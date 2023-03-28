@@ -1,0 +1,31 @@
+{
+"@@locale": "zh",
+"templates": "模板",
+"@language": {
+"description": "模板视图的应用栏标题"
+},
+"viewAll": "查看全部",
+"@viewAll": {
+"description": "查看所有模板的按钮"
+},
+"createPost": "创建帖子",
+"@createPost": {
+"description": "创建帖子视图的应用栏标题"
+},
+"moreImages": "更多图片",
+"@moreImages": {
+"description": "添加更多图片的按钮"
+},
+"chooseImage": "选择图片",
+"@chooseImage": {
+"description": "选择图片的按钮"
+},
+"gallery": "相册",
+"@gallery": {
+"description": "从相册选择图片的按钮"
+},
+"camera": "相机",
+"@camera": {
+"description": "从相机选择图片的按钮"
+}
+}

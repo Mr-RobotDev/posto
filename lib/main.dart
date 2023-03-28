@@ -2,10 +2,12 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:posto/app/app.locator.dart';
 import 'package:posto/app/app.router.dart';
 import 'package:posto/firebase_options.dart';
+import 'package:posto/l10n/l10n.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 Future main() async {
@@ -47,7 +49,9 @@ class MyApp extends StatelessWidget {
         navigatorObservers: [
           StackedService.routeObserver,
         ],
+        supportedLocales: L10n.all,
         localizationsDelegates: const [
+          AppLocalizations.delegate,
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,

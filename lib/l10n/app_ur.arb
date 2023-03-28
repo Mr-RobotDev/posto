@@ -1,0 +1,30 @@
+{
+    "templates": "ٹیمپلیٹس",
+    "@language": {
+      "description": "ٹیمپلیٹس ویو کا ایپ بار ٹائٹل"
+    },
+    "viewAll": "سب تصاویر",
+    "@viewAll": {
+      "description": "تمام ٹیمپلیٹس دیکھنے کے لئے بٹن"
+    },
+    "createPost": "پوسٹ بنائیں",
+    "@createPost": {
+      "description": "The appbar title of the create post view"
+    },
+    "moreImages": "مزید تصاویر",
+    "@moreImages": {
+      "description": "The button to add more images to a post"
+    },
+    "chooseImage": "تصویر منتخب کریں",
+    "@chooseImage": {
+      "description": "The button to choose an image from the gallery"
+    },
+    "gallery": "گیلری",
+    "@gallery": {
+      "description": "The gallery button"
+    },
+    "camera": "کیمرہ",
+    "@camera": {
+      "description": "The camera button"
+    }
+}

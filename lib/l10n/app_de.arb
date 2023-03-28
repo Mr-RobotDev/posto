@@ -1,0 +1,31 @@
+{
+  "@@locale": "de",
+  "templates": "Vorlagen",
+  "@language": {
+      "description": "Der App-Bar-Titel der Vorlagen-Ansicht"
+  },
+  "viewAll": "Alle anzeigen",
+  "@viewAll": {
+      "description": "Die Schaltfläche zum Anzeigen aller Vorlagen"
+  },
+  "createPost": "Beitrag erstellen",
+  "@createPost": {
+      "description": "Der App-Bar-Titel der Ansicht zum Erstellen eines Beitrags"
+  },
+  "moreImages": "Mehr Bilder",
+  "@moreImages": {
+      "description": "Die Schaltfläche zum Hinzufügen weiterer Bilder"
+  },
+  "chooseImage": "Bild auswählen",
+  "@chooseImage": {
+      "description": "Die Schaltfläche zum Auswählen eines Bildes"
+  },
+  "gallery": "Galerie",
+  "@gallery": {
+      "description": "Die Schaltfläche zum Auswählen eines Bildes aus der Galerie"
+  },
+  "camera": "Kamera",
+  "@camera": {
+      "description": "Die Schaltfläche zum Auswählen eines Bildes aus der Kamera"
+  }
+}

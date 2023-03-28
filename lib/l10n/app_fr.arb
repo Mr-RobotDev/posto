@@ -1,0 +1,31 @@
+{
+  "@@locale": "fr",
+  "templates": "Modèles",
+  "@language": {
+      "description": "Le titre de la barre d'application de la vue des modèles"
+  },
+  "viewAll": "Voir tout",
+  "@viewAll": {
+      "description": "Le bouton pour afficher tous les modèles"
+  },
+  "createPost": "Créer une publication",
+  "@createPost": {
+      "description": "Le titre de la barre d'application de la vue pour créer une publication"
+  },
+  "moreImages": "Plus d'images",
+  "@moreImages": {
+      "description": "Le bouton pour ajouter plus d'images"
+  },
+  "chooseImage": "Choisir une image",
+  "@chooseImage": {
+      "description": "Le bouton pour choisir une image"
+  },
+  "gallery": "Galerie",
+  "@gallery": {
+      "description": "Le bouton pour choisir une image depuis la galerie"
+  },
+  "camera": "Caméra",
+  "@camera": {
+      "description": "Le bouton pour choisir une image depuis la caméra"
+  }
+}
