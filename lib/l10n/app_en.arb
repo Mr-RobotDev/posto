@@ -1,0 +1,31 @@
+{
+    "@@locale": "en",
+    "templates": "Templates",
+    "@language": {
+        "description": "The appbar title of the templates view"
+    },
+    "viewAll": "view all",
+    "@viewAll": {
+        "description": "The button to view all templates"
+    },
+    "createPost": "Create Post",
+    "@createPost": {
+        "description": "The appbar title of the create post view"
+    },
+    "moreImages": "More Images",
+    "@moreImages": {
+        "description": "The button to add more images"
+    },
+    "chooseImage": "Choose Image",
+    "@chooseImage": {
+        "description": "The button to choose an image"
+    },
+    "gallery": "Gallery",
+    "@gallery": {
+        "description": "The button to choose an image from the gallery"
+    },
+    "camera": "Camera",
+    "@camera": {
+        "description": "The button to choose an image from the camera"
+    }
+}
