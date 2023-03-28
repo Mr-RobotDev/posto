@@ -1,0 +1,31 @@
+{
+  "@@locale": "it",
+  "templates": "Modelli",
+  "@language": {
+      "description": "Il titolo della barra dell'app nella vista dei modelli"
+  },
+  "viewAll": "Visualizza tutti",
+  "@viewAll": {
+      "description": "Il pulsante per visualizzare tutti i modelli"
+  },
+  "createPost": "Crea post",
+  "@createPost": {
+      "description": "Il titolo della barra dell'app nella vista di creazione di un post"
+  },
+  "moreImages": "Più immagini",
+  "@moreImages": {
+      "description": "Il pulsante per aggiungere più immagini"
+  },
+  "chooseImage": "Scegli immagine",
+  "@chooseImage": {
+      "description": "Il pulsante per scegliere un'immagine"
+  },
+  "gallery": "Galleria",
+  "@gallery": {
+      "description": "Il pulsante per scegliere un'immagine dalla galleria"
+  },
+  "camera": "Fotocamera",
+  "@camera": {
+      "description": "Il pulsante per scegliere un'immagine dalla fotocamera"
+  }
+}

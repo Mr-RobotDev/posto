@@ -1,0 +1,31 @@
+{
+  "@@locale": "es",
+  "templates": "Plantillas",
+  "@language": {
+  "description": "El título de la barra de aplicación de la vista de plantillas"
+  },
+  "viewAll": "ver todo",
+  "@viewAll": {
+  "description": "El botón para ver todas las plantillas"
+  },
+  "createPost": "Crear publicación",
+  "@createPost": {
+  "description": "El título de la barra de aplicación de la vista para crear una publicación"
+  },
+  "moreImages": "Más imágenes",
+  "@moreImages": {
+  "description": "El botón para agregar más imágenes"
+  },
+  "chooseImage": "Elegir imagen",
+  "@chooseImage": {
+  "description": "El botón para elegir una imagen"
+  },
+  "gallery": "Galería",
+  "@gallery": {
+  "description": "El botón para elegir una imagen de la galería"
+  },
+  "camera": "Cámara",
+  "@camera": {
+  "description": "El botón para elegir una imagen de la cámara"
+  }
+  }
