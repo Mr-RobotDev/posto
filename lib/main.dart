@@ -1,12 +1,20 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:posto/app/app.locator.dart';
 import 'package:posto/app/app.router.dart';
+import 'package:posto/firebase_options.dart';
 import 'package:stacked_services/stacked_services.dart';
 
-void main() {
-  setupLocator();
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  await setupLocator();
 
   runApp(const MyApp());
 }
