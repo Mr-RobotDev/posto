@@ -7,9 +7,9 @@ part 'models.g.dart';
 class Template with _$Template {
   factory Template({
     required String id,
-    required String thumbnail
+    required String thumbnail,
   }) = _Template;
 
-factory Template.fromJson(Map<String, dynamic> json) =>
-_$TemplateFromJson(json);
+  factory Template.fromJson(Map<String, dynamic> json) =>
+      _$TemplateFromJson(json);
 }

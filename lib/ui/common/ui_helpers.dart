@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 const double _tinySize = 5.0;
@@ -77,8 +78,13 @@ double getResponsiveFontSize(BuildContext context,
   return responsiveSize;
 }
 
-bool isDarkMode(BuildContext context) =>
+bool isDarkModeColor(BuildContext context) =>
     MediaQuery.of(context).platformBrightness == Brightness.dark;
+
+Color isDarkMode(BuildContext context) =>
+    MediaQuery.of(context).platformBrightness == Brightness.dark
+        ? CupertinoColors.darkBackgroundGray
+        : CupertinoColors.lightBackgroundGray;
 
 final Random random = Random();
 double getMinHeight(int index) {

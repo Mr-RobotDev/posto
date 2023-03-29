@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
@@ -24,14 +25,6 @@ class TemplatesView extends StackedView<TemplatesViewModel> {
         title: Text(
           AppLocalizations.of(context)!.templates,
         ),
-        trailingActions: [
-          PlatformIconButton(
-            icon: Icon(
-              PlatformIcons(context).search,
-            ),
-            onPressed: () {},
-          ),
-        ],
       ),
       body: SafeArea(
         bottom: false,
@@ -41,6 +34,37 @@ class TemplatesView extends StackedView<TemplatesViewModel> {
           ),
           child: CustomScrollView(
             slivers: [
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 12.0),
+                  child: Hero(
+                    tag: 'search',
+                    child: Material(
+                      child: PlatformTextField(
+                        focusNode: viewModel.focusNode,
+                        onTap: viewModel.navigateToSearchCategoryTemplatesView,
+                        hintText: 'Search',
+                        material: (_, __) => MaterialTextFieldData(
+                          decoration: const InputDecoration(
+                            border: InputBorder.none,
+                            prefixIcon: Icon(Icons.search),
+                          ),
+                        ),
+                        cupertino: (_, __) => CupertinoTextFieldData(
+                          prefix: const Padding(
+                            padding: EdgeInsets.only(left: 8.0),
+                            child: Icon(CupertinoIcons.search),
+                          ),
+                          decoration: BoxDecoration(
+                            color: isDarkMode(context),
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
               viewModel.initialBusy
                   ? const TemplatesLoadingShimmerWidget()
                   : SliverFillRemaining(
@@ -49,9 +73,9 @@ class TemplatesView extends StackedView<TemplatesViewModel> {
                         crossAxisCount: 2,
                         mainAxisSpacing: 8.0,
                         crossAxisSpacing: 8.0,
-                        itemCount: viewModel.templates!.length,
+                        itemCount: viewModel.templates.length,
                         itemBuilder: (context, index) {
-                          final template = viewModel.templates![index];
+                          final template = viewModel.templates[index];
                           double height = getMinHeight(index);
                           return ShimmerImageWidget(
                             url: template.thumbnail,

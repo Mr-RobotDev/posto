@@ -2,27 +2,36 @@ import 'package:flutter/cupertino.dart';
 import 'package:posto/app/app.locator.dart';
 import 'package:posto/models/models.dart';
 import 'package:posto/services/firebase_service.dart';
+import 'package:posto/ui/views/search_category_templates/search_category_templates_view.dart';
 import 'package:stacked/stacked.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 class TemplatesViewModel extends BaseViewModel {
   final _firebaseService = locator<FirebaseService>();
+  final _navigationService = locator<NavigationService>();
 
   ScrollController scrollController = ScrollController();
 
-  final List<Template>? _templates = [];
-  List<Template>? get templates => _templates;
+  FocusNode focusNode = FocusNode();
+
+  final List<Template> _templates = [];
+  List<Template> get templates => _templates;
 
   List<String>? _categories = [];
   List<String>? get categories => _categories;
 
-  bool get initialBusy => _templates!.length < 10;
+  bool get initialBusy => _templates.length < 10;
 
   int _currentCategory = 0;
   int get currentCategory => _currentCategory;
 
+  bool _isFocused = false;
+  bool get isFocused => _isFocused;
+
   Future<void> initialise() async {
     await fetchCategories();
     await fetchTemplates();
+
     scrollController.addListener(() async {
       double threshold = 500.0;
       double extentAfter = scrollController.position.extentAfter;
@@ -32,6 +41,11 @@ class TemplatesViewModel extends BaseViewModel {
         }
         await fetchTemplates();
       }
+    });
+
+    focusNode.addListener(() {
+      _isFocused = focusNode.hasFocus;
+      notifyListeners();
     });
   }
 
@@ -53,7 +67,14 @@ class TemplatesViewModel extends BaseViewModel {
       ),
     );
     if (templates != null) {
-      _templates!.addAll(templates);
+      _templates.addAll(templates);
     }
+  }
+
+  void navigateToSearchCategoryTemplatesView() {
+    _navigationService.navigateWithTransition(
+      const SearchCategoryTemplatesView(),
+      transitionStyle: Transition.downToUp,
+    );
   }
 }
