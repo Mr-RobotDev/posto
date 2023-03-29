@@ -49,7 +49,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '236600038314',
     projectId: 'creation-post-app',
     authDomain: 'creation-post-app.firebaseapp.com',
-    databaseURL: 'https://creation-post-app-default-rtdb.asia-southeast1.firebasedatabase.app',
+    databaseURL:
+        'https://creation-post-app-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'creation-post-app.appspot.com',
   );
 
@@ -58,7 +59,8 @@ class DefaultFirebaseOptions {
     appId: '1:236600038314:android:2a1cdfab7cd7f77e0351d3',
     messagingSenderId: '236600038314',
     projectId: 'creation-post-app',
-    databaseURL: 'https://creation-post-app-default-rtdb.asia-southeast1.firebasedatabase.app',
+    databaseURL:
+        'https://creation-post-app-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'creation-post-app.appspot.com',
   );
 
@@ -67,9 +69,11 @@ class DefaultFirebaseOptions {
     appId: '1:236600038314:ios:ffd58d93ffc7ec7c0351d3',
     messagingSenderId: '236600038314',
     projectId: 'creation-post-app',
-    databaseURL: 'https://creation-post-app-default-rtdb.asia-southeast1.firebasedatabase.app',
+    databaseURL:
+        'https://creation-post-app-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'creation-post-app.appspot.com',
-    iosClientId: '236600038314-jqdf5jn87mqof73tt2em4ap3a9n0botc.apps.googleusercontent.com',
+    iosClientId:
+        '236600038314-jqdf5jn87mqof73tt2em4ap3a9n0botc.apps.googleusercontent.com',
     iosBundleId: 'com.example.posto',
   );
 
@@ -78,9 +82,11 @@ class DefaultFirebaseOptions {
     appId: '1:236600038314:ios:ffd58d93ffc7ec7c0351d3',
     messagingSenderId: '236600038314',
     projectId: 'creation-post-app',
-    databaseURL: 'https://creation-post-app-default-rtdb.asia-southeast1.firebasedatabase.app',
+    databaseURL:
+        'https://creation-post-app-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'creation-post-app.appspot.com',
-    iosClientId: '236600038314-jqdf5jn87mqof73tt2em4ap3a9n0botc.apps.googleusercontent.com',
+    iosClientId:
+        '236600038314-jqdf5jn87mqof73tt2em4ap3a9n0botc.apps.googleusercontent.com',
     iosBundleId: 'com.example.posto',
   );
 }
