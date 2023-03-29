@@ -79,3 +79,18 @@ double getResponsiveFontSize(BuildContext context,
 
 bool isDarkMode(BuildContext context) =>
     MediaQuery.of(context).platformBrightness == Brightness.dark;
+
+double getMinHeight(int index) {
+  switch (index % 4) {
+    case 0:
+      return 150;
+    case 1:
+      return 100;
+    case 2:
+      return 250;
+    case 3:
+      return 125;
+    default:
+      return 100;
+  }
+}

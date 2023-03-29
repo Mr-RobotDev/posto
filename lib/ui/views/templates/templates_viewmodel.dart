@@ -41,6 +41,7 @@ class TemplatesViewModel extends BaseViewModel {
       _categories = await runBusyFuture(
         _firebaseService.getCategories(),
       );
+      _categories!.shuffle();
     }
   }
 

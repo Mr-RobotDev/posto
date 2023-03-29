@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:stacked/stacked.dart';
+
+import 'package:posto/ui/common/ui_helpers.dart';
 import 'package:posto/ui/dumb_widgets/shimmer_image_widget.dart';
 import 'package:posto/ui/dumb_widgets/templates_loading_shimmer_widget.dart';
-import 'package:stacked/stacked.dart';
 
 import 'templates_viewmodel.dart';
 
@@ -17,7 +21,17 @@ class TemplatesView extends StackedView<TemplatesViewModel> {
   ) {
     return PlatformScaffold(
       appBar: PlatformAppBar(
-        title: const Text('Templates'),
+        title: Text(
+          AppLocalizations.of(context)!.templates,
+        ),
+        trailingActions: [
+          PlatformIconButton(
+            icon: Icon(
+              PlatformIcons(context).search,
+            ),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: SafeArea(
         bottom: false,
@@ -26,25 +40,24 @@ class TemplatesView extends StackedView<TemplatesViewModel> {
             horizontal: 10.0,
           ),
           child: CustomScrollView(
-            controller: viewModel.scrollController,
             slivers: [
               viewModel.initialBusy
                   ? const TemplatesLoadingShimmerWidget()
-                  : SliverGrid.builder(
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
+                  : SliverFillRemaining(
+                      child: MasonryGridView.count(
+                        controller: viewModel.scrollController,
                         crossAxisCount: 2,
-                        mainAxisSpacing: 10.0,
-                        crossAxisSpacing: 10.0,
-                        childAspectRatio: 9 / 16,
+                        mainAxisSpacing: 8.0,
+                        crossAxisSpacing: 8.0,
+                        itemCount: viewModel.templates!.length,
+                        itemBuilder: (context, index) {
+                          final template = viewModel.templates![index];
+                          return ShimmerImageWidget(
+                            url: template.thumbnail,
+                            height: getMinHeight(index),
+                          );
+                        },
                       ),
-                      itemCount: viewModel.templates!.length,
-                      itemBuilder: (context, index) {
-                        final template = viewModel.templates![index];
-                        return ShimmerImageWidget(
-                          url: template.thumbnail,
-                        );
-                      },
                     ),
               viewModel.isBusy
                   ? const SliverFillRemaining(
