@@ -52,9 +52,10 @@ class TemplatesView extends StackedView<TemplatesViewModel> {
                         itemCount: viewModel.templates!.length,
                         itemBuilder: (context, index) {
                           final template = viewModel.templates![index];
+                          double height = getMinHeight(index);
                           return ShimmerImageWidget(
                             url: template.thumbnail,
-                            height: getMinHeight(index),
+                            height: height,
                           );
                         },
                       ),
