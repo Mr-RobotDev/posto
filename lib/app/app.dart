@@ -1,6 +1,7 @@
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:posto/ui/views/templates/templates_view.dart';
+import 'package:posto/services/firebase_service.dart';
 // @stacked-import
 
 @StackedApp(
@@ -13,7 +14,8 @@ import 'package:posto/ui/views/templates/templates_view.dart';
     LazySingleton(classType: DialogService),
     LazySingleton(classType: NavigationService),
     LazySingleton(classType: SnackbarService),
-    // @stacked-service
+    LazySingleton(classType: FirebaseService),
+// @stacked-service
   ],
   logger: StackedLogger(),
 )

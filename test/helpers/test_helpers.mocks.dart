@@ -8,6 +8,7 @@ import 'dart:ui' as _i5;
 
 import 'package:flutter/material.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
+import 'package:posto/services/firebase_service.dart' as _i6;
 import 'package:stacked_services/stacked_services.dart' as _i2;
 
 // ignore_for_file: type=lint
@@ -620,4 +621,31 @@ class MockDialogService extends _i1.Mock implements _i2.DialogService {
         ),
         returnValueForMissingStub: null,
       );
+}
+
+/// A class which mocks [FirebaseService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockFirebaseService extends _i1.Mock implements _i6.FirebaseService {
+  @override
+  List<String> get categories => (super.noSuchMethod(
+        Invocation.getter(#categories),
+        returnValue: <String>[],
+        returnValueForMissingStub: <String>[],
+      ) as List<String>);
+  @override
+  bool get hasLoaded => (super.noSuchMethod(
+        Invocation.getter(#hasLoaded),
+        returnValue: false,
+        returnValueForMissingStub: false,
+      ) as bool);
+  @override
+  _i4.Future<List<String>?> getCategories() => (super.noSuchMethod(
+        Invocation.method(
+          #getCategories,
+          [],
+        ),
+        returnValue: _i4.Future<List<String>?>.value(),
+        returnValueForMissingStub: _i4.Future<List<String>?>.value(),
+      ) as _i4.Future<List<String>?>);
 }
