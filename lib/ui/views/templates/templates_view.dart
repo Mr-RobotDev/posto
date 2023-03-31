@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:stacked/stacked.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:posto/ui/common/ui_helpers.dart';
 import 'package:posto/ui/dumb_widgets/shimmer_image_widget.dart';
@@ -17,51 +18,53 @@ class TemplatesView extends StackedView<TemplatesViewModel> {
     TemplatesViewModel viewModel,
     Widget? child,
   ) {
-    return SafeArea(
-      bottom: false,
-      child: Padding(
-        padding: const EdgeInsets.only(
-          left: 10.0,
-          right: 10.0,
-          top: 10.0,
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: Text(
+            AppLocalizations.of(context)!.templates,
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
+                  color: isDarkModeTextColor(context),
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
         ),
-        child: CustomScrollView(
-          slivers: [
-            viewModel.initialBusy
-                ? const TemplatesLoadingShimmerWidget()
-                : SliverFillRemaining(
-                    child: MasonryGridView.count(
-                      controller: viewModel.scrollController,
-                      crossAxisCount: 2,
-                      mainAxisSpacing: 8.0,
-                      crossAxisSpacing: 8.0,
-                      itemCount: viewModel.templates.length,
-                      itemBuilder: (context, index) {
-                        final template = viewModel.templates[index];
-                        double height = getMinHeight(index);
-                        return ShimmerImageWidget(
-                          url: template.thumbnail,
-                          height: height,
-                        );
-                      },
-                    ),
-                  ),
-            viewModel.isBusy
-                ? const SliverFillRemaining(
-                    child: Center(
-                      child: CircularProgressIndicator.adaptive(),
-                    ),
-                  )
-                : const SliverToBoxAdapter(),
-            if (viewModel.currentCategory == viewModel.categories!.length)
-              const SliverFillRemaining(
-                child: Center(
-                  child: Text('No more templates'),
+        const SliverToBoxAdapter(
+          child: verticalSpaceSmall,
+        ),
+        viewModel.initialBusy
+            ? const TemplatesLoadingShimmerWidget()
+            : SliverFillRemaining(
+                child: MasonryGridView.count(
+                  controller: viewModel.scrollController,
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 8.0,
+                  crossAxisSpacing: 8.0,
+                  itemCount: viewModel.templates.length,
+                  itemBuilder: (context, index) {
+                    final template = viewModel.templates[index];
+                    double height = getMinHeight(index);
+                    return ShimmerImageWidget(
+                      url: template.thumbnail,
+                      height: height,
+                    );
+                  },
                 ),
               ),
-          ],
-        ),
-      ),
+        viewModel.isBusy
+            ? const SliverFillRemaining(
+                child: Center(
+                  child: CircularProgressIndicator.adaptive(),
+                ),
+              )
+            : const SliverToBoxAdapter(),
+        if (viewModel.currentCategory == viewModel.categories!.length)
+          const SliverFillRemaining(
+            child: Center(
+              child: Text('No more templates'),
+            ),
+          ),
+      ],
     );
   }
 
@@ -76,6 +79,5 @@ class TemplatesView extends StackedView<TemplatesViewModel> {
     TemplatesViewModel viewModel,
   ) {
     viewModel.initialise();
-    super.onViewModelReady(viewModel);
   }
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:posto/ui/common/ui_helpers.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:stacked/stacked.dart';
 
 import 'settings_viewmodel.dart';
@@ -12,18 +14,21 @@ class SettingsView extends StackedView<SettingsViewModel> {
     SettingsViewModel viewModel,
     Widget? child,
   ) {
-    return const SafeArea(
-      child: Padding(
-        padding: EdgeInsets.only(
-          left: 10.0,
-          right: 10.0,
-          top: 10.0,
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: Text(
+            AppLocalizations.of(context)!.settings,
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
+                  color: isDarkModeTextColor(context),
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
         ),
-        child: CustomScrollView(
-          slivers: []
+        const SliverToBoxAdapter(
+          child: verticalSpaceSmall,
         ),
-      ),
-      
+      ],
     );
   }
 

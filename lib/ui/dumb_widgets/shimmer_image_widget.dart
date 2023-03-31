@@ -8,11 +8,11 @@ class ShimmerImageWidget extends StatelessWidget {
   const ShimmerImageWidget({
     super.key,
     required this.url,
-    required this.height,
+    this.height,
   });
 
   final String url;
-  final double height;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,10 @@ class ShimmerImageWidget extends StatelessWidget {
           baseColor: defaultShimmerBaseColor,
           highlightColor: defaultShimmerHighlightColor,
           child: Container(
-            color: defaultShimmerBackColor,
+            decoration: BoxDecoration(
+              color: defaultShimmerBackColor,
+              borderRadius: BorderRadius.circular(10),
+            ),
           ),
         ),
       ),

@@ -81,6 +81,11 @@ double getResponsiveFontSize(BuildContext context,
 bool isDarkModeColor(BuildContext context) =>
     MediaQuery.of(context).platformBrightness == Brightness.dark;
 
+Color isDarkModeTextColor(BuildContext context) =>
+    MediaQuery.of(context).platformBrightness == Brightness.dark
+        ? Colors.white
+        : Colors.black;
+
 Color isDarkMode(BuildContext context) =>
     MediaQuery.of(context).platformBrightness == Brightness.dark
         ? CupertinoColors.darkBackgroundGray
