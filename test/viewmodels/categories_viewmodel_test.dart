@@ -4,7 +4,7 @@ import 'package:posto/app/app.locator.dart';
 import '../helpers/test_helpers.dart';
 
 void main() {
-  group('SearchCategoryTemplatesViewModel Tests -', () {
+  group('CategoriesViewModel Tests -', () {
     setUp(() => registerServices());
     tearDown(() => locator.reset());
   });

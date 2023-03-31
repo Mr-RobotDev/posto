@@ -2,13 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:posto/app/app.locator.dart';
 import 'package:posto/models/models.dart';
 import 'package:posto/services/firebase_service.dart';
-import 'package:posto/ui/views/search_category_templates/search_category_templates_view.dart';
 import 'package:stacked/stacked.dart';
-import 'package:stacked_services/stacked_services.dart';
 
 class TemplatesViewModel extends BaseViewModel {
   final _firebaseService = locator<FirebaseService>();
-  final _navigationService = locator<NavigationService>();
 
   ScrollController scrollController = ScrollController();
 
@@ -69,12 +66,5 @@ class TemplatesViewModel extends BaseViewModel {
     if (templates != null) {
       _templates.addAll(templates);
     }
-  }
-
-  void navigateToSearchCategoryTemplatesView() {
-    _navigationService.navigateWithTransition(
-      const SearchCategoryTemplatesView(),
-      transitionStyle: Transition.downToUp,
-    );
   }
 }

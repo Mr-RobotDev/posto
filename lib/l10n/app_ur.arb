@@ -1,12 +1,57 @@
 {
-    "templates": "ٹیمپلیٹس",
-    "@language": {
-      "description": "ٹیمپلیٹس ویو کا ایپ بار ٹائٹل"
-    },
-    "viewAll": "سب تصاویر",
-    "@viewAll": {
-      "description": "تمام ٹیمپلیٹس دیکھنے کے لئے بٹن"
-    },
+  "@@locale": "ur",
+  "templates": "سانچے",
+  "@language": {
+  "description": "سانچوں کے دیکھنے کے لئے ایپ بار کا ٹائٹل"
+  },
+  "categories": "زمرے",
+  "@language": {
+  "description": "زمرہ دیکھنے کے لئے ایپ بار کا ٹائٹل"
+  },
+  "settings": "ترتیبات",
+  "@settings": {
+  "description": "ترتیبات دیکھنے کے لئے ایپ بار کا ٹائٹل"
+  },
+  "language": "زبان",
+  "@language": {
+  "description": "زبان دیکھنے کے لئے ایپ بار کا ٹائٹل"
+  },
+  "english": "انگریزی",
+  "@english": {
+  "description": "انگریزی زبان کا انتخاب کرنے کا بٹن"
+  },
+  "german": "جرمن",
+  "@german": {
+  "description": "جرمن زبان کا انتخاب کرنے کا بٹن"
+  },
+  "french": "فرانسیسی",
+  "@french": {
+  "description": "فرانسیسی زبان کا انتخاب کرنے کا بٹن"
+  },
+  "spanish": "ہسپانوی",
+  "@spanish": {
+  "description": "ہسپانوی زبان کا انتخاب کرنے کا بٹن"
+  },
+  "italian": "اطالوی",
+  "@italian": {
+  "description": "اطالوی زبان کا انتخاب کرنے کا بٹن"
+  },
+  "chinese": "چینی",
+  "@chinese": {
+  "description": "چینی زبان کا انتخاب کرنے کا بٹن"
+  },
+  "japanese": "جاپانی",
+  "@japanese": {
+  "description": "جاپانی زبان کا انتخاب کرنے کا بٹن"
+  },
+  "arabic": "عربی",
+  "@arabic": {
+  "description": "عربی زبان کا انتخاب کرنے کا بٹن"
+  },
+  "urdu": "اردو",
+  "@urdu": {
+  "description": "اردو زبان کا انتخاب کرنے کا بٹن"
+  },
     "createPost": "پوسٹ بنائیں",
     "@createPost": {
       "description": "The appbar title of the create post view"
