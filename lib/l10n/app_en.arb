@@ -4,9 +4,53 @@
     "@language": {
         "description": "The appbar title of the templates view"
     },
-    "viewAll": "view all",
-    "@viewAll": {
-        "description": "The button to view all templates"
+    "categories": "Categories",
+    "@language": {
+        "description": "The appbar title of the categories view"
+    },
+    "settings": "Settings",
+    "@settings": {
+        "description": "The appbar title of the settings view"
+    },
+    "language": "Language",
+    "@language": {
+        "description": "The appbar title of the language view"
+    },
+    "english": "English",
+    "@english": {
+        "description": "The button to choose the english language"
+    },
+    "german": "German",
+    "@german": {
+        "description": "The button to choose the german language"
+    },
+    "french": "French",
+    "@french": {
+        "description": "The button to choose the french language"
+    },
+    "spanish": "Spanish",
+    "@spanish": {
+        "description": "The button to choose the spanish language"
+    },
+    "italian": "Italian",
+    "@italian": {
+        "description": "The button to choose the italian language"
+    },
+    "chinese": "Chinese",
+    "@chinese": {
+        "description": "The button to choose the chinese language"
+    },
+    "japanese": "Japanese",
+    "@japanese": {
+        "description": "The button to choose the japanese language"
+    },
+    "arabic": "Arabic",
+    "@arabic": {
+        "description": "The button to choose the arabic language"
+    },
+    "urdu": "Urdu",
+    "@urdu": {
+        "description": "The button to choose the urdu language"
     },
     "createPost": "Create Post",
     "@createPost": {

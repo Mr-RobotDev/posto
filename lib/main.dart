@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:posto/app/app.locator.dart';
 import 'package:posto/app/app.router.dart';
@@ -30,6 +30,8 @@ class MyApp extends StatelessWidget {
       settings: PlatformSettingsData(
         iosUsesMaterialWidgets: true,
         iosUseZeroPaddingForAppbarPlatformIcon: true,
+        legacyIosUsesMaterialWidgets: true,
+        wrapCupertinoAppBarMiddleWithMediaQuery: true,
       ),
       builder: (context) => PlatformApp(
         debugShowCheckedModeBanner: false,
@@ -43,7 +45,7 @@ class MyApp extends StatelessWidget {
           themeMode: ThemeMode.system,
         ),
         cupertino: (context, platform) => CupertinoAppData(),
-        initialRoute: Routes.templatesView,
+        initialRoute: Routes.homeView,
         onGenerateRoute: StackedRouter().onGenerateRoute,
         navigatorKey: StackedService.navigatorKey,
         navigatorObservers: [
@@ -52,9 +54,9 @@ class MyApp extends StatelessWidget {
         supportedLocales: L10n.all,
         localizationsDelegates: const [
           AppLocalizations.delegate,
-          DefaultMaterialLocalizations.delegate,
-          DefaultWidgetsLocalizations.delegate,
-          DefaultCupertinoLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
         ],
       ),
     );

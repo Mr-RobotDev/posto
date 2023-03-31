@@ -1,29 +1,73 @@
 {
-  "@@locale": "ar",
-  "templates": "القوالب",
-  "@language": {
-      "description": "عنوان شريط التطبيق لعرض القوالب"
-  },
-  "viewAll": "عرض الكل",
-  "@viewAll": {
-      "description": "زر لعرض جميع القوالب"
-  },
-  "createPost": "إنشاء منشور",
-  "@createPost": {
-      "description": "عنوان شريط التطبيق لعرض إنشاء منشور"
-  },
-  "moreImages": "المزيد من الصور",
-  "@moreImages": {
-      "description": "زر لإضافة المزيد من الصور"
-  },
-  "chooseImage": "اختيار صورة",
-  "@chooseImage": {
-      "description": "زر لاختيار صورة"
-  },
-  "gallery": "معرض الصور",
-  "@gallery": {
-      "description": "زر لاختيار صورة من معرض الصور"
-  },
+    "@@locale": "ar",
+    "templates": "القوالب",
+    "@language": {
+    "description": "عنوان شريط التطبيق لعرض القوالب"
+    },
+    "categories": "التصنيفات",
+    "@language": {
+    "description": "عنوان شريط التطبيق لعرض التصنيفات"
+    },
+    "settings": "الإعدادات",
+    "@settings": {
+    "description": "عنوان شريط التطبيق لعرض الإعدادات"
+    },
+    "language": "اللغة",
+    "@language": {
+    "description": "عنوان شريط التطبيق لعرض اللغة"
+    },
+    "english": "الإنجليزية",
+    "@english": {
+    "description": "زر اختيار اللغة الإنجليزية"
+    },
+    "german": "الألمانية",
+    "@german": {
+    "description": "زر اختيار اللغة الألمانية"
+    },
+    "french": "الفرنسية",
+    "@french": {
+    "description": "زر اختيار اللغة الفرنسية"
+    },
+    "spanish": "الإسبانية",
+    "@spanish": {
+    "description": "زر اختيار اللغة الإسبانية"
+    },
+    "italian": "الإيطالية",
+    "@italian": {
+    "description": "زر اختيار اللغة الإيطالية"
+    },
+    "chinese": "الصينية",
+    "@chinese": {
+    "description": "زر اختيار اللغة الصينية"
+    },
+    "japanese": "اليابانية",
+    "@japanese": {
+    "description": "زر اختيار اللغة اليابانية"
+    },
+    "arabic": "العربية",
+    "@arabic": {
+    "description": "زر اختيار اللغة العربية"
+    },
+    "urdu": "الأردية",
+    "@urdu": {
+    "description": "زر اختيار اللغة الأردية"
+    },
+    "createPost": "إنشاء منشور",
+    "@createPost": {
+    "description": "عنوان شريط التطبيق لعرض إنشاء المنشور"
+    },
+    "moreImages": "المزيد من الصور",
+    "@moreImages": {
+    "description": "زر إضافة المزيد من الصور"
+    },
+    "chooseImage": "اختيار صورة",
+    "@chooseImage": {
+    "description": "زر اختيار صورة"
+    },
+    "gallery": "معرض الصور",
+    "@gallery": {
+    "description": "زر اختيار صورة من معرض الصور"
+    },
   "camera": "الكاميرا",
   "@camera": {
       "description": "زر لاختيار صورة من الكاميرا"

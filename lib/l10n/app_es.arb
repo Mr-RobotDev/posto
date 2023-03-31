@@ -4,13 +4,57 @@
   "@language": {
   "description": "El título de la barra de aplicación de la vista de plantillas"
   },
-  "viewAll": "ver todo",
-  "@viewAll": {
-  "description": "El botón para ver todas las plantillas"
+  "categories": "Categorías",
+  "@language": {
+  "description": "El título de la barra de aplicación de la vista de categorías"
+  },
+  "settings": "Ajustes",
+  "@settings": {
+  "description": "El título de la barra de aplicación de la vista de ajustes"
+  },
+  "language": "Idioma",
+  "@language": {
+  "description": "El título de la barra de aplicación de la vista de idioma"
+  },
+  "english": "Inglés",
+  "@english": {
+  "description": "El botón para elegir el idioma inglés"
+  },
+  "german": "Alemán",
+  "@german": {
+  "description": "El botón para elegir el idioma alemán"
+  },
+  "french": "Francés",
+  "@french": {
+  "description": "El botón para elegir el idioma francés"
+  },
+  "spanish": "Español",
+  "@spanish": {
+  "description": "El botón para elegir el idioma español"
+  },
+  "italian": "Italiano",
+  "@italian": {
+  "description": "El botón para elegir el idioma italiano"
+  },
+  "chinese": "Chino",
+  "@chinese": {
+  "description": "El botón para elegir el idioma chino"
+  },
+  "japanese": "Japonés",
+  "@japanese": {
+  "description": "El botón para elegir el idioma japonés"
+  },
+  "arabic": "Árabe",
+  "@arabic": {
+  "description": "El botón para elegir el idioma árabe"
+  },
+  "urdu": "Urdu",
+  "@urdu": {
+  "description": "El botón para elegir el idioma urdu"
   },
   "createPost": "Crear publicación",
   "@createPost": {
-  "description": "El título de la barra de aplicación de la vista para crear una publicación"
+  "description": "El título de la barra de aplicación de la vista de crear publicación"
   },
   "moreImages": "Más imágenes",
   "@moreImages": {

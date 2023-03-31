@@ -1,31 +1,75 @@
 {
-  "@@locale": "ja",
-  "templates": "テンプレート",
-  "@language": {
-      "description": "テンプレートビューのアプリバーのタイトル"
-  },
-  "viewAll": "すべて表示",
-  "@viewAll": {
-      "description": "すべてのテンプレートを表示するためのボタン"
-  },
-  "createPost": "投稿を作成",
-  "@createPost": {
-      "description": "投稿作成ビューのアプリバーのタイトル"
-  },
-  "moreImages": "もっと画像を追加",
-  "@moreImages": {
-      "description": "もっと画像を追加するためのボタン"
-  },
-  "chooseImage": "画像を選択",
-  "@chooseImage": {
-      "description": "画像を選択するためのボタン"
-  },
-  "gallery": "ギャラリー",
-  "@gallery": {
-      "description": "ギャラリーから画像を選択するためのボタン"
-  },
-  "camera": "カメラ",
-  "@camera": {
-      "description": "カメラから画像を選択するためのボタン"
-  }
-}
+    "@@locale": "ja",
+    "templates": "テンプレート",
+    "@language": {
+    "description": "テンプレートビューのアプリバータイトル"
+    },
+    "categories": "カテゴリ",
+    "@language": {
+    "description": "カテゴリビューのアプリバータイトル"
+    },
+    "settings": "設定",
+    "@settings": {
+    "description": "設定ビューのアプリバータイトル"
+    },
+    "language": "言語",
+    "@language": {
+    "description": "言語ビューのアプリバータイトル"
+    },
+    "english": "英語",
+    "@english": {
+    "description": "英語を選択するボタン"
+    },
+    "german": "ドイツ語",
+    "@german": {
+    "description": "ドイツ語を選択するボタン"
+    },
+    "french": "フランス語",
+    "@french": {
+    "description": "フランス語を選択するボタン"
+    },
+    "spanish": "スペイン語",
+    "@spanish": {
+    "description": "スペイン語を選択するボタン"
+    },
+    "italian": "イタリア語",
+    "@italian": {
+    "description": "イタリア語を選択するボタン"
+    },
+    "chinese": "中国語",
+    "@chinese": {
+    "description": "中国語を選択するボタン"
+    },
+    "japanese": "日本語",
+    "@japanese": {
+    "description": "日本語を選択するボタン"
+    },
+    "arabic": "アラビア語",
+    "@arabic": {
+    "description": "アラビア語を選択するボタン"
+    },
+    "urdu": "ウルドゥ語",
+    "@urdu": {
+    "description": "ウルドゥ語を選択するボタン"
+    },
+    "createPost": "投稿を作成",
+    "@createPost": {
+    "description": "投稿作成ビューのアプリバータイトル"
+    },
+    "moreImages": "画像を追加",
+    "@moreImages": {
+    "description": "さらに画像を追加するボタン"
+    },
+    "chooseImage": "画像を選択",
+    "@chooseImage": {
+    "description": "画像を選択するボタン"
+    },
+    "gallery": "ギャラリー",
+    "@gallery": {
+    "description": "ギャラリーから画像を選択するボタン"
+    },
+    "camera": "カメラ",
+    "@camera": {
+    "description": "カメラから画像を選択するボタン"
+    }
+    }

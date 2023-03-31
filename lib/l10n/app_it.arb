@@ -1,31 +1,75 @@
 {
-  "@@locale": "it",
-  "templates": "Modelli",
-  "@language": {
-      "description": "Il titolo della barra dell'app nella vista dei modelli"
-  },
-  "viewAll": "Visualizza tutti",
-  "@viewAll": {
-      "description": "Il pulsante per visualizzare tutti i modelli"
-  },
-  "createPost": "Crea post",
-  "@createPost": {
-      "description": "Il titolo della barra dell'app nella vista di creazione di un post"
-  },
-  "moreImages": "Più immagini",
-  "@moreImages": {
-      "description": "Il pulsante per aggiungere più immagini"
-  },
-  "chooseImage": "Scegli immagine",
-  "@chooseImage": {
-      "description": "Il pulsante per scegliere un'immagine"
-  },
-  "gallery": "Galleria",
-  "@gallery": {
-      "description": "Il pulsante per scegliere un'immagine dalla galleria"
-  },
-  "camera": "Fotocamera",
-  "@camera": {
-      "description": "Il pulsante per scegliere un'immagine dalla fotocamera"
-  }
-}
+    "@@locale": "it",
+    "templates": "Modelli",
+    "@language": {
+    "description": "Il titolo dell'appbar della vista dei modelli"
+    },
+    "categories": "Categorie",
+    "@language": {
+    "description": "Il titolo dell'appbar della vista delle categorie"
+    },
+    "settings": "Impostazioni",
+    "@settings": {
+    "description": "Il titolo dell'appbar della vista delle impostazioni"
+    },
+    "language": "Lingua",
+    "@language": {
+    "description": "Il titolo dell'appbar della vista della lingua"
+    },
+    "english": "Inglese",
+    "@english": {
+    "description": "Il pulsante per scegliere la lingua inglese"
+    },
+    "german": "Tedesco",
+    "@german": {
+    "description": "Il pulsante per scegliere la lingua tedesca"
+    },
+    "french": "Francese",
+    "@french": {
+    "description": "Il pulsante per scegliere la lingua francese"
+    },
+    "spanish": "Spagnolo",
+    "@spanish": {
+    "description": "Il pulsante per scegliere la lingua spagnola"
+    },
+    "italian": "Italiano",
+    "@italian": {
+    "description": "Il pulsante per scegliere la lingua italiana"
+    },
+    "chinese": "Cinese",
+    "@chinese": {
+    "description": "Il pulsante per scegliere la lingua cinese"
+    },
+    "japanese": "Giapponese",
+    "@japanese": {
+    "description": "Il pulsante per scegliere la lingua giapponese"
+    },
+    "arabic": "Arabo",
+    "@arabic": {
+    "description": "Il pulsante per scegliere la lingua araba"
+    },
+    "urdu": "Urdu",
+    "@urdu": {
+    "description": "Il pulsante per scegliere la lingua urdu"
+    },
+    "createPost": "Crea Post",
+    "@createPost": {
+    "description": "Il titolo dell'appbar della vista di creazione post"
+    },
+    "moreImages": "Altre Immagini",
+    "@moreImages": {
+    "description": "Il pulsante per aggiungere altre immagini"
+    },
+    "chooseImage": "Scegli Immagine",
+    "@chooseImage": {
+    "description": "Il pulsante per scegliere un'immagine"
+    },
+    "gallery": "Galleria",
+    "@gallery": {
+    "description": "Il pulsante per scegliere un'immagine dalla galleria"
+    },
+    "camera": "Fotocamera",
+    "@camera": {
+    "description": "Il pulsante per scegliere un'immagine dalla fotocamera"
+    }
+    }

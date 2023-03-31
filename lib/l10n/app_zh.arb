@@ -1,31 +1,75 @@
 {
-"@@locale": "zh",
-"templates": "模板",
-"@language": {
-"description": "模板视图的应用栏标题"
-},
-"viewAll": "查看全部",
-"@viewAll": {
-"description": "查看所有模板的按钮"
-},
-"createPost": "创建帖子",
-"@createPost": {
-"description": "创建帖子视图的应用栏标题"
-},
-"moreImages": "更多图片",
-"@moreImages": {
-"description": "添加更多图片的按钮"
-},
-"chooseImage": "选择图片",
-"@chooseImage": {
-"description": "选择图片的按钮"
-},
-"gallery": "相册",
-"@gallery": {
-"description": "从相册选择图片的按钮"
-},
-"camera": "相机",
-"@camera": {
-"description": "从相机选择图片的按钮"
-}
-}
+    "@@locale": "zh",
+    "templates": "模板",
+    "@language": {
+    "description": "模板视图的应用栏标题"
+    },
+    "categories": "分类",
+    "@language": {
+    "description": "分类视图的应用栏标题"
+    },
+    "settings": "设置",
+    "@settings": {
+    "description": "设置视图的应用栏标题"
+    },
+    "language": "语言",
+    "@language": {
+    "description": "语言视图的应用栏标题"
+    },
+    "english": "英语",
+    "@english": {
+    "description": "选择英语语言的按钮"
+    },
+    "german": "德语",
+    "@german": {
+    "description": "选择德语语言的按钮"
+    },
+    "french": "法语",
+    "@french": {
+    "description": "选择法语语言的按钮"
+    },
+    "spanish": "西班牙语",
+    "@spanish": {
+    "description": "选择西班牙语语言的按钮"
+    },
+    "italian": "意大利语",
+    "@italian": {
+    "description": "选择意大利语语言的按钮"
+    },
+    "chinese": "中文",
+    "@chinese": {
+    "description": "选择中文语言的按钮"
+    },
+    "japanese": "日语",
+    "@japanese": {
+    "description": "选择日语语言的按钮"
+    },
+    "arabic": "阿拉伯语",
+    "@arabic": {
+    "description": "选择阿拉伯语语言的按钮"
+    },
+    "urdu": "乌尔都语",
+    "@urdu": {
+    "description": "选择乌尔都语语言的按钮"
+    },
+    "createPost": "创建帖子",
+    "@createPost": {
+    "description": "创建帖子视图的应用栏标题"
+    },
+    "moreImages": "更多图片",
+    "@moreImages": {
+    "description": "添加更多图片的按钮"
+    },
+    "chooseImage": "选择图片",
+    "@chooseImage": {
+    "description": "选择图片的按钮"
+    },
+    "gallery": "图库",
+    "@gallery": {
+    "description": "从图库选择图片的按钮"
+    },
+    "camera": "相机",
+    "@camera": {
+    "description": "从相机选择图片的按钮"
+    }
+    }

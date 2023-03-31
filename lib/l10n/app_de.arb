@@ -1,31 +1,75 @@
 {
-  "@@locale": "de",
-  "templates": "Vorlagen",
-  "@language": {
-      "description": "Der App-Bar-Titel der Vorlagen-Ansicht"
-  },
-  "viewAll": "Alle anzeigen",
-  "@viewAll": {
-      "description": "Die Schaltfläche zum Anzeigen aller Vorlagen"
-  },
-  "createPost": "Beitrag erstellen",
-  "@createPost": {
-      "description": "Der App-Bar-Titel der Ansicht zum Erstellen eines Beitrags"
-  },
-  "moreImages": "Mehr Bilder",
-  "@moreImages": {
-      "description": "Die Schaltfläche zum Hinzufügen weiterer Bilder"
-  },
-  "chooseImage": "Bild auswählen",
-  "@chooseImage": {
-      "description": "Die Schaltfläche zum Auswählen eines Bildes"
-  },
-  "gallery": "Galerie",
-  "@gallery": {
-      "description": "Die Schaltfläche zum Auswählen eines Bildes aus der Galerie"
-  },
-  "camera": "Kamera",
-  "@camera": {
-      "description": "Die Schaltfläche zum Auswählen eines Bildes aus der Kamera"
-  }
-}
+    "@@locale": "de",
+    "templates": "Vorlagen",
+    "@language": {
+    "description": "Der Appbar-Titel der Vorlagenansicht"
+    },
+    "categories": "Kategorien",
+    "@language": {
+    "description": "Der Appbar-Titel der Kategorienansicht"
+    },
+    "settings": "Einstellungen",
+    "@settings": {
+    "description": "Der Appbar-Titel der Einstellungenansicht"
+    },
+    "language": "Sprache",
+    "@language": {
+    "description": "Der Appbar-Titel der Sprachansicht"
+    },
+    "english": "Englisch",
+    "@english": {
+    "description": "Die Schaltfläche zum Auswählen der englischen Sprache"
+    },
+    "german": "Deutsch",
+    "@german": {
+    "description": "Die Schaltfläche zum Auswählen der deutschen Sprache"
+    },
+    "french": "Französisch",
+    "@french": {
+    "description": "Die Schaltfläche zum Auswählen der französischen Sprache"
+    },
+    "spanish": "Spanisch",
+    "@spanish": {
+    "description": "Die Schaltfläche zum Auswählen der spanischen Sprache"
+    },
+    "italian": "Italienisch",
+    "@italian": {
+    "description": "Die Schaltfläche zum Auswählen der italienischen Sprache"
+    },
+    "chinese": "Chinesisch",
+    "@chinese": {
+    "description": "Die Schaltfläche zum Auswählen der chinesischen Sprache"
+    },
+    "japanese": "Japanisch",
+    "@japanese": {
+    "description": "Die Schaltfläche zum Auswählen der japanischen Sprache"
+    },
+    "arabic": "Arabisch",
+    "@arabic": {
+    "description": "Die Schaltfläche zum Auswählen der arabischen Sprache"
+    },
+    "urdu": "Urdu",
+    "@urdu": {
+    "description": "Die Schaltfläche zum Auswählen der urdu Sprache"
+    },
+    "createPost": "Beitrag erstellen",
+    "@createPost": {
+    "description": "Der Appbar-Titel der Ansicht zum Erstellen eines Beitrags"
+    },
+    "moreImages": "Mehr Bilder",
+    "@moreImages": {
+    "description": "Die Schaltfläche zum Hinzufügen weiterer Bilder"
+    },
+    "chooseImage": "Bild auswählen",
+    "@chooseImage": {
+    "description": "Die Schaltfläche zum Auswählen eines Bildes"
+    },
+    "gallery": "Galerie",
+    "@gallery": {
+    "description": "Die Schaltfläche zum Auswählen eines Bildes aus der Galerie"
+    },
+    "camera": "Kamera",
+    "@camera": {
+    "description": "Die Schaltfläche zum Auswählen eines Bildes aus der Kamera"
+    }
+    }
