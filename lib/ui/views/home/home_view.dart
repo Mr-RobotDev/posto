@@ -56,7 +56,7 @@ class HomeView extends StackedView<HomeViewModel> {
             icon: Icon(
               PlatformIcons(context).settings,
             ),
-            label: AppLocalizations.of(context)!.templates,
+            label: AppLocalizations.of(context)!.settings,
           ),
         ],
       ),

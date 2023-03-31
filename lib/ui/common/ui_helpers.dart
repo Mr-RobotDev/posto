@@ -86,7 +86,23 @@ Color isDarkMode(BuildContext context) =>
         ? CupertinoColors.darkBackgroundGray
         : CupertinoColors.lightBackgroundGray;
 
-final Random random = Random();
 double getMinHeight(int index) {
-  return (100 + random.nextInt(400 - 100 + 1)).toDouble();
+  switch (index % 7) {
+    case 0:
+      return 100;
+    case 1:
+      return 350;
+    case 2:
+      return 200;
+    case 3:
+      return 150;
+    case 4:
+      return 400;
+    case 5:
+      return 250;
+    case 6:
+      return 300;
+    default:
+      return 100;
+  }
 }
