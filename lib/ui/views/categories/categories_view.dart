@@ -70,4 +70,11 @@ class CategoriesView extends StackedView<CategoriesViewModel> {
     BuildContext context,
   ) =>
       CategoriesViewModel();
+
+  @override
+  void onViewModelReady(
+    CategoriesViewModel viewModel,
+  ) {
+    viewModel.fetchCategories();
+  }
 }

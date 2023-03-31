@@ -6,5 +6,18 @@ import 'package:stacked/stacked.dart';
 class CategoriesViewModel extends BaseViewModel {
   final _firebaseService = locator<FirebaseService>();
 
-  List<Category>? get categories => _firebaseService.categories;
+  List<Category>? _categories = [];
+  List<Category>? get categories => _categories!;
+
+  Future<void> fetchCategories() async {
+    if (_firebaseService.hasLoaded) {
+      _categories = _firebaseService.categories;
+    } else {
+      _categories = await runBusyFuture(
+        _firebaseService.getCategories(),
+      );
+    }
+    _categories!.shuffle();
+    rebuildUi();
+  }
 }

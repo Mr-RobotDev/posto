@@ -22,9 +22,6 @@ class TemplatesViewModel extends BaseViewModel {
   int _currentCategory = 0;
   int get currentCategory => _currentCategory;
 
-  bool _isFocused = false;
-  bool get isFocused => _isFocused;
-
   Future<void> initialise() async {
     await fetchCategories();
     await fetchTemplates();
@@ -38,11 +35,6 @@ class TemplatesViewModel extends BaseViewModel {
         }
         await fetchTemplates();
       }
-    });
-
-    focusNode.addListener(() {
-      _isFocused = focusNode.hasFocus;
-      notifyListeners();
     });
   }
 
