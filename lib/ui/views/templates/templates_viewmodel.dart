@@ -14,16 +14,13 @@ class TemplatesViewModel extends BaseViewModel {
   final List<Template> _templates = [];
   List<Template> get templates => _templates;
 
-  List<String>? _categories = [];
-  List<String>? get categories => _categories;
+  List<Category>? _categories = [];
+  List<Category>? get categories => _categories!;
 
   bool get initialBusy => _templates.length < 10;
 
   int _currentCategory = 0;
   int get currentCategory => _currentCategory;
-
-  bool _isFocused = false;
-  bool get isFocused => _isFocused;
 
   Future<void> initialise() async {
     await fetchCategories();
@@ -39,11 +36,6 @@ class TemplatesViewModel extends BaseViewModel {
         await fetchTemplates();
       }
     });
-
-    focusNode.addListener(() {
-      _isFocused = focusNode.hasFocus;
-      notifyListeners();
-    });
   }
 
   Future<void> fetchCategories() async {
@@ -53,14 +45,14 @@ class TemplatesViewModel extends BaseViewModel {
       _categories = await runBusyFuture(
         _firebaseService.getCategories(),
       );
-      _categories!.shuffle();
     }
+    _categories!.shuffle();
   }
 
   Future<void> fetchTemplates() async {
     final templates = await runBusyFuture(
       _firebaseService.getTemplates(
-        _categories![_currentCategory++],
+        _categories![_currentCategory++].name,
       ),
     );
     if (templates != null) {

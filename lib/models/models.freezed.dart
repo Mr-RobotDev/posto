@@ -165,3 +165,155 @@ abstract class _Template implements Template {
   _$$_TemplateCopyWith<_$_Template> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+Category _$CategoryFromJson(Map<String, dynamic> json) {
+  return _Category.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Category {
+  String get name => throw _privateConstructorUsedError;
+  String get backgroundImage => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CategoryCopyWith<Category> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CategoryCopyWith<$Res> {
+  factory $CategoryCopyWith(Category value, $Res Function(Category) then) =
+      _$CategoryCopyWithImpl<$Res, Category>;
+  @useResult
+  $Res call({String name, String backgroundImage});
+}
+
+/// @nodoc
+class _$CategoryCopyWithImpl<$Res, $Val extends Category>
+    implements $CategoryCopyWith<$Res> {
+  _$CategoryCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? backgroundImage = null,
+  }) {
+    return _then(_value.copyWith(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      backgroundImage: null == backgroundImage
+          ? _value.backgroundImage
+          : backgroundImage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_CategoryCopyWith<$Res> implements $CategoryCopyWith<$Res> {
+  factory _$$_CategoryCopyWith(
+          _$_Category value, $Res Function(_$_Category) then) =
+      __$$_CategoryCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String name, String backgroundImage});
+}
+
+/// @nodoc
+class __$$_CategoryCopyWithImpl<$Res>
+    extends _$CategoryCopyWithImpl<$Res, _$_Category>
+    implements _$$_CategoryCopyWith<$Res> {
+  __$$_CategoryCopyWithImpl(
+      _$_Category _value, $Res Function(_$_Category) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? backgroundImage = null,
+  }) {
+    return _then(_$_Category(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      backgroundImage: null == backgroundImage
+          ? _value.backgroundImage
+          : backgroundImage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_Category implements _Category {
+  _$_Category({required this.name, required this.backgroundImage});
+
+  factory _$_Category.fromJson(Map<String, dynamic> json) =>
+      _$$_CategoryFromJson(json);
+
+  @override
+  final String name;
+  @override
+  final String backgroundImage;
+
+  @override
+  String toString() {
+    return 'Category(name: $name, backgroundImage: $backgroundImage)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_Category &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.backgroundImage, backgroundImage) ||
+                other.backgroundImage == backgroundImage));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, backgroundImage);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CategoryCopyWith<_$_Category> get copyWith =>
+      __$$_CategoryCopyWithImpl<_$_Category>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CategoryToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Category implements Category {
+  factory _Category(
+      {required final String name,
+      required final String backgroundImage}) = _$_Category;
+
+  factory _Category.fromJson(Map<String, dynamic> json) = _$_Category.fromJson;
+
+  @override
+  String get name;
+  @override
+  String get backgroundImage;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CategoryCopyWith<_$_Category> get copyWith =>
+      throw _privateConstructorUsedError;
+}

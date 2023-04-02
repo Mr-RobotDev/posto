@@ -20,20 +20,18 @@ class HomeView extends StackedView<HomeViewModel> {
     Widget? child,
   ) {
     return PlatformScaffold(
-      appBar: PlatformAppBar(
-        title: Text(viewModel.currentIndex == 0
-            ? AppLocalizations.of(context)!.templates
-            : viewModel.currentIndex == 1
-                ? AppLocalizations.of(context)!.categories
-                : AppLocalizations.of(context)!.settings),
-      ),
-      body: IndexedStack(
-        index: viewModel.currentIndex,
-        children: const [
-          TemplatesView(),
-          CategoriesView(),
-          SettingsView(),
-        ],
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          child: IndexedStack(
+            index: viewModel.currentIndex,
+            children: const [
+              TemplatesView(),
+              CategoriesView(),
+              SettingsView(),
+            ],
+          ),
+        ),
       ),
       bottomNavBar: PlatformNavBar(
         height: Platform.isAndroid ? 84.0 : 60.0,

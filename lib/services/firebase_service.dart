@@ -3,19 +3,21 @@ import 'package:posto/models/models.dart';
 import 'package:posto/ui/common/app_strings.dart';
 
 class FirebaseService {
-  List<String> _categories = [];
+  List<Category>? _categories = [];
+  List<Category>? get categories => _categories;
+  bool get hasLoaded => _categories!.isNotEmpty;
 
-  List<String> get categories => _categories;
-  bool get hasLoaded => _categories.isNotEmpty;
-
-  Future<List<String>?> getCategories() async {
+  Future<List<Category>?> getCategories() async {
     try {
       final QuerySnapshot<Object?> result = await categoryNamesCollection.get();
-      _categories =
-          (result.docs.first.get('categories') as List<dynamic>).cast<String>();
+      _categories = result.docs
+          .map((doc) => Category.fromJson(doc.data() as Map<String, dynamic>))
+          .toList();
       return _categories;
     } on FirebaseException {
-      return null;
+      throw FirebaseException(
+        plugin: '',
+      );
     }
   }
 

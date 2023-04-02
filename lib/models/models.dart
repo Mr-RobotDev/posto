@@ -13,3 +13,14 @@ class Template with _$Template {
   factory Template.fromJson(Map<String, dynamic> json) =>
       _$TemplateFromJson(json);
 }
+
+@freezed
+class Category with _$Category {
+  factory Category({
+    required String name,
+    required String backgroundImage,
+  }) = _Category;
+
+factory Category.fromJson(Map<String, dynamic> json) => 
+_$CategoryFromJson(json);
+}
