@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:posto/ui/common/ui_helpers.dart';
 import 'package:posto/ui/views/categories/categories_view.dart';
 import 'package:posto/ui/views/settings/settings_view.dart';
 import 'package:posto/ui/views/templates/templates_view.dart';
@@ -20,20 +21,29 @@ class HomeView extends StackedView<HomeViewModel> {
     Widget? child,
   ) {
     return PlatformScaffold(
+      cupertino: (_, __) => CupertinoPageScaffoldData(
+        backgroundColor: isDarkModeBackgroundColor(context),
+      ),
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-          child: IndexedStack(
-            index: viewModel.currentIndex,
-            children: const [
-              TemplatesView(),
-              CategoriesView(),
-              SettingsView(),
-            ],
-          ),
+        child: IndexedStack(
+          index: viewModel.currentIndex,
+          children: const [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
+              child: TemplatesView(),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
+              child: CategoriesView(),
+            ),
+            SettingsView(),
+          ],
         ),
       ),
       bottomNavBar: PlatformNavBar(
+        cupertino: (_, __) => CupertinoTabBarData(
+          backgroundColor: isDarkModeNavBarColor(context),
+        ),
         height: Platform.isAndroid ? 84.0 : 60.0,
         currentIndex: viewModel.currentIndex,
         itemChanged: viewModel.setIndex,
