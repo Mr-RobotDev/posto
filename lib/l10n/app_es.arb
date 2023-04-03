@@ -52,6 +52,46 @@
   "@urdu": {
   "description": "El botón para elegir el idioma urdu"
   },
+  "darkmode": "Modo oscuro",
+"@darkmode": {
+"description": "El botón para elegir el modo oscuro"
+},
+"dark": "Tema oscuro",
+"@dark": {
+"description": "El botón para elegir el tema oscuro"
+},
+"light": "Tema claro",
+"@light": {
+"description": "El botón para elegir el tema claro"
+},
+"system": "Tema del sistema",
+"@system": {
+"description": "El botón para elegir el tema del sistema"
+},
+"about": "Acerca de",
+"@about": {
+"description": "El título de la barra de aplicación de la vista Acerca de"
+},
+"noMoreTemplates": "No hay más plantillas",
+"@noMoreTemplates": {
+"description": "El texto para mostrar cuando no hay más plantillas"
+},
+"languageAndRegion": "Idioma y región",
+"@language": {
+"description": "El título de la barra de aplicación de la vista de idioma y región"
+},
+"errorLoadingTemplates": "Error al cargar plantillas",
+"@errorLoadingTemplates": {
+"description": "El mensaje de error que se muestra cuando no se pueden cargar las plantillas"
+},
+"errorLoadingCategories": "Error al cargar categorías",
+"@errorLoadingCategories": {
+"description": "El mensaje de error que se muestra cuando no se pueden cargar las categorías"
+},
+"errorLoadingImage": "Error al cargar imagen",
+"@errorLoadingImage": {
+"description": "El mensaje de error que se muestra cuando no se puede cargar la imagen"
+},
   "createPost": "Crear publicación",
   "@createPost": {
   "description": "El título de la barra de aplicación de la vista de crear publicación"

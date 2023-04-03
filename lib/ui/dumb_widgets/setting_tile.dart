@@ -6,11 +6,13 @@ class SettingTile extends StatelessWidget {
   const SettingTile({
     super.key,
     this.onTap,
-    required this.icon,
+    this.color,
+    this.icon,
     required this.title,
   });
 
   final VoidCallback? onTap;
+  final Color? color;
   final IconData? icon;
   final String title;
 
@@ -22,13 +24,20 @@ class SettingTile extends StatelessWidget {
         color: isDarkModeTileColor(context),
         padding: const EdgeInsets.symmetric(
           horizontal: 16,
-          vertical: 12,
+          vertical: 8,
         ),
         child: Row(
           children: [
-            Icon(
-              icon,
-              color: Colors.grey,
+            Container(
+              decoration: BoxDecoration(
+                color: color,
+                borderRadius: BorderRadius.circular(5),
+              ),
+              padding: const EdgeInsets.all(5),
+              child: Icon(
+                icon,
+                color: Colors.white,
+              ),
             ),
             horizontalSpaceSmall,
             Text(

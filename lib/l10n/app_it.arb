@@ -52,6 +52,46 @@
     "@urdu": {
     "description": "Il pulsante per scegliere la lingua urdu"
     },
+    "darkmode": "Dunkelmodus",
+"@darkmode": {
+"description": "Die Schaltfläche zum Auswählen des Dunkelmodus"
+},
+"dark": "Dunkel",
+"@dark": {
+"description": "Die Schaltfläche zum Auswählen des dunklen Themas"
+},
+"light": "Licht",
+"@light": {
+"description": "Die Schaltfläche zum Auswählen des hellen Themas"
+},
+"system": "System",
+"@system": {
+"description": "Die Schaltfläche zum Auswählen des Systemthemas"
+},
+"about": "Über",
+"@about": {
+"description": "Die Titelleiste der Über-Ansicht"
+},
+"noMoreTemplates": "Keine weiteren Vorlagen",
+"@noMoreTemplates": {
+"description": "Der Text, der angezeigt wird, wenn es keine weiteren Vorlagen gibt"
+},
+"languageAndRegion": "Sprache und Region",
+"@language": {
+"description": "Die Titelleiste der Sprach- und Region-Ansicht"
+},
+"errorLoadingTemplates": "Errore durante il caricamento dei modelli",
+"@errorLoadingTemplates": {
+"description": "Il messaggio di errore da mostrare quando non è possibile caricare i modelli"
+},
+"errorLoadingCategories": "Errore durante il caricamento delle categorie",
+"@errorLoadingCategories": {
+"description": "Il messaggio di errore da mostrare quando non è possibile caricare le categorie"
+},
+"errorLoadingImage": "Errore durante il caricamento dell'immagine",
+"@errorLoadingImage": {
+"description": "Il messaggio di errore da mostrare quando non è possibile caricare l'immagine"
+},
     "createPost": "Crea Post",
     "@createPost": {
     "description": "Il titolo dell'appbar della vista di creazione post"

@@ -52,6 +52,48 @@
     "@urdu": {
     "description": "زر اختيار اللغة الأردية"
     },
+    "darkmode": "الوضع الداكن",
+"@darkmode": {
+"description": "الزر لاختيار الوضع الداكن"
+},
+"dark": "المظهر الداكن",
+"@dark": {
+"description": "الزر لاختيار المظهر الداكن"
+},
+"light": "المظهر الفاتح",
+"@light": {
+"description": "الزر لاختيار المظهر الفاتح"
+},
+"system": "مظهر النظام",
+"@system": {
+"description": "الزر لاختيار مظهر النظام"
+},
+"about": "نبذة عن",
+"@about": {
+"description": "عنوان شريط التطبيق لعرض نبذة عن"
+},
+"noMoreTemplates": "لا توجد مزيد من القوالب",
+"@noMoreTemplates": {
+"description": "النص المراد عرضه عندما لا يوجد مزيد من القوالب"
+},
+"languageAndRegion": "اللغة والمنطقة",
+"@language": {
+"description": "عنوان شريط التطبيق لعرض اللغة والمنطقة"
+},
+"errorLoadingTemplates": "حدث خطأ في تحميل القوالب",
+"@errorLoadingTemplates": {
+"description": "رسالة الخطأ التي يتم عرضها عند عدم تمكن تحميل القوالب"
+},
+"errorLoadingCategories": "حدث خطأ في تحميل الفئات",
+"@errorLoadingCategories": {
+"description": "رسالة الخطأ التي يتم عرضها عند عدم تمكن تحميل الفئات"
+},
+"errorLoadingImage": "حدث خطأ في تحميل الصورة",
+"@errorLoadingImage": {
+"description": "رسالة الخطأ التي يتم عرضها عند عدم تمكن تحميل الصورة"
+},
+
+
     "createPost": "إنشاء منشور",
     "@createPost": {
     "description": "عنوان شريط التطبيق لعرض إنشاء المنشور"

@@ -52,6 +52,46 @@
     "@urdu": {
     "description": "选择乌尔都语语言的按钮"
     },
+    "darkmode": "夜间模式",
+"@darkmode": {
+"description": "选择夜间模式的按钮"
+},
+"dark": "暗色主题",
+"@dark": {
+"description": "选择暗色主题的按钮"
+},
+"light": "亮色主题",
+"@light": {
+"description": "选择亮色主题的按钮"
+},
+"system": "系统主题",
+"@system": {
+"description": "选择系统主题的按钮"
+},
+"about": "关于",
+"@about": {
+"description": "关于视图的应用栏标题"
+},
+"noMoreTemplates": "没有更多的模板",
+"@noMoreTemplates": {
+"description": "没有更多模板时显示的文本"
+},
+"languageAndRegion": "语言和地区",
+"@language": {
+"description": "语言和地区视图的应用栏标题"
+},
+"errorLoadingTemplates": "加载模板出错",
+"@errorLoadingTemplates": {
+"description": "当无法加载模板时显示的错误消息"
+},
+"errorLoadingCategories": "加载类别出错",
+"@errorLoadingCategories": {
+"description": "当无法加载类别时显示的错误消息"
+},
+"errorLoadingImage": "加载图像出错",
+"@errorLoadingImage": {
+"description": "当无法加载图像时显示的错误消息"
+},
     "createPost": "创建帖子",
     "@createPost": {
     "description": "创建帖子视图的应用栏标题"

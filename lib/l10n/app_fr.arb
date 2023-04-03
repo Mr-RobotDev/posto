@@ -52,6 +52,46 @@
     "@urdu": {
     "description": "Le bouton pour choisir la langue ourdou"
     },
+    "darkmode": "Mode sombre",
+"@darkmode": {
+"description": "Le bouton pour choisir le mode sombre"
+},
+"dark": "Thème sombre",
+"@dark": {
+"description": "Le bouton pour choisir le thème sombre"
+},
+"light": "Thème clair",
+"@light": {
+"description": "Le bouton pour choisir le thème clair"
+},
+"system": "Thème du système",
+"@system": {
+"description": "Le bouton pour choisir le thème du système"
+},
+"about": "À propos",
+"@about": {
+"description": "Le titre de la barre d'application de la vue À propos"
+},
+"noMoreTemplates": "Plus de modèles",
+"@noMoreTemplates": {
+"description": "Le texte à afficher lorsqu'il n'y a plus de modèles"
+},
+"languageAndRegion": "Langue et région",
+"@language": {
+"description": "Le titre de la barre d'application de la vue de langue et région"
+},
+"errorLoadingTemplates": "Erreur lors du chargement des modèles",
+"@errorLoadingTemplates": {
+"description": "Le message d'erreur à afficher lorsque les modèles ne peuvent pas être chargés"
+},
+"errorLoadingCategories": "Erreur lors du chargement des catégories",
+"@errorLoadingCategories": {
+"description": "Le message d'erreur à afficher lorsque les catégories ne peuvent pas être chargées"
+},
+"errorLoadingImage": "Erreur lors du chargement de l'image",
+"@errorLoadingImage": {
+"description": "Le message d'erreur à afficher lorsque l'image ne peut pas être chargée"
+},
     "createPost": "Créer une publication",
     "@createPost": {
     "description": "Le titre de l'application pour la vue de création de publication"

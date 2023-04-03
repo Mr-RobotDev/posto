@@ -52,6 +52,46 @@
   "@urdu": {
   "description": "اردو زبان کا انتخاب کرنے کا بٹن"
   },
+  "darkmode": "ڈارک موڈ",
+"@darkmode": {
+"description": "ڈارک موڈ منتخب کرنے والے بٹن"
+},
+"dark": "ڈارک",
+"@dark": {
+"description": "ڈارک تھیم منتخب کرنے والے بٹن"
+},
+"light": "لائٹ",
+"@light": {
+"description": "لائٹ تھیم منتخب کرنے والے بٹن"
+},
+"system": "سسٹم",
+"@system": {
+"description": "سسٹم تھیم منتخب کرنے والے بٹن"
+},
+"about": "کے بارے میں",
+"@about": {
+"description": "کے بارے میں ویو کا عنوان"
+},
+"noMoreTemplates": "کوئی مزید ٹیمپلیٹ نہیں",
+"@noMoreTemplates": {
+"description": "جب کوئی ٹیمپلیٹ نہیں رہتا تو دکھانے والا ٹیکسٹ"
+},
+"languageAndRegion": "زبان اور علاقہ",
+"@language": {
+"description": "زبان اور علاقہ ویو کا عنوان"
+},
+"errorLoadingTemplates": "ٹیمپلیٹس لوڈ کرنے میں خرابی",
+"@errorLoadingTemplates": {
+"description": "ٹیمپلیٹس لوڈ نہ ہونے کی صورت میں دکھانے کے لئے خرابی کا پیغام"
+},
+"errorLoadingCategories": "زمرے لوڈ کرنے میں خرابی",
+"@errorLoadingCategories": {
+"description": "زمرے لوڈ نہ ہونے کی صورت میں دکھانے کے لئے خرابی کا پیغام"
+},
+"errorLoadingImage": "تصویر لوڈ کرنے میں خرابی",
+"@errorLoadingImage": {
+"description": "تصویر لوڈ نہ ہونے کی صورت میں دکھانے کے لئے خرابی کا پیغام"
+},
     "createPost": "پوسٹ بنائیں",
     "@createPost": {
       "description": "The appbar title of the create post view"

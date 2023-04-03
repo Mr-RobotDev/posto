@@ -52,6 +52,58 @@
     "@urdu": {
         "description": "The button to choose the urdu language"
     },
+    "darkmode": "Darkmode",
+    "@darkmode": {
+        "description": "The button to choose the darkmode"
+    },
+    "dark": "Dark",
+    "@dark": {
+        "description": "The button to choose the dark theme"
+    },
+    "light": "Light",
+    "@light": {
+        "description": "The button to choose the light theme"
+    },
+    "system": "System",
+    "@system": {
+        "description": "The button to choose the system theme"
+    },
+    "about": "About",
+    "@about": {
+        "description": "The appbar title of the about view"
+    },
+    "noMoreTemplates": "No more templates",
+    "@noMoreTemplates": {
+        "description": "The text to show when there are no more templates"
+    },
+    "languageAndRegion": "Language & Region",
+    "@language": {
+        "description": "The appbar title of the language and region view"
+    },
+    "errorLoadingTemplates": "Error loading templates",
+    "@errorLoadingTemplates": {
+        "description": "The error message to show when the templates could not be loaded"
+    },
+    "errorLoadingCategories": "Error loading categories",
+    "@errorLoadingCategories": {
+        "description": "The error message to show when the categories could not be loaded"
+    },
+    "errorLoadingImage": "Error loading image",
+    "@errorLoadingImage": {
+        "description": "The error message to show when the image could not be loaded"
+    },
+    "errorLoadingTemplates": "حدث خطأ في تحميل القوالب",
+"@errorLoadingTemplates": {
+"description": "رسالة الخطأ التي يتم عرضها عند عدم تمكن تحميل القوالب"
+},
+"errorLoadingCategories": "حدث خطأ في تحميل الفئات",
+"@errorLoadingCategories": {
+"description": "رسالة الخطأ التي يتم عرضها عند عدم تمكن تحميل الفئات"
+},
+"errorLoadingImage": "حدث خطأ في تحميل الصورة",
+"@errorLoadingImage": {
+"description": "رسالة الخطأ التي يتم عرضها عند عدم تمكن تحميل الصورة"
+},
     "createPost": "Create Post",
     "@createPost": {
         "description": "The appbar title of the create post view"

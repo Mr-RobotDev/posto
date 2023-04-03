@@ -31,13 +31,21 @@ class SettingsView extends StackedView<SettingsViewModel> {
         ),
         verticalSpaceMedium,
         SettingTile(
-          icon: PlatformIcons(context).brightness,
-          title: 'Dark',
+          color: Colors.blue,
+          icon: PlatformIcons(context).brightnessSolid,
+          title: AppLocalizations.of(context)!.darkmode,
         ),
         verticalSpaceMedium,
         SettingTile(
+          color: Colors.green,
           icon: PlatformIcons(context).flag,
-          title: 'Language & Reigon',
+          title: AppLocalizations.of(context)!.language,
+        ),
+        verticalSpaceMedium,
+        SettingTile(
+          color: Colors.red,
+          icon: PlatformIcons(context).info,
+          title: AppLocalizations.of(context)!.about,
         ),
       ],
     );
