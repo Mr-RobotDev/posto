@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:posto/ui/dumb_widgets/animated_dialog_widget.dart';
 import 'package:stacked/stacked.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -44,9 +45,21 @@ class TemplatesView extends StackedView<TemplatesViewModel> {
                   itemBuilder: (context, index) {
                     final template = viewModel.templates[index];
                     double height = getMinHeight(index);
-                    return ShimmerImageWidget(
-                      url: template.thumbnail,
-                      height: height,
+                    return GestureDetector(
+                      onLongPress: () {
+                        viewModel.popupDialog = OverlayEntry(
+                          builder: (context) => AnimatedDialog(
+                            child: ShimmerImageWidget(url: template.thumbnail),
+                          ),
+                        );
+                        Overlay.of(context).insert(viewModel.popupDialog!);
+                      },
+                      onLongPressEnd: (details) =>
+                          viewModel.popupDialog?.remove(),
+                      child: ShimmerImageWidget(
+                        url: template.thumbnail,
+                        height: height,
+                      ),
                     );
                   },
                 ),

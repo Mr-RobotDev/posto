@@ -77,8 +77,8 @@ class SettingsView extends StackedView<SettingsViewModel> {
         ),
         SettingTile(
           title: 'Rate',
-          icon: PlatformIcons(context).starCircleSolid,
-          color: Colors.yellow,
+          icon: PlatformIcons(context).star,
+          color: Colors.amber,
         ),
         SettingTile(
           title: 'Privacy Policy',

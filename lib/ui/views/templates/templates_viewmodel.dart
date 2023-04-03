@@ -8,6 +8,7 @@ class TemplatesViewModel extends BaseViewModel {
   final _firebaseService = locator<FirebaseService>();
 
   ScrollController scrollController = ScrollController();
+  OverlayEntry? popupDialog;
 
   FocusNode focusNode = FocusNode();
 
