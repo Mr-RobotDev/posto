@@ -22,7 +22,9 @@ class HomeView extends StackedView<HomeViewModel> {
   ) {
     return PlatformScaffold(
       cupertino: (_, __) => CupertinoPageScaffoldData(
-        backgroundColor: isDarkModeBackgroundColor(context),
+        backgroundColor: viewModel.currentIndex == 2
+            ? settingsBackgroundColor(context)
+            : scaffoldColor(context),
       ),
       body: SafeArea(
         child: IndexedStack(

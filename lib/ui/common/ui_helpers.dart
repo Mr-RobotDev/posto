@@ -91,10 +91,15 @@ Color isDarkModeTileColor(BuildContext context) =>
         ? CupertinoColors.darkBackgroundGray
         : CupertinoColors.white;
 
-Color isDarkModeBackgroundColor(BuildContext context) =>
+Color settingsBackgroundColor(BuildContext context) =>
     MediaQuery.of(context).platformBrightness == Brightness.dark
         ? CupertinoColors.black
         : CupertinoColors.lightBackgroundGray;
+
+Color scaffoldColor(BuildContext context) =>
+    MediaQuery.of(context).platformBrightness == Brightness.dark
+        ? CupertinoColors.black
+        : CupertinoColors.white;
 
 Color isDarkModeNavBarColor(BuildContext context) =>
     MediaQuery.of(context).platformBrightness == Brightness.dark
