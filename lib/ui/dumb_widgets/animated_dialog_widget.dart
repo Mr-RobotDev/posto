@@ -34,6 +34,12 @@ class AnimatedDialogState extends State<AnimatedDialog>
   }
 
   @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Material(
       color: Colors.black.withOpacity(opacityAnimation.value),

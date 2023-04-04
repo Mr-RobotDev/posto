@@ -92,18 +92,38 @@
     "@errorLoadingImage": {
         "description": "The error message to show when the image could not be loaded"
     },
-    "errorLoadingTemplates": "حدث خطأ في تحميل القوالب",
-"@errorLoadingTemplates": {
-"description": "رسالة الخطأ التي يتم عرضها عند عدم تمكن تحميل القوالب"
-},
-"errorLoadingCategories": "حدث خطأ في تحميل الفئات",
-"@errorLoadingCategories": {
-"description": "رسالة الخطأ التي يتم عرضها عند عدم تمكن تحميل الفئات"
-},
-"errorLoadingImage": "حدث خطأ في تحميل الصورة",
-"@errorLoadingImage": {
-"description": "رسالة الخطأ التي يتم عرضها عند عدم تمكن تحميل الصورة"
-},
+    "preferences": "Preferences",
+    "@preferences": {
+        "description": "The text preferences"
+    },
+    "appInfo": "App Info",
+    "@appInfo": {
+        "description": "The text app info"
+    },
+    "feedback": "Feedback",
+    "@feedback": {
+        "description": "The text feedback"
+    },
+    "share": "Share",
+    "@share": {
+        "description": "The text share"
+    },
+    "rate": "Rate",
+    "@rate": {
+        "description": "The text rate"
+    },
+    "privacyPolicy": "Privacy Policy",
+    "@privacyPolicy": {
+        "description": "The text privacy policy"
+    },
+    "termsOfUse": "Terms of Use",
+    "@termsOfUse": {
+        "description": "The text terms of use"
+    },
+    "version": "Version",
+    "@version": {
+        "description": "The text version"
+    },
     "createPost": "Create Post",
     "@createPost": {
         "description": "The appbar title of the create post view"

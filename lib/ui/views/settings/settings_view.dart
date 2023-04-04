@@ -16,81 +16,90 @@ class SettingsView extends StackedView<SettingsViewModel> {
     SettingsViewModel viewModel,
     Widget? child,
   ) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-          child: Text(
-            AppLocalizations.of(context)!.settings,
-            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
-                  color: isDarkModeTextColor(context),
-                  fontWeight: FontWeight.bold,
-                ),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: Text(
+              AppLocalizations.of(context)!.settings,
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
+                    color: isDarkModeTextColor(context),
+                    fontWeight: FontWeight.bold,
+                  ),
+            ),
           ),
-        ),
-        verticalSpaceMedium,
-        Padding(
-          padding: const EdgeInsets.all(20),
-          child: Text(
-            'Preferences',
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                  color: Colors.grey,
-                  letterSpacing: 1.5,
-                ),
+          verticalSpaceSmall,
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Text(
+              AppLocalizations.of(context)!.preferences,
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                    color: Colors.grey,
+                    letterSpacing: 1.5,
+                  ),
+            ),
           ),
-        ),
-        SettingTile(
-          color: Colors.green,
-          icon: PlatformIcons(context).flag,
-          title: AppLocalizations.of(context)!.language,
-        ),
-        Padding(
-          padding: const EdgeInsets.all(20),
-          child: Text(
-            'App Info',
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                  color: Colors.grey,
-                  letterSpacing: 1.5,
-                ),
+          SettingTile(
+            onTap: viewModel.navigateToLanguageRegion,
+            color: Colors.green,
+            icon: PlatformIcons(context).flag,
+            title: AppLocalizations.of(context)!.languageAndRegion,
           ),
-        ),
-        SettingTile(
-          color: Colors.red,
-          icon: PlatformIcons(context).info,
-          title: AppLocalizations.of(context)!.about,
-        ),
-        SettingTile(
-          color: Colors.blue,
-          icon: PlatformIcons(context).settings,
-          title: AppLocalizations.of(context)!.settings,
-        ),
-        SettingTile(
-          title: 'Feedback',
-          icon: PlatformIcons(context).checkMark,
-          color: Colors.orange,
-        ),
-        SettingTile(
-          title: 'Share',
-          icon: PlatformIcons(context).share,
-          color: Colors.purple,
-        ),
-        SettingTile(
-          title: 'Rate',
-          icon: PlatformIcons(context).star,
-          color: Colors.amber,
-        ),
-        SettingTile(
-          title: 'Privacy Policy',
-          icon: PlatformIcons(context).padLock,
-          color: Colors.pink,
-        ),
-        SettingTile(
-          title: 'Terms of Service',
-          icon: PlatformIcons(context).cloudDownloadSolid,
-          color: Colors.teal,
-        ),
-      ],
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Text(
+              AppLocalizations.of(context)!.appInfo,
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                    color: Colors.grey,
+                    letterSpacing: 1.5,
+                  ),
+            ),
+          ),
+          SettingTile(
+            color: Colors.red,
+            icon: PlatformIcons(context).info,
+            title: AppLocalizations.of(context)!.about,
+          ),
+          SettingTile(
+            color: Colors.blue,
+            icon: PlatformIcons(context).settings,
+            title: AppLocalizations.of(context)!.settings,
+          ),
+          SettingTile(
+            title: AppLocalizations.of(context)!.feedback,
+            icon: PlatformIcons(context).checkMark,
+            color: Colors.orange,
+          ),
+          SettingTile(
+            title: AppLocalizations.of(context)!.share,
+            icon: PlatformIcons(context).share,
+            color: Colors.purple,
+          ),
+          SettingTile(
+            title: AppLocalizations.of(context)!.rate,
+            icon: PlatformIcons(context).star,
+            color: Colors.amber,
+          ),
+          SettingTile(
+            title: AppLocalizations.of(context)!.privacyPolicy,
+            icon: PlatformIcons(context).padLock,
+            color: Colors.pink,
+          ),
+          SettingTile(
+            title: AppLocalizations.of(context)!.termsOfUse,
+            icon: PlatformIcons(context).cloud,
+            color: Colors.teal,
+          ),
+          // version
+          SettingTile(
+            title: AppLocalizations.of(context)!.version,
+            icon: PlatformIcons(context).create,
+            color: Colors.indigo,
+          ),
+        ],
+      ),
     );
   }
 

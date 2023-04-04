@@ -92,6 +92,38 @@
 "@errorLoadingImage": {
 "description": "Le message d'erreur à afficher lorsque l'image ne peut pas être chargée"
 },
+"preferences": "Préférences",
+"@preferences": {
+"description": "Le texte des préférences"
+},
+"appInfo": "Informations sur l'application",
+"@appInfo": {
+"description": "Le texte des informations sur l'application"
+},
+"feedback": "Commentaires",
+"@feedback": {
+"description": "Le texte des commentaires"
+},
+"share": "Partager",
+"@share": {
+"description": "Le texte pour partager"
+},
+"rate": "Évaluer",
+"@rate": {
+"description": "Le texte pour évaluer"
+},
+"privacyPolicy": "Politique de confidentialité",
+"@privacyPolicy": {
+"description": "Le texte de la politique de confidentialité"
+},
+"termsOfUse": "Conditions d'utilisation",
+"@termsOfUse": {
+"description": "Le texte des conditions d'utilisation"
+},
+"version": "Version",
+"@version": {
+"description": "Le texte de la version"
+},
     "createPost": "Créer une publication",
     "@createPost": {
     "description": "Le titre de l'application pour la vue de création de publication"

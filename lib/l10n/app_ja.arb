@@ -92,6 +92,38 @@
 "@errorLoadingImage": {
 "description": "画像の読み込みに失敗した場合に表示するエラーメッセージ"
 },
+"preferences": "設定",
+"@preferences": {
+"description": "設定のテキスト"
+},
+"appInfo": "アプリ情報",
+"@appInfo": {
+"description": "アプリ情報のテキスト"
+},
+"feedback": "フィードバック",
+"@feedback": {
+"description": "フィードバックのテキスト"
+},
+"share": "共有",
+"@share": {
+"description": "共有のテキスト"
+},
+"rate": "評価",
+"@rate": {
+"description": "評価のテキスト"
+},
+"privacyPolicy": "プライバシーポリシー",
+"@privacyPolicy": {
+"description": "プライバシーポリシーのテキスト"
+},
+"termsOfUse": "利用規約",
+"@termsOfUse": {
+"description": "利用規約のテキスト"
+},
+"version": "バージョン",
+"@version": {
+"description": "バージョンのテキスト"
+},
     "createPost": "投稿を作成",
     "@createPost": {
     "description": "投稿作成ビューのアプリバータイトル"

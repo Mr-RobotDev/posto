@@ -92,6 +92,38 @@
 "@errorLoadingImage": {
 "description": "Il messaggio di errore da mostrare quando non è possibile caricare l'immagine"
 },
+"preferences": "Preferenze",
+"@preferences": {
+"description": "Il testo delle preferenze"
+},
+"appInfo": "Informazioni sull'applicazione",
+"@appInfo": {
+"description": "Il testo delle informazioni sull'applicazione"
+},
+"feedback": "Feedback",
+"@feedback": {
+"description": "Il testo del feedback"
+},
+"share": "Condividi",
+"@share": {
+"description": "Il testo per la condivisione"
+},
+"rate": "Valuta",
+"@rate": {
+"description": "Il testo per la valutazione"
+},
+"privacyPolicy": "Informativa sulla privacy",
+"@privacyPolicy": {
+"description": "Il testo dell'informativa sulla privacy"
+},
+"termsOfUse": "Condizioni d'uso",
+"@termsOfUse": {
+"description": "Il testo delle condizioni d'uso"
+},
+"version": "Versione",
+"@version": {
+"description": "Il testo della versione"
+},
     "createPost": "Crea Post",
     "@createPost": {
     "description": "Il titolo dell'appbar della vista di creazione post"

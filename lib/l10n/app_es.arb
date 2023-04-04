@@ -92,6 +92,38 @@
 "@errorLoadingImage": {
 "description": "El mensaje de error que se muestra cuando no se puede cargar la imagen"
 },
+"preferences": "Preferencias",
+"@preferences": {
+"description": "El texto de las preferencias"
+},
+"appInfo": "Información de la aplicación",
+"@appInfo": {
+"description": "El texto de la información de la aplicación"
+},
+"feedback": "Comentarios",
+"@feedback": {
+"description": "El texto de los comentarios"
+},
+"share": "Compartir",
+"@share": {
+"description": "El texto para compartir"
+},
+"rate": "Valorar",
+"@rate": {
+"description": "El texto para valorar"
+},
+"privacyPolicy": "Política de privacidad",
+"@privacyPolicy": {
+"description": "El texto de la política de privacidad"
+},
+"termsOfUse": "Condiciones de uso",
+"@termsOfUse": {
+"description": "El texto de las condiciones de uso"
+},
+"version": "Versión",
+"@version": {
+"description": "El texto de la versión"
+},
   "createPost": "Crear publicación",
   "@createPost": {
   "description": "El título de la barra de aplicación de la vista de crear publicación"

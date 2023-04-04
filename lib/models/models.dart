@@ -21,6 +21,6 @@ class Category with _$Category {
     required String backgroundImage,
   }) = _Category;
 
-factory Category.fromJson(Map<String, dynamic> json) => 
-_$CategoryFromJson(json);
+  factory Category.fromJson(Map<String, dynamic> json) =>
+      _$CategoryFromJson(json);
 }

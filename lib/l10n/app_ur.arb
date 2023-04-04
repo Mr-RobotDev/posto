@@ -68,7 +68,7 @@
 "@system": {
 "description": "سسٹم تھیم منتخب کرنے والے بٹن"
 },
-"about": "کے بارے میں",
+"about": "اپپ کے بارے میں",
 "@about": {
 "description": "کے بارے میں ویو کا عنوان"
 },
@@ -91,6 +91,38 @@
 "errorLoadingImage": "تصویر لوڈ کرنے میں خرابی",
 "@errorLoadingImage": {
 "description": "تصویر لوڈ نہ ہونے کی صورت میں دکھانے کے لئے خرابی کا پیغام"
+},
+"preferences": "ترجیحات",
+"@preferences": {
+"description": "ترجیحات کا متن"
+},
+"appInfo": "ایپ کی معلومات",
+"@appInfo": {
+"description": "ایپ کی معلومات کا متن"
+},
+"feedback": "تاثرات",
+"@feedback": {
+"description": "تاثرات کا متن"
+},
+"share": "اشتراک کریں",
+"@share": {
+"description": "اشتراک کرنے کا متن"
+},
+"rate": "درجہ",
+"@rate": {
+"description": "درجہ دینے کا متن"
+},
+"privacyPolicy": "رازداری کی پالیسی",
+"@privacyPolicy": {
+"description": "رازداری کی پالیسی کا متن"
+},
+"termsOfUse": "استعمال کے شرائط",
+"@termsOfUse": {
+"description": "استعمال کے شرائط کا متن"
+},
+"version": "ورژن",
+"@version": {
+"description": "ورژن کا متن"
 },
     "createPost": "پوسٹ بنائیں",
     "@createPost": {

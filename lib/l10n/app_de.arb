@@ -92,6 +92,38 @@
 "@errorLoadingImage": {
 "description": "Die Fehlermeldung, die angezeigt wird, wenn das Bild nicht geladen werden kann"
 },
+"preferences": "Einstellungen",
+"@preferences": {
+"description": "Der Text der Einstellungen"
+},
+"appInfo": "App-Informationen",
+"@appInfo": {
+"description": "Der Text der App-Informationen"
+},
+"feedback": "Feedback",
+"@feedback": {
+"description": "Der Text des Feedbacks"
+},
+"share": "Teilen",
+"@share": {
+"description": "Der Text zum Teilen"
+},
+"rate": "Bewertung",
+"@rate": {
+"description": "Der Text zur Bewertung"
+},
+"privacyPolicy": "Datenschutzerklärung",
+"@privacyPolicy": {
+"description": "Der Text der Datenschutzerklärung"
+},
+"termsOfUse": "Nutzungsbedingungen",
+"@termsOfUse": {
+"description": "Der Text der Nutzungsbedingungen"
+},
+"version": "Version",
+"@version": {
+"description": "Der Text der Version"
+},
     "createPost": "Beitrag erstellen",
     "@createPost": {
     "description": "Der Appbar-Titel der Ansicht zum Erstellen eines Beitrags"
