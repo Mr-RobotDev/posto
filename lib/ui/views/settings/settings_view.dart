@@ -46,6 +46,27 @@ class SettingsView extends StackedView<SettingsViewModel> {
             color: Colors.green,
             icon: PlatformIcons(context).flag,
             title: AppLocalizations.of(context)!.languageAndRegion,
+            trailing: viewModel.languageCode == 'ar'
+                ? AppLocalizations.of(context)!.arabic
+                : viewModel.languageCode == 'de'
+                    ? AppLocalizations.of(context)!.german
+                    : viewModel.languageCode == 'en'
+                        ? AppLocalizations.of(context)!.english
+                        : viewModel.languageCode == 'es'
+                            ? AppLocalizations.of(context)!.spanish
+                            : viewModel.languageCode == 'fr'
+                                ? AppLocalizations.of(context)!.french
+                                : viewModel.languageCode == 'it'
+                                    ? AppLocalizations.of(context)!.italian
+                                    : viewModel.languageCode == 'ja'
+                                        ? AppLocalizations.of(context)!.japanese
+                                        : viewModel.languageCode == 'ur'
+                                            ? AppLocalizations.of(context)!.urdu
+                                            : viewModel.languageCode == 'zh'
+                                                ? AppLocalizations.of(context)!
+                                                    .chinese
+                                                : AppLocalizations.of(context)!
+                                                    .english,
           ),
           Padding(
             padding: const EdgeInsets.all(20),
@@ -108,4 +129,11 @@ class SettingsView extends StackedView<SettingsViewModel> {
     BuildContext context,
   ) =>
       SettingsViewModel();
+
+  @override
+  void onViewModelReady(
+    SettingsViewModel viewModel,
+  ) {
+    viewModel.init();
+  }
 }

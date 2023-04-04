@@ -9,12 +9,14 @@ class SettingTile extends StatelessWidget {
     this.color,
     this.icon,
     required this.title,
+    this.trailing,
   });
 
   final VoidCallback? onTap;
   final Color? color;
   final IconData? icon;
   final String title;
+  final String? trailing;
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +50,12 @@ class SettingTile extends StatelessWidget {
               ),
             ),
             const Spacer(),
+            Text(
+              trailing ?? '',
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                    color: Colors.grey,
+                  ),
+            ),
             Icon(
               PlatformIcons(context).rightChevron,
               color: Colors.grey,

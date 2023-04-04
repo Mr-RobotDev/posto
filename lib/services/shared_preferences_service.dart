@@ -12,6 +12,6 @@ class SharedPreferencesService {
   }
 
   String? getString(String key) {
-    return _preferences!.getString(key);
+    return _preferences?.getString(key);
   }
 }
