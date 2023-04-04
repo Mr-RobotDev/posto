@@ -10,6 +10,7 @@ import 'package:posto/ui/views/language_region/language_region_view.dart';
 import 'package:posto/services/localization_service.dart';
 import 'package:posto/ui/views/app/app_view.dart';
 import 'package:posto/services/shared_preferences_service.dart';
+import 'package:posto/ui/views/category_templates/category_templates_view.dart';
 // @stacked-import
 
 @StackedApp(
@@ -20,6 +21,7 @@ import 'package:posto/services/shared_preferences_service.dart';
     MaterialRoute(page: SettingsView),
     MaterialRoute(page: LanguageRegionView),
     MaterialRoute(page: AppView),
+    MaterialRoute(page: CategoryTemplatesView),
 // @stacked-route
   ],
   dependencies: [

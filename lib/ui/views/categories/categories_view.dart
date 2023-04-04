@@ -38,23 +38,28 @@ class CategoriesView extends StackedView<CategoriesViewModel> {
           delegate: SliverChildBuilderDelegate(
             childCount: viewModel.categories!.length,
             (BuildContext context, int index) {
-              return GridTile(
-                child: ShimmerImage(
-                  url: viewModel.categories![index].backgroundImage,
+              return GestureDetector(
+                onTap: () => viewModel.navigateToCategoryTemplates(
+                  viewModel.categories![index],
                 ),
-                footer: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 4.0,
-                    vertical: 4.0,
+                child: GridTile(
+                  child: ShimmerImage(
+                    url: viewModel.categories![index].backgroundImage,
                   ),
-                  child: FittedBox(
-                    fit: BoxFit.scaleDown,
-                    child: Text(
-                      viewModel.categories![index].name,
-                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
+                  footer: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 4.0,
+                      vertical: 4.0,
+                    ),
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        viewModel.categories![index].name,
+                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
                     ),
                   ),
                 ),
