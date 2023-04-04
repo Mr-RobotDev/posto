@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:posto/ui/common/ui_helpers.dart';
-import 'package:posto/ui/dumb_widgets/shimmer_image_widget.dart';
+import 'package:posto/ui/dumb_widgets/shimmer_image.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:stacked/stacked.dart';
 
@@ -39,7 +39,7 @@ class CategoriesView extends StackedView<CategoriesViewModel> {
             childCount: viewModel.categories!.length,
             (BuildContext context, int index) {
               return GridTile(
-                child: ShimmerImageWidget(
+                child: ShimmerImage(
                   url: viewModel.categories![index].backgroundImage,
                 ),
                 footer: Padding(

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:posto/app/app.locator.dart';
 import 'package:posto/services/localization_service.dart';
+import 'package:posto/services/shared_preferences_service.dart';
 import 'package:stacked/stacked.dart';
 
 class LanguageRegionViewModel extends BaseViewModel {
   final _localizationService = locator<LocalizationService>();
+  final _sharedPreferencesService = locator<SharedPreferencesService>();
+
   int current = 0;
   Locale? locale;
 
@@ -12,6 +15,43 @@ class LanguageRegionViewModel extends BaseViewModel {
     current = index;
     updateLocale();
     _localizationService.setLocale(locale);
+    _sharedPreferencesService.setString('locale', locale!.languageCode);
+    notifyListeners();
+  }
+
+  void updateIndex() {
+    final localeString = _sharedPreferencesService.getString('locale');
+    switch (localeString) {
+      case 'en':
+        current = 0;
+        break;
+      case 'ar':
+        current = 1;
+        break;
+      case 'zh':
+        current = 2;
+        break;
+      case 'es':
+        current = 3;
+        break;
+      case 'de':
+        current = 4;
+        break;
+      case 'ur':
+        current = 5;
+        break;
+      case 'fr':
+        current = 6;
+        break;
+      case 'it':
+        current = 7;
+        break;
+      case 'ja':
+        current = 8;
+        break;
+      default:
+        current = 0;
+    }
     notifyListeners();
   }
 

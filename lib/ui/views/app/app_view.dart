@@ -64,7 +64,7 @@ class AppView extends StackedView<AppViewModel> {
   @override
   void onViewModelReady(
     AppViewModel viewModel,
-  ) {
-    viewModel.fetchLocale();
+  ) async {
+    await viewModel.init();
   }
 }

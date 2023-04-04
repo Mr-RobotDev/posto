@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:posto/ui/dumb_widgets/animated_dialog_widget.dart';
+import 'package:posto/ui/dumb_widgets/animated_dialog.dart';
 import 'package:stacked/stacked.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:posto/ui/common/ui_helpers.dart';
-import 'package:posto/ui/dumb_widgets/shimmer_image_widget.dart';
+import 'package:posto/ui/dumb_widgets/shimmer_image.dart';
 import 'package:posto/ui/dumb_widgets/templates_loading_shimmer_widget.dart';
 
 import 'templates_viewmodel.dart';
@@ -34,7 +34,7 @@ class TemplatesView extends StackedView<TemplatesViewModel> {
           child: verticalSpaceSmall,
         ),
         viewModel.initialBusy
-            ? const TemplatesLoadingShimmerWidget()
+            ? const TemplatesLoadingShimmer()
             : SliverFillRemaining(
                 child: MasonryGridView.count(
                   controller: viewModel.scrollController,
@@ -49,14 +49,14 @@ class TemplatesView extends StackedView<TemplatesViewModel> {
                       onLongPress: () {
                         viewModel.popupDialog = OverlayEntry(
                           builder: (context) => AnimatedDialog(
-                            child: ShimmerImageWidget(url: template.thumbnail),
+                            child: ShimmerImage(url: template.thumbnail),
                           ),
                         );
                         Overlay.of(context).insert(viewModel.popupDialog!);
                       },
                       onLongPressEnd: (details) =>
                           viewModel.popupDialog?.remove(),
-                      child: ShimmerImageWidget(
+                      child: ShimmerImage(
                         url: template.thumbnail,
                         height: height,
                       ),

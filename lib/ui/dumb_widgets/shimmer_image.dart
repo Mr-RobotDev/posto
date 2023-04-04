@@ -1,11 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:posto/ui/common/app_strings.dart';
-import 'package:posto/ui/dumb_widgets/image_error_widget.dart';
+import 'package:posto/ui/dumb_widgets/image_error.dart';
 import 'package:shimmer/shimmer.dart';
 
-class ShimmerImageWidget extends StatelessWidget {
-  const ShimmerImageWidget({
+class ShimmerImage extends StatelessWidget {
+  const ShimmerImage({
     super.key,
     required this.url,
     this.height,
@@ -22,7 +22,7 @@ class ShimmerImageWidget extends StatelessWidget {
         height: height,
         imageUrl: url,
         fit: BoxFit.cover,
-        errorWidget: (context, url, error) => const ImageErrorWidget(),
+        errorWidget: (context, url, error) => const ImageError(),
         placeholder: (context, url) => Shimmer.fromColors(
           baseColor: defaultShimmerBaseColor,
           highlightColor: defaultShimmerHighlightColor,

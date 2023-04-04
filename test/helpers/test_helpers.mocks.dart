@@ -11,6 +11,7 @@ import 'package:mockito/mockito.dart' as _i1;
 import 'package:posto/models/models.dart' as _i7;
 import 'package:posto/services/firebase_service.dart' as _i6;
 import 'package:posto/services/localization_service.dart' as _i8;
+import 'package:posto/services/shared_preferences_service.dart' as _i9;
 import 'package:stacked_services/stacked_services.dart' as _i2;
 
 // ignore_for_file: type=lint
@@ -676,3 +677,9 @@ class MockLocalizationService extends _i1.Mock
         returnValueForMissingStub: null,
       );
 }
+
+/// A class which mocks [SharedPreferencesService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockSharedPreferencesService extends _i1.Mock
+    implements _i9.SharedPreferencesService {}

@@ -8,6 +8,7 @@ import 'package:posto/ui/views/settings/settings_view.dart';
 import 'package:posto/ui/views/language_region/language_region_view.dart';
 import 'package:posto/services/localization_service.dart';
 import 'package:posto/ui/views/app/app_view.dart';
+import 'package:posto/services/shared_preferences_service.dart';
 // @stacked-import
 
 @StackedApp(
@@ -27,6 +28,7 @@ import 'package:posto/ui/views/app/app_view.dart';
     LazySingleton(classType: SnackbarService),
     LazySingleton(classType: FirebaseService),
     LazySingleton(classType: LocalizationService),
+    LazySingleton(classType: SharedPreferencesService),
 // @stacked-service
   ],
   logger: StackedLogger(),
