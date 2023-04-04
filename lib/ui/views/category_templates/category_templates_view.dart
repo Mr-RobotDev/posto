@@ -60,11 +60,17 @@ class CategoryTemplatesView extends StackedView<CategoryTemplatesViewModel> {
                           );
                         }
                       },
-                      child: ShimmerImage(
-                        url: viewModel
-                            .templates[viewModel.currentTemplateIndex!]
-                            .thumbnail,
-                        height: screenHeight(context) * 0.6,
+                      child: InteractiveViewer(
+                        panEnabled: false,
+                        boundaryMargin: const EdgeInsets.all(100),
+                        minScale: 0.5,
+                        maxScale: 2,
+                        child: ShimmerImage(
+                          url: viewModel
+                              .templates[viewModel.currentTemplateIndex!]
+                              .thumbnail,
+                          height: screenHeight(context) * 0.6,
+                        ),
                       ),
                     )
                   : Container(
