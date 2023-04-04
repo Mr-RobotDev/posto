@@ -682,4 +682,38 @@ class MockLocalizationService extends _i1.Mock
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockSharedPreferencesService extends _i1.Mock
-    implements _i9.SharedPreferencesService {}
+    implements _i9.SharedPreferencesService {
+  @override
+  _i4.Future<void> init() => (super.noSuchMethod(
+        Invocation.method(
+          #init,
+          [],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+  @override
+  _i4.Future<bool> setString(
+    String? key,
+    String? value,
+  ) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #setString,
+          [
+            key,
+            value,
+          ],
+        ),
+        returnValue: _i4.Future<bool>.value(false),
+        returnValueForMissingStub: _i4.Future<bool>.value(false),
+      ) as _i4.Future<bool>);
+  @override
+  String? getString(String? key) => (super.noSuchMethod(
+        Invocation.method(
+          #getString,
+          [key],
+        ),
+        returnValueForMissingStub: null,
+      ) as String?);
+}

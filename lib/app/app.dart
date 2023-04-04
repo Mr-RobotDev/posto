@@ -1,3 +1,4 @@
+import 'package:posto/ui/views/home/home_viewmodel.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:posto/ui/views/templates/templates_view.dart';
@@ -29,6 +30,7 @@ import 'package:posto/services/shared_preferences_service.dart';
     LazySingleton(classType: FirebaseService),
     LazySingleton(classType: LocalizationService),
     LazySingleton(classType: SharedPreferencesService),
+    Singleton(classType: HomeViewModel),
 // @stacked-service
   ],
   logger: StackedLogger(),

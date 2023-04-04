@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:posto/app/app.locator.dart';
 import 'package:posto/ui/common/ui_helpers.dart';
 import 'package:posto/ui/views/categories/categories_view.dart';
 import 'package:posto/ui/views/settings/settings_view.dart';
@@ -43,6 +44,7 @@ class HomeView extends StackedView<HomeViewModel> {
         ),
       ),
       bottomNavBar: PlatformNavBar(
+        key: const Key('bottomNavBar'),
         cupertino: (_, __) => CupertinoTabBarData(
           backgroundColor: isDarkModeNavBarColor(context),
         ),
@@ -77,5 +79,11 @@ class HomeView extends StackedView<HomeViewModel> {
   HomeViewModel viewModelBuilder(
     BuildContext context,
   ) =>
-      HomeViewModel();
+      locator<HomeViewModel>();
+
+  @override
+  bool get disposeViewModel => false;
+
+  @override
+  bool get initialiseSpecialViewModelsOnce => false;
 }
