@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:posto/ui/common/ui_helpers.dart';
-import 'package:posto/ui/dumb_widgets/shimmer_image_widget.dart';
+import 'package:posto/ui/dumb_widgets/shimmer_image.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:stacked/stacked.dart';
 
 import 'categories_viewmodel.dart';
@@ -18,7 +19,7 @@ class CategoriesView extends StackedView<CategoriesViewModel> {
       slivers: [
         SliverToBoxAdapter(
           child: Text(
-            'Categories',
+            AppLocalizations.of(context)!.categories,
             style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: isDarkModeTextColor(context),
                   fontWeight: FontWeight.bold,
@@ -38,7 +39,7 @@ class CategoriesView extends StackedView<CategoriesViewModel> {
             childCount: viewModel.categories!.length,
             (BuildContext context, int index) {
               return GridTile(
-                child: ShimmerImageWidget(
+                child: ShimmerImage(
                   url: viewModel.categories![index].backgroundImage,
                 ),
                 footer: Padding(

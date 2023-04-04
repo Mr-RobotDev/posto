@@ -52,6 +52,78 @@
     "@urdu": {
     "description": "ウルドゥ語を選択するボタン"
     },
+    "darkmode": "ダークモード",
+"@darkmode": {
+"description": "ダークモードを選択するためのボタン"
+},
+"dark": "ダーク",
+"@dark": {
+"description": "ダークテーマを選択するためのボタン"
+},
+"light": "ライト",
+"@light": {
+"description": "ライトテーマを選択するためのボタン"
+},
+"system": "システム",
+"@system": {
+"description": "システムテーマを選択するためのボタン"
+},
+"about": "アバウト",
+"@about": {
+"description": "アバウトビューのアプリバータイトル"
+},
+"noMoreTemplates": "テンプレートがありません",
+"@noMoreTemplates": {
+"description": "テンプレートがない場合に表示するテキスト"
+},
+"languageAndRegion": "言語と地域",
+"@language": {
+"description": "言語と地域ビューのアプリバータイトル"
+},
+"errorLoadingTemplates": "テンプレートの読み込みエラー",
+"@errorLoadingTemplates": {
+"description": "テンプレートの読み込みに失敗した場合に表示するエラーメッセージ"
+},
+"errorLoadingCategories": "カテゴリの読み込みエラー",
+"@errorLoadingCategories": {
+"description": "カテゴリの読み込みに失敗した場合に表示するエラーメッセージ"
+},
+"errorLoadingImage": "画像の読み込みエラー",
+"@errorLoadingImage": {
+"description": "画像の読み込みに失敗した場合に表示するエラーメッセージ"
+},
+"preferences": "設定",
+"@preferences": {
+"description": "設定のテキスト"
+},
+"appInfo": "アプリ情報",
+"@appInfo": {
+"description": "アプリ情報のテキスト"
+},
+"feedback": "フィードバック",
+"@feedback": {
+"description": "フィードバックのテキスト"
+},
+"share": "共有",
+"@share": {
+"description": "共有のテキスト"
+},
+"rate": "評価",
+"@rate": {
+"description": "評価のテキスト"
+},
+"privacyPolicy": "プライバシーポリシー",
+"@privacyPolicy": {
+"description": "プライバシーポリシーのテキスト"
+},
+"termsOfUse": "利用規約",
+"@termsOfUse": {
+"description": "利用規約のテキスト"
+},
+"version": "バージョン",
+"@version": {
+"description": "バージョンのテキスト"
+},
     "createPost": "投稿を作成",
     "@createPost": {
     "description": "投稿作成ビューのアプリバータイトル"

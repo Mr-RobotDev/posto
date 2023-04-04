@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:posto/ui/common/ui_helpers.dart';
 
-class ImageErrorWidget extends StatelessWidget {
-  const ImageErrorWidget({
+class ImageError extends StatelessWidget {
+  const ImageError({
     super.key,
   });
 
@@ -16,12 +17,12 @@ class ImageErrorWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
-          children: const [
-            Icon(
+          children: [
+            const Icon(
               Icons.error,
             ),
             Text(
-              'Error loading image',
+              AppLocalizations.of(context)!.errorLoadingImage,
             ),
           ],
         ),

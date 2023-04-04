@@ -52,6 +52,78 @@
     "@urdu": {
     "description": "Die Schaltfläche zum Auswählen der urdu Sprache"
     },
+    "darkmode": "Dunkelmodus",
+"@darkmode": {
+"description": "Die Schaltfläche zum Auswählen des Dunkelmodus"
+},
+"dark": "Dunkles Thema",
+"@dark": {
+"description": "Die Schaltfläche zum Auswählen des dunklen Themas"
+},
+"light": "Helles Thema",
+"@light": {
+"description": "Die Schaltfläche zum Auswählen des hellen Themas"
+},
+"system": "System",
+"@system": {
+"description": "Die Schaltfläche zum Auswählen des Systemthemas"
+},
+"about": "Über",
+"@about": {
+"description": "Der Appbar-Titel der Über-Ansicht"
+},
+"noMoreTemplates": "Keine weiteren Vorlagen",
+"@noMoreTemplates": {
+"description": "Der Text, der angezeigt wird, wenn keine weiteren Vorlagen vorhanden sind"
+},
+"languageAndRegion": "Sprache und Region",
+"@language": {
+"description": "Der Appbar-Titel der Sprach- und Regionen-Ansicht"
+},
+"errorLoadingTemplates": "Fehler beim Laden von Vorlagen",
+"@errorLoadingTemplates": {
+"description": "Die Fehlermeldung, die angezeigt wird, wenn die Vorlagen nicht geladen werden können"
+},
+"errorLoadingCategories": "Fehler beim Laden von Kategorien",
+"@errorLoadingCategories": {
+"description": "Die Fehlermeldung, die angezeigt wird, wenn die Kategorien nicht geladen werden können"
+},
+"errorLoadingImage": "Fehler beim Laden des Bildes",
+"@errorLoadingImage": {
+"description": "Die Fehlermeldung, die angezeigt wird, wenn das Bild nicht geladen werden kann"
+},
+"preferences": "Einstellungen",
+"@preferences": {
+"description": "Der Text der Einstellungen"
+},
+"appInfo": "App-Informationen",
+"@appInfo": {
+"description": "Der Text der App-Informationen"
+},
+"feedback": "Feedback",
+"@feedback": {
+"description": "Der Text des Feedbacks"
+},
+"share": "Teilen",
+"@share": {
+"description": "Der Text zum Teilen"
+},
+"rate": "Bewertung",
+"@rate": {
+"description": "Der Text zur Bewertung"
+},
+"privacyPolicy": "Datenschutzerklärung",
+"@privacyPolicy": {
+"description": "Der Text der Datenschutzerklärung"
+},
+"termsOfUse": "Nutzungsbedingungen",
+"@termsOfUse": {
+"description": "Der Text der Nutzungsbedingungen"
+},
+"version": "Version",
+"@version": {
+"description": "Der Text der Version"
+},
     "createPost": "Beitrag erstellen",
     "@createPost": {
     "description": "Der Appbar-Titel der Ansicht zum Erstellen eines Beitrags"

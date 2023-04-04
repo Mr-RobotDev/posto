@@ -13,6 +13,9 @@ import 'package:stacked_services/src/snackbar/snackbar_service.dart';
 import 'package:stacked_shared/stacked_shared.dart';
 
 import '../services/firebase_service.dart';
+import '../services/localization_service.dart';
+import '../services/shared_preferences_service.dart';
+import '../ui/views/home/home_viewmodel.dart';
 
 final locator = StackedLocator.instance;
 
@@ -30,4 +33,7 @@ Future<void> setupLocator({
   locator.registerLazySingleton(() => NavigationService());
   locator.registerLazySingleton(() => SnackbarService());
   locator.registerLazySingleton(() => FirebaseService());
+  locator.registerLazySingleton(() => LocalizationService());
+  locator.registerLazySingleton(() => SharedPreferencesService());
+  locator.registerSingleton(HomeViewModel());
 }

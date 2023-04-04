@@ -52,6 +52,78 @@
     "@urdu": {
     "description": "زر اختيار اللغة الأردية"
     },
+    "darkmode": "الوضع الداكن",
+"@darkmode": {
+"description": "الزر لاختيار الوضع الداكن"
+},
+"dark": "المظهر الداكن",
+"@dark": {
+"description": "الزر لاختيار المظهر الداكن"
+},
+"light": "المظهر الفاتح",
+"@light": {
+"description": "الزر لاختيار المظهر الفاتح"
+},
+"system": "مظهر النظام",
+"@system": {
+"description": "الزر لاختيار مظهر النظام"
+},
+"about": "نبذة عن",
+"@about": {
+"description": "عنوان شريط التطبيق لعرض نبذة عن"
+},
+"noMoreTemplates": "لا توجد مزيد من القوالب",
+"@noMoreTemplates": {
+"description": "النص المراد عرضه عندما لا يوجد مزيد من القوالب"
+},
+"languageAndRegion": "اللغة والمنطقة",
+"@language": {
+"description": "عنوان شريط التطبيق لعرض اللغة والمنطقة"
+},
+"errorLoadingTemplates": "حدث خطأ في تحميل القوالب",
+"@errorLoadingTemplates": {
+"description": "رسالة الخطأ التي يتم عرضها عند عدم تمكن تحميل القوالب"
+},
+"errorLoadingCategories": "حدث خطأ في تحميل الفئات",
+"@errorLoadingCategories": {
+"description": "رسالة الخطأ التي يتم عرضها عند عدم تمكن تحميل الفئات"
+},
+"errorLoadingImage": "حدث خطأ في تحميل الصورة",
+"@errorLoadingImage": {
+"description": "رسالة الخطأ التي يتم عرضها عند عدم تمكن تحميل الصورة"
+},
+"preferences": "التفضيلات",
+"@preferences": {
+"description": "نص التفضيلات"
+},
+"appInfo": "معلومات التطبيق",
+"@appInfo": {
+"description": "نص معلومات التطبيق"
+},
+"feedback": "ردود الفعل",
+"@feedback": {
+"description": "نص ردود الفعل"
+},
+"share": "مشاركة",
+"@share": {
+"description": "نص المشاركة"
+},
+"rate": "تقييم",
+"@rate": {
+"description": "نص التقييم"
+},
+"privacyPolicy": "سياسة الخصوصية",
+"@privacyPolicy": {
+"description": "نص سياسة الخصوصية"
+},
+"termsOfUse": "شروط الاستخدام",
+"@termsOfUse": {
+"description": "نص شروط الاستخدام"
+},
+"version": "الإصدار",
+"@version": {
+"description": "نص الإصدار"
+},
     "createPost": "إنشاء منشور",
     "@createPost": {
     "description": "عنوان شريط التطبيق لعرض إنشاء المنشور"

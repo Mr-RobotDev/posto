@@ -52,6 +52,78 @@
     "@urdu": {
     "description": "选择乌尔都语语言的按钮"
     },
+    "darkmode": "夜间模式",
+"@darkmode": {
+"description": "选择夜间模式的按钮"
+},
+"dark": "暗色主题",
+"@dark": {
+"description": "选择暗色主题的按钮"
+},
+"light": "亮色主题",
+"@light": {
+"description": "选择亮色主题的按钮"
+},
+"system": "系统主题",
+"@system": {
+"description": "选择系统主题的按钮"
+},
+"about": "关于",
+"@about": {
+"description": "关于视图的应用栏标题"
+},
+"noMoreTemplates": "没有更多的模板",
+"@noMoreTemplates": {
+"description": "没有更多模板时显示的文本"
+},
+"languageAndRegion": "语言和地区",
+"@language": {
+"description": "语言和地区视图的应用栏标题"
+},
+"errorLoadingTemplates": "加载模板出错",
+"@errorLoadingTemplates": {
+"description": "当无法加载模板时显示的错误消息"
+},
+"errorLoadingCategories": "加载类别出错",
+"@errorLoadingCategories": {
+"description": "当无法加载类别时显示的错误消息"
+},
+"errorLoadingImage": "加载图像出错",
+"@errorLoadingImage": {
+"description": "当无法加载图像时显示的错误消息"
+},
+"preferences": "偏好设置",
+"@preferences": {
+"description": "偏好设置的文本"
+},
+"appInfo": "应用信息",
+"@appInfo": {
+"description": "应用信息的文本"
+},
+"feedback": "反馈",
+"@feedback": {
+"description": "反馈的文本"
+},
+"share": "分享",
+"@share": {
+"description": "分享的文本"
+},
+"rate": "评分",
+"@rate": {
+"description": "评分的文本"
+},
+"privacyPolicy": "隐私政策",
+"@privacyPolicy": {
+"description": "隐私政策的文本"
+},
+"termsOfUse": "使用条款",
+"@termsOfUse": {
+"description": "使用条款的文本"
+},
+"version": "版本",
+"@version": {
+"description": "版本的文本"
+},
     "createPost": "创建帖子",
     "@createPost": {
     "description": "创建帖子视图的应用栏标题"

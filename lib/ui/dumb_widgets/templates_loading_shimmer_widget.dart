@@ -4,8 +4,8 @@ import 'package:posto/ui/common/app_strings.dart';
 import 'package:posto/ui/common/ui_helpers.dart';
 import 'package:shimmer/shimmer.dart';
 
-class TemplatesLoadingShimmerWidget extends StatelessWidget {
-  const TemplatesLoadingShimmerWidget({
+class TemplatesLoadingShimmer extends StatelessWidget {
+  const TemplatesLoadingShimmer({
     super.key,
   });
 
