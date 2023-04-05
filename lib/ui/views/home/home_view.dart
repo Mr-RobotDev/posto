@@ -29,12 +29,14 @@ class HomeView extends StackedView<HomeViewModel> {
       ),
       material: (_, __) => MaterialScaffoldData(
         floatingActionButton: viewModel.currentIndex == 0
-            ? FloatingActionButton(
+            ? FloatingActionButton.extended(
                 onPressed: () {},
-                child: Icon(PlatformIcons(context).add),
+                icon: Icon(PlatformIcons(context).add),
+                label: const Text(
+                  'Create',
+                ),
               )
             : null,
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),
       body: SafeArea(
         child: IndexedStack(
