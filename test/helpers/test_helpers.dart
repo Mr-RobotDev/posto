@@ -5,6 +5,7 @@ import 'package:stacked_services/stacked_services.dart';
 import 'package:posto/services/firebase_service.dart';
 import 'package:posto/services/localization_service.dart';
 import 'package:posto/services/shared_preferences_service.dart';
+import 'package:posto/services/media_service.dart';
 // @stacked-import
 
 import 'test_helpers.mocks.dart';
@@ -17,6 +18,7 @@ import 'test_helpers.mocks.dart';
   MockSpec<LocalizationService>(onMissingStub: OnMissingStub.returnDefault),
   MockSpec<SharedPreferencesService>(
       onMissingStub: OnMissingStub.returnDefault),
+  MockSpec<MediaService>(onMissingStub: OnMissingStub.returnDefault),
 // @stacked-mock-spec
 ])
 void registerServices() {
@@ -26,6 +28,7 @@ void registerServices() {
   getAndRegisterFirebaseService();
   getAndRegisterLocalizationService();
   getAndRegisterSharedPreferencesService();
+  getAndRegisterMediaService();
 // @stacked-mock-register
 }
 
@@ -97,6 +100,13 @@ MockSharedPreferencesService getAndRegisterSharedPreferencesService() {
   _removeRegistrationIfExists<SharedPreferencesService>();
   final service = MockSharedPreferencesService();
   locator.registerSingleton<SharedPreferencesService>(service);
+  return service;
+}
+
+MockMediaService getAndRegisterMediaService() {
+  _removeRegistrationIfExists<MediaService>();
+  final service = MockMediaService();
+  locator.registerSingleton<MediaService>(service);
   return service;
 }
 // @stacked-mock-create

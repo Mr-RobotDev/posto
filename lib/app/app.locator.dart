@@ -14,6 +14,7 @@ import 'package:stacked_shared/stacked_shared.dart';
 
 import '../services/firebase_service.dart';
 import '../services/localization_service.dart';
+import '../services/media_service.dart';
 import '../services/shared_preferences_service.dart';
 import '../ui/views/home/home_viewmodel.dart';
 
@@ -36,4 +37,5 @@ Future<void> setupLocator({
   locator.registerLazySingleton(() => LocalizationService());
   locator.registerLazySingleton(() => SharedPreferencesService());
   locator.registerSingleton(HomeViewModel());
+  locator.registerLazySingleton(() => MediaService());
 }

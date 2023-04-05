@@ -11,6 +11,7 @@ import 'package:posto/services/localization_service.dart';
 import 'package:posto/ui/views/app/app_view.dart';
 import 'package:posto/services/shared_preferences_service.dart';
 import 'package:posto/ui/views/category_templates/category_templates_view.dart';
+import 'package:posto/services/media_service.dart';
 // @stacked-import
 
 @StackedApp(
@@ -33,6 +34,7 @@ import 'package:posto/ui/views/category_templates/category_templates_view.dart';
     LazySingleton(classType: LocalizationService),
     LazySingleton(classType: SharedPreferencesService),
     Singleton(classType: HomeViewModel),
+    LazySingleton(classType: MediaService),
 // @stacked-service
   ],
   logger: StackedLogger(),

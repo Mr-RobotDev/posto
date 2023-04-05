@@ -11,6 +11,7 @@ import 'package:mockito/mockito.dart' as _i1;
 import 'package:posto/models/models.dart' as _i7;
 import 'package:posto/services/firebase_service.dart' as _i6;
 import 'package:posto/services/localization_service.dart' as _i8;
+import 'package:posto/services/media_service.dart' as _i10;
 import 'package:posto/services/shared_preferences_service.dart' as _i9;
 import 'package:stacked_services/stacked_services.dart' as _i2;
 
@@ -717,3 +718,8 @@ class MockSharedPreferencesService extends _i1.Mock
         returnValueForMissingStub: null,
       ) as String?);
 }
+
+/// A class which mocks [MediaService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockMediaService extends _i1.Mock implements _i10.MediaService {}
