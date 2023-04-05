@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:posto/ui/dumb_widgets/animated_dialog.dart';
 import 'package:stacked/stacked.dart';
@@ -22,12 +23,23 @@ class TemplatesView extends StackedView<TemplatesViewModel> {
     return CustomScrollView(
       slivers: [
         SliverToBoxAdapter(
-          child: Text(
-            AppLocalizations.of(context)!.templates,
-            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
-                  color: isDarkModeTextColor(context),
-                  fontWeight: FontWeight.bold,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                AppLocalizations.of(context)!.templates,
+                style: Theme.of(context).textTheme.headlineMedium!.copyWith(
+                      color: isDarkModeTextColor(context),
+                      fontWeight: FontWeight.bold,
+                    ),
+              ),
+              PlatformWidget(
+                cupertino: (_, __) => PlatformIconButton(
+                  icon: Icon(PlatformIcons(context).add),
+                  onPressed: () {},
                 ),
+              ),
+            ],
           ),
         ),
         const SliverToBoxAdapter(

@@ -1,10 +1,13 @@
 import 'package:posto/app/app.locator.dart';
+import 'package:posto/app/app.router.dart';
 import 'package:posto/models/models.dart';
 import 'package:posto/services/firebase_service.dart';
 import 'package:stacked/stacked.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 class CategoriesViewModel extends BaseViewModel {
   final _firebaseService = locator<FirebaseService>();
+  final _navigationService = locator<NavigationService>();
 
   List<Category>? _categories = [];
   List<Category>? get categories => _categories!;
@@ -19,5 +22,9 @@ class CategoriesViewModel extends BaseViewModel {
     }
     _categories!.shuffle();
     rebuildUi();
+  }
+
+  void navigateToCategoryTemplates(Category category) {
+    _navigationService.navigateToCategoryTemplatesView(name: category.name);
   }
 }

@@ -27,6 +27,17 @@ class HomeView extends StackedView<HomeViewModel> {
             ? settingsBackgroundColor(context)
             : scaffoldColor(context),
       ),
+      material: (_, __) => MaterialScaffoldData(
+        floatingActionButton: viewModel.currentIndex == 0
+            ? FloatingActionButton.extended(
+                onPressed: () {},
+                icon: Icon(PlatformIcons(context).add),
+                label: const Text(
+                  'Create',
+                ),
+              )
+            : null,
+      ),
       body: SafeArea(
         child: IndexedStack(
           index: viewModel.currentIndex,
