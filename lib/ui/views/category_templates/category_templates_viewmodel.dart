@@ -11,7 +11,7 @@ class CategoryTemplatesViewModel extends BaseViewModel {
   final List<Template> _templates = [];
   List<Template> get templates => _templates;
 
-  int? currentTemplateIndex;
+  int? currentTemplateIndex = 0;
 
   void nextTemplate(int index) {
     currentTemplateIndex = index;

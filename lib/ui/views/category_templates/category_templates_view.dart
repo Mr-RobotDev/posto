@@ -44,7 +44,7 @@ class CategoryTemplatesView extends StackedView<CategoryTemplatesViewModel> {
                 ],
               ),
               verticalSpaceSmall,
-              viewModel.currentTemplateIndex != null
+              viewModel.templates.isNotEmpty
                   ? GestureDetector(
                       onHorizontalDragEnd: (dragEndDetails) {
                         if (dragEndDetails.primaryVelocity! > 0) {
