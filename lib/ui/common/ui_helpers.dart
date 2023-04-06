@@ -78,7 +78,7 @@ double getResponsiveFontSize(BuildContext context,
   return responsiveSize;
 }
 
-bool isDarkModeColor(BuildContext context) =>
+bool isDarkMode(BuildContext context) =>
     MediaQuery.of(context).platformBrightness == Brightness.dark;
 
 Color isDarkModeTextColor(BuildContext context) =>

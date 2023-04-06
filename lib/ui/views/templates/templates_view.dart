@@ -35,8 +35,9 @@ class TemplatesView extends StackedView<TemplatesViewModel> {
               ),
               PlatformWidget(
                 cupertino: (_, __) => PlatformIconButton(
+                  padding: EdgeInsets.zero,
                   icon: Icon(PlatformIcons(context).add),
-                  onPressed: () {},
+                  onPressed: viewModel.showGalleryCameraSheet,
                 ),
               ),
             ],

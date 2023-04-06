@@ -1,16 +1,25 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
+import 'package:posto/app/app.bottomsheets.dart';
 import 'package:posto/app/app.locator.dart';
 import 'package:posto/models/models.dart';
 import 'package:posto/services/firebase_service.dart';
+import 'package:posto/services/media_service.dart';
 import 'package:stacked/stacked.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 class TemplatesViewModel extends BaseViewModel {
   final _firebaseService = locator<FirebaseService>();
+  final _mediaService = locator<MediaService>();
+  final _bottomSheetService = locator<BottomSheetService>();
 
   ScrollController scrollController = ScrollController();
   OverlayEntry? popupDialog;
-
   FocusNode focusNode = FocusNode();
+
+  File? _image;
+  File? get image => _image;
 
   final List<Template> _templates = [];
   List<Template> get templates => _templates;
@@ -58,6 +67,21 @@ class TemplatesViewModel extends BaseViewModel {
     );
     if (templates != null) {
       _templates.addAll(templates);
+    }
+  }
+
+  void showGalleryCameraSheet() async {
+    final SheetResponse<dynamic>? result =
+        await _bottomSheetService.showCustomSheet(
+      variant: BottomSheetType.galleryCamera,
+    );
+    if (result != null && result.confirmed) {
+      final file = await _mediaService.pickImage(result.data);
+      if (file != null) {
+        _image = File(file.path);
+        notifyListeners();
+      }
+      rebuildUi();
     }
   }
 }

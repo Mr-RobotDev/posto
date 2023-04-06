@@ -36,6 +36,6 @@ Future<void> setupLocator({
   locator.registerLazySingleton(() => FirebaseService());
   locator.registerLazySingleton(() => LocalizationService());
   locator.registerLazySingleton(() => SharedPreferencesService());
-  locator.registerSingleton(HomeViewModel());
   locator.registerLazySingleton(() => MediaService());
+  locator.registerSingleton(HomeViewModel());
 }

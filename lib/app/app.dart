@@ -12,6 +12,7 @@ import 'package:posto/ui/views/app/app_view.dart';
 import 'package:posto/services/shared_preferences_service.dart';
 import 'package:posto/ui/views/category_templates/category_templates_view.dart';
 import 'package:posto/services/media_service.dart';
+import 'package:posto/ui/bottom_sheets/gallery_camera/gallery_camera_sheet.dart';
 // @stacked-import
 
 @StackedApp(
@@ -33,10 +34,14 @@ import 'package:posto/services/media_service.dart';
     LazySingleton(classType: FirebaseService),
     LazySingleton(classType: LocalizationService),
     LazySingleton(classType: SharedPreferencesService),
-    Singleton(classType: HomeViewModel),
     LazySingleton(classType: MediaService),
+    Singleton(classType: HomeViewModel),
 // @stacked-service
   ],
   logger: StackedLogger(),
+  bottomsheets: [
+    StackedBottomsheet(classType: GalleryCameraSheet),
+    // @stacked-bottom-sheet
+  ],
 )
 class App {}

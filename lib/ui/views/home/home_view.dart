@@ -30,7 +30,7 @@ class HomeView extends StackedView<HomeViewModel> {
       material: (_, __) => MaterialScaffoldData(
         floatingActionButton: viewModel.currentIndex == 0
             ? FloatingActionButton.extended(
-                onPressed: () {},
+                onPressed: viewModel.showGalleryCameraSheet,
                 icon: Icon(PlatformIcons(context).add),
                 label: const Text(
                   'Create',
