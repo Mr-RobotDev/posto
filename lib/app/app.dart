@@ -13,6 +13,7 @@ import 'package:posto/services/shared_preferences_service.dart';
 import 'package:posto/ui/views/category_templates/category_templates_view.dart';
 import 'package:posto/services/media_service.dart';
 import 'package:posto/ui/bottom_sheets/gallery_camera/gallery_camera_sheet.dart';
+import 'package:posto/ui/views/create_post/create_post_view.dart';
 // @stacked-import
 
 @StackedApp(
@@ -24,6 +25,7 @@ import 'package:posto/ui/bottom_sheets/gallery_camera/gallery_camera_sheet.dart'
     MaterialRoute(page: LanguageRegionView),
     MaterialRoute(page: AppView),
     MaterialRoute(page: CategoryTemplatesView),
+    MaterialRoute(page: CreatePostView),
 // @stacked-route
   ],
   dependencies: [

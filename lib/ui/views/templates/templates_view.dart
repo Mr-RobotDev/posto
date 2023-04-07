@@ -59,6 +59,7 @@ class TemplatesView extends StackedView<TemplatesViewModel> {
                     final template = viewModel.templates[index];
                     double height = getMinHeight(index);
                     return GestureDetector(
+                      onTap: () => viewModel.navigateToCreatePost(template.thumbnail),
                       onLongPress: () {
                         viewModel.popupDialog = OverlayEntry(
                           builder: (context) => AnimatedDialog(

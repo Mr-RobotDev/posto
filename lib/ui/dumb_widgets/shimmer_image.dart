@@ -9,16 +9,19 @@ class ShimmerImage extends StatelessWidget {
     super.key,
     required this.url,
     this.height,
+    this.width,
   });
 
   final String url;
   final double? height;
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: CachedNetworkImage(
+        width: width,
         height: height,
         imageUrl: url,
         fit: BoxFit.cover,

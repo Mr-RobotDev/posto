@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:posto/app/app.bottomsheets.dart';
 import 'package:posto/app/app.locator.dart';
+import 'package:posto/app/app.router.dart';
 import 'package:posto/models/models.dart';
 import 'package:posto/services/firebase_service.dart';
 import 'package:posto/services/media_service.dart';
@@ -10,6 +11,7 @@ import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 class TemplatesViewModel extends BaseViewModel {
+  final _navigationService = locator<NavigationService>();
   final _firebaseService = locator<FirebaseService>();
   final _mediaService = locator<MediaService>();
   final _bottomSheetService = locator<BottomSheetService>();
@@ -83,5 +85,9 @@ class TemplatesViewModel extends BaseViewModel {
       }
       rebuildUi();
     }
+  }
+
+  void navigateToCreatePost(String imageUrl) {
+    _navigationService.navigateToCreatePostView(imageUrl: imageUrl);
   }
 }

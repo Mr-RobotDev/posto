@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'models.freezed.dart';
@@ -23,4 +24,13 @@ class Category with _$Category {
 
   factory Category.fromJson(Map<String, dynamic> json) =>
       _$CategoryFromJson(json);
+}
+
+@freezed
+class AspectRatioButton with _$AspectRatioButton {
+  factory AspectRatioButton({
+    required String text,
+    required double aspectRatio,
+    IconData? icon,
+  }) = _AspectRatioButton;
 }
