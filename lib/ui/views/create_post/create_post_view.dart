@@ -44,17 +44,25 @@ class CreatePostView extends StackedView<CreatePostViewModel> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ShimmerImage(
-                url: imageUrl,
+              const Spacer(
+                flex: 1,
+              ),
+              AnimatedContainer(
+                duration: const Duration(milliseconds: 300),
                 width: viewModel.aspectRatio >= 1
                     ? imageWidth
                     : imageWidth * viewModel.aspectRatio,
                 height: viewModel.aspectRatio <= 1
                     ? imageWidth
                     : imageWidth / viewModel.aspectRatio,
-                radius: 0,
+                child: ShimmerImage(
+                  url: imageUrl,
+                  radius: 0,
+                ),
               ),
-              verticalSpaceLarge,
+              const Spacer(
+                flex: 1,
+              ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -108,6 +116,7 @@ class CreatePostView extends StackedView<CreatePostViewModel> {
                       .toList(),
                 ),
               ),
+              verticalSpaceMedium,
             ],
           ),
         ),

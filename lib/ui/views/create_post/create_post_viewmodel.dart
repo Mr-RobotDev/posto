@@ -1,26 +1,12 @@
-import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:posto/models/models.dart';
 import 'package:stacked/stacked.dart';
 
 class CreatePostViewModel extends BaseViewModel {
-  Offset distance = const Offset(18, 18);
-  double blurRadius = 10.0;
-  bool isPressed = false;
-
   double aspectRatio = 1 / 1;
 
-  void changeAspectRatio(double aspectRatio) {
-    this.aspectRatio = aspectRatio;
-    notifyListeners();
-  }
-
-  void onPressed() {
-    isPressed = !isPressed;
-    isPressed
-        ? distance = const Offset(10, 10)
-        : distance = const Offset(18, 18);
-    isPressed ? blurRadius = 5.0 : blurRadius = 10.0;
+  void changeAspectRatio(double value) {
+    aspectRatio = value;
     notifyListeners();
   }
 
