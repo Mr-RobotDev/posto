@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -20,7 +21,6 @@ class CreatePostView extends StackedView<CreatePostViewModel> {
   ) {
     final imageWidth = screenWidth(context);
     final height = screenHeight(context);
-    final theme = Theme.of(context);
 
     return PlatformScaffold(
       appBar: PlatformAppBar(
@@ -30,7 +30,7 @@ class CreatePostView extends StackedView<CreatePostViewModel> {
         trailingActions: [
           viewModel.isBusy
               ? const CircularProgressIndicator.adaptive()
-              : IconButton(
+              : PlatformIconButton(
                   onPressed: () {},
                   icon: Icon(
                     PlatformIcons(context).share,
@@ -52,6 +52,7 @@ class CreatePostView extends StackedView<CreatePostViewModel> {
                 height: viewModel.aspectRatio <= 1
                     ? imageWidth
                     : imageWidth / viewModel.aspectRatio,
+                radius: 0,
               ),
               verticalSpaceLarge,
               SingleChildScrollView(
@@ -67,13 +68,14 @@ class CreatePostView extends StackedView<CreatePostViewModel> {
                             height: height * 0.08,
                             margin: const EdgeInsets.only(right: 10),
                             decoration: BoxDecoration(
-                              color: theme.colorScheme.primary.withOpacity(0.1),
-                              border: viewModel.aspectRatio == e.aspectRatio
-                                  ? Border.all(
-                                      color: theme.colorScheme.primary,
-                                      width: 2,
-                                    )
-                                  : null,
+                              color: viewModel.aspectRatio == e.aspectRatio
+                                  ? CupertinoColors.white
+                                  : CupertinoColors.darkBackgroundGray,
+                              border: Border.all(
+                                color: viewModel.aspectRatio == e.aspectRatio
+                                    ? CupertinoColors.darkBackgroundGray
+                                    : Colors.transparent,
+                              ),
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Column(
@@ -83,14 +85,19 @@ class CreatePostView extends StackedView<CreatePostViewModel> {
                                 e.icon != null
                                     ? Icon(
                                         e.icon,
+                                        color: viewModel.aspectRatio ==
+                                                e.aspectRatio
+                                            ? Colors.black
+                                            : Colors.white,
                                       )
                                     : const SizedBox.shrink(),
                                 Text(
                                   e.text,
                                   style: TextStyle(
-                                    color: isDarkMode(context)
-                                        ? Colors.white
-                                        : Colors.black,
+                                    color:
+                                        viewModel.aspectRatio == e.aspectRatio
+                                            ? Colors.black
+                                            : Colors.white,
                                   ),
                                 ),
                               ],
