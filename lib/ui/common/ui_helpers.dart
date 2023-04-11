@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
 const double _tinySize = 5.0;
 const double _smallSize = 10.0;
@@ -125,4 +126,40 @@ double getMinHeight(int index) {
     default:
       return 100;
   }
+}
+
+Future showConfirmationDialog(
+  BuildContext context, {
+  required String content,
+  required String confirmText,
+  required String cancelText,
+  required Function onConfirm,
+}) async {
+  return showPlatformDialog(
+    context: context,
+    builder: (context) => PlatformAlertDialog(
+      content: Text(
+        content,
+        style: TextStyle(
+          color: isDarkModeTextColor(context),
+        ),
+      ),
+      actions: <Widget>[
+        PlatformDialogAction(
+          child: Text(cancelText),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        PlatformDialogAction(
+          cupertino: (_, __) => CupertinoDialogActionData(
+            isDestructiveAction: true,
+          ),
+          child: Text(confirmText),
+          onPressed: () {
+            onConfirm();
+            Navigator.of(context).pop();
+          },
+        ),
+      ],
+    ),
+  );
 }

@@ -1,13 +1,49 @@
+import 'package:flutter/cupertino.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:posto/models/models.dart';
+import 'package:posto/ui/common/ui_helpers.dart';
+import 'package:posto/ui/views/create_post/text_item.dart';
+import 'package:posto/ui/views/create_post/get_text_dialog.dart';
 import 'package:stacked/stacked.dart';
 
 class CreatePostViewModel extends BaseViewModel {
   double aspectRatio = 1 / 1;
 
+  List<TextItem> texts = [];
+
   void changeAspectRatio(double value) {
     aspectRatio = value;
     notifyListeners();
+  }
+
+  void fetchText(BuildContext context) async {
+    final result = await getText(context);
+    if (result != null) {
+      addText(result);
+    }
+  }
+
+  void editText(BuildContext context, TextItem textItem) async {
+    final result = await getText(context, textItem);
+    if (result != null) {
+      texts.remove(textItem);
+      addText(result); 
+    }
+  }
+
+  void addText(TextItem text) {
+    texts.add(text);
+    notifyListeners();
+  }
+
+  void removeText(BuildContext context, TextItem text) async {
+    await showConfirmationDialog(context,
+        content: 'Are you sure you want to remove this text?',
+        confirmText: 'Delete',
+        cancelText: 'Cancel', onConfirm: () {
+      texts.remove(text);
+      notifyListeners();
+    });
   }
 
   final List<AspectRatioButton> aspectRatios = [
