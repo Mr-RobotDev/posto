@@ -1,15 +1,29 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:posto/app/app.locator.dart';
 import 'package:posto/models/models.dart';
+import 'package:posto/services/media_service.dart';
 import 'package:posto/ui/common/ui_helpers.dart';
 import 'package:posto/ui/views/create_post/text_item.dart';
 import 'package:posto/ui/views/create_post/get_text_dialog.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:stacked/stacked.dart';
+import 'package:widgets_to_image/widgets_to_image.dart';
 
 class CreatePostViewModel extends BaseViewModel {
-  double aspectRatio = 1 / 1;
+  final _mediaService = locator<MediaService>();
 
+  WidgetsToImageController controller = WidgetsToImageController();
+
+  double aspectRatio = 1 / 1;
   List<TextItem> texts = [];
+
+  bool downloadBusy = false;
+  bool shareBusy = false;
 
   void changeAspectRatio(double value) {
     aspectRatio = value;
@@ -27,7 +41,7 @@ class CreatePostViewModel extends BaseViewModel {
     final result = await getText(context, textItem);
     if (result != null) {
       texts.remove(textItem);
-      addText(result); 
+      addText(result);
     }
   }
 
@@ -44,6 +58,51 @@ class CreatePostViewModel extends BaseViewModel {
       texts.remove(text);
       notifyListeners();
     });
+  }
+
+  void share() async {
+    shareBusy = true;
+    notifyListeners();
+    final imageBytes = await controller.capture();
+    final Directory tempDir = await getTemporaryDirectory();
+    final String tempPath = tempDir.path;
+    final file = await bytesToFile('$tempPath/image.png', imageBytes!);
+    Share.shareXFiles([XFile(file.path)]);
+    shareBusy = false;
+    notifyListeners();
+  }
+
+  Future<File> bytesToFile(String filePath, List<int> bytes) async {
+    final file = File(filePath);
+    await file.writeAsBytes(bytes);
+    return file;
+  }
+
+  void download(BuildContext context) async {
+    downloadBusy = true;
+    notifyListeners();
+    final imageBytes = await controller.capture();
+    final isSaved = await _mediaService.saveImage(imageBytes!);
+    if (isSaved) {
+      showPlatformDialog(
+        context: context,
+        builder: (_) => PlatformAlertDialog(
+          title: const Text('Success'),
+          content: const Text(
+            'Image saved to gallery',
+            textAlign: TextAlign.center,
+          ),
+          actions: [
+            PlatformDialogAction(
+              child: const Text('OK'),
+              onPressed: () => Navigator.of(context).pop(),
+            ),
+          ],
+        ),
+      );
+    }
+    downloadBusy = false;
+    notifyListeners();
   }
 
   final List<AspectRatioButton> aspectRatios = [

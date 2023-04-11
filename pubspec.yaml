@@ -37,6 +37,8 @@ dependencies:
   permission_handler: ^10.2.0
   cached_network_image: ^3.2.3
   shimmer: ^2.0.0
+  image_gallery_saver: ^1.7.1
+  widgets_to_image: ^0.0.2
 
   # fonts
   google_fonts: ^4.0.3
@@ -48,7 +50,7 @@ dependencies:
   flutter_dotenv: ^5.0.2
 
   # share
-  share_plus: ^6.3.1
+  share_plus: ^6.3.2
 
   # path provider
   path_provider: ^2.0.14
@@ -68,6 +70,8 @@ dependencies:
 
   # font awesome icons
   font_awesome_flutter: ^10.4.0
+
+  # native splash
   flutter_native_splash: ^2.2.19
 
 dev_dependencies:

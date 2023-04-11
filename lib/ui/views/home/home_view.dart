@@ -35,6 +35,9 @@ class HomeView extends StackedView<HomeViewModel> {
                 label: const Text(
                   'Create',
                 ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
               )
             : null,
       ),

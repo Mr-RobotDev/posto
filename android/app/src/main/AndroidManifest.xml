@@ -6,18 +6,6 @@
     -->
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <!-- Permissions options for the `camera` group -->
-    <uses-permission android:name="android.permission.CAMERA" />
-
-    <!-- Permissions options for the `storage` group -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-
     <application android:label="posto" android:name="${applicationName}"
         android:roundIcon="@mipmap/round_launcher" android:icon="@mipmap/ic_launcher">
         <activity android:name=".MainActivity" android:exported="true"

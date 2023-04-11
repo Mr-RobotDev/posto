@@ -6,6 +6,7 @@ import 'package:posto/ui/common/ui_helpers.dart';
 import 'package:posto/ui/dumb_widgets/shimmer_image.dart';
 import 'package:posto/ui/views/create_post/draggable_text_widget.dart';
 import 'package:stacked/stacked.dart';
+import 'package:widgets_to_image/widgets_to_image.dart';
 
 import 'create_post_viewmodel.dart';
 
@@ -29,14 +30,20 @@ class CreatePostView extends StackedView<CreatePostViewModel> {
           AppLocalizations.of(context)!.createPost,
         ),
         trailingActions: [
-          viewModel.isBusy
-              ? const CircularProgressIndicator.adaptive()
-              : PlatformIconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    PlatformIcons(context).share,
-                  ),
-                ),
+          PlatformIconButton(
+            onPressed: viewModel.downloadBusy
+                ? null
+                : () => viewModel.download(context),
+            icon: Icon(
+              PlatformIcons(context).cloudDownload,
+            ),
+          ),
+          PlatformIconButton(
+            onPressed: viewModel.shareBusy ? null : viewModel.share,
+            icon: Icon(
+              PlatformIcons(context).share,
+            ),
+          ),
         ],
       ),
       body: SafeArea(
@@ -48,38 +55,41 @@ class CreatePostView extends StackedView<CreatePostViewModel> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  AnimatedContainer(
-                    duration: const Duration(milliseconds: 300),
-                    width: viewModel.aspectRatio >= 1
-                        ? imageWidth
-                        : imageWidth * viewModel.aspectRatio,
-                    height: viewModel.aspectRatio <= 1
-                        ? imageWidth
-                        : imageWidth / viewModel.aspectRatio,
-                    child: Stack(
-                      children: [
-                        GestureDetector(
-                          onTap: () => viewModel.fetchText(context),
-                          child: ShimmerImage(
-                            url: imageUrl,
-                            height: double.infinity,
-                            width: double.infinity,
-                            radius: 0,
+                  WidgetsToImage(
+                    controller: viewModel.controller,
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 300),
+                      width: viewModel.aspectRatio >= 1
+                          ? imageWidth
+                          : imageWidth * viewModel.aspectRatio,
+                      height: viewModel.aspectRatio <= 1
+                          ? imageWidth
+                          : imageWidth / viewModel.aspectRatio,
+                      child: Stack(
+                        children: [
+                          GestureDetector(
+                            onTap: () => viewModel.fetchText(context),
+                            child: ShimmerImage(
+                              url: imageUrl,
+                              height: double.infinity,
+                              width: double.infinity,
+                              radius: 0,
+                            ),
                           ),
-                        ),
-                        ...viewModel.texts.map(
-                          (e) => DraggableTextWidget(
-                            id: DateTime.now().millisecondsSinceEpoch,
-                            child: e,
-                            onPress: () {
-                              viewModel.editText(context, e);
-                            },
-                            onLongPress: () {
-                              viewModel.removeText(context, e);
-                            },
+                          ...viewModel.texts.map(
+                            (e) => DraggableTextWidget(
+                              id: DateTime.now().millisecondsSinceEpoch,
+                              child: e,
+                              onPress: () {
+                                viewModel.editText(context, e);
+                              },
+                              onLongPress: () {
+                                viewModel.removeText(context, e);
+                              },
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                   verticalSpaceLarge,
