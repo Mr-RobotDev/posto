@@ -68,6 +68,7 @@ dependencies:
 
   # font awesome icons
   font_awesome_flutter: ^10.4.0
+  flutter_native_splash: ^2.2.19
 
 dev_dependencies:
   flutter_test:
