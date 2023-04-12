@@ -39,14 +39,10 @@ class TemplatesViewModel extends BaseViewModel {
     await fetchTemplates();
 
     scrollController.addListener(() async {
-      double threshold = 500.0;
-      double extentAfter = scrollController.position.extentAfter;
-      if (extentAfter < threshold) {
-        if (_currentCategory == _categories!.length) {
-          return;
-        }
-        await fetchTemplates();
+      if (_currentCategory == _categories!.length) {
+        return;
       }
+      await fetchTemplates();
     });
   }
 
