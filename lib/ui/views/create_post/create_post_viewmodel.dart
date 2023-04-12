@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:posto/app/app.locator.dart';
@@ -84,22 +83,7 @@ class CreatePostViewModel extends BaseViewModel {
     final imageBytes = await controller.capture();
     final isSaved = await _mediaService.saveImage(imageBytes!);
     if (isSaved) {
-      showPlatformDialog(
-        context: context,
-        builder: (_) => PlatformAlertDialog(
-          title: const Text('Success'),
-          content: const Text(
-            'Image saved to gallery',
-            textAlign: TextAlign.center,
-          ),
-          actions: [
-            PlatformDialogAction(
-              child: const Text('OK'),
-              onPressed: () => Navigator.of(context).pop(),
-            ),
-          ],
-        ),
-      );
+      await showSavedDialog(context);
     }
     downloadBusy = false;
     notifyListeners();

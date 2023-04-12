@@ -163,3 +163,32 @@ Future showConfirmationDialog(
     ),
   );
 }
+
+Future showSavedDialog(
+  BuildContext context,
+) async {
+  return showPlatformDialog(
+    context: context,
+    builder: (_) => PlatformAlertDialog(
+      title: Text(
+        'Success',
+        style: TextStyle(
+          color: isDarkModeTextColor(context),
+        ),
+      ),
+      content: Text(
+        'Image saved to gallery',
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          color: isDarkModeTextColor(context),
+        ),
+      ),
+      actions: [
+        PlatformDialogAction(
+          child: const Text('OK'),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+      ],
+    ),
+  );
+}

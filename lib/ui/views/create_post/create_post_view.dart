@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
@@ -11,9 +13,10 @@ import 'package:widgets_to_image/widgets_to_image.dart';
 import 'create_post_viewmodel.dart';
 
 class CreatePostView extends StackedView<CreatePostViewModel> {
-  const CreatePostView(this.imageUrl, {Key? key}) : super(key: key);
+  const CreatePostView({Key? key, this.imageUrl, this.image}) : super(key: key);
 
-  final String imageUrl;
+  final String? imageUrl;
+  final File? image;
 
   @override
   Widget builder(
@@ -55,6 +58,7 @@ class CreatePostView extends StackedView<CreatePostViewModel> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  const Spacer(),
                   WidgetsToImage(
                     controller: viewModel.controller,
                     child: AnimatedContainer(
@@ -68,14 +72,20 @@ class CreatePostView extends StackedView<CreatePostViewModel> {
                       child: Stack(
                         children: [
                           GestureDetector(
-                            onTap: () => viewModel.fetchText(context),
-                            child: ShimmerImage(
-                              url: imageUrl,
-                              height: double.infinity,
-                              width: double.infinity,
-                              radius: 0,
-                            ),
-                          ),
+                              onTap: () => viewModel.fetchText(context),
+                              child: imageUrl != null
+                                  ? ShimmerImage(
+                                      url: imageUrl!,
+                                      height: double.infinity,
+                                      width: double.infinity,
+                                      radius: 0,
+                                    )
+                                  : Image.file(
+                                      image!,
+                                      height: double.infinity,
+                                      width: double.infinity,
+                                      fit: BoxFit.cover,
+                                    )),
                           ...viewModel.texts.map(
                             (e) => DraggableTextWidget(
                               id: DateTime.now().millisecondsSinceEpoch,
@@ -92,7 +102,7 @@ class CreatePostView extends StackedView<CreatePostViewModel> {
                       ),
                     ),
                   ),
-                  verticalSpaceLarge,
+                  const Spacer(),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(

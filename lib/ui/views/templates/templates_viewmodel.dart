@@ -81,9 +81,8 @@ class TemplatesViewModel extends BaseViewModel {
       final file = await _mediaService.pickImage(result.data);
       if (file != null) {
         _image = File(file.path);
-        notifyListeners();
+        _navigationService.navigateToCreatePostView(image: _image);
       }
-      rebuildUi();
     }
   }
 

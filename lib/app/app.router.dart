@@ -5,6 +5,8 @@
 // **************************************************************************
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'dart:io' as _i11;
+
 import 'package:flutter/material.dart' as _i10;
 import 'package:flutter/material.dart';
 import 'package:posto/ui/views/app/app_view.dart' as _i7;
@@ -18,7 +20,7 @@ import 'package:posto/ui/views/language_region/language_region_view.dart'
 import 'package:posto/ui/views/settings/settings_view.dart' as _i5;
 import 'package:posto/ui/views/templates/templates_view.dart' as _i2;
 import 'package:stacked/stacked.dart' as _i1;
-import 'package:stacked_services/stacked_services.dart' as _i11;
+import 'package:stacked_services/stacked_services.dart' as _i12;
 
 class Routes {
   static const templatesView = '/templates-view';
@@ -138,9 +140,12 @@ class StackedRouter extends _i1.RouterBase {
       );
     },
     _i9.CreatePostView: (data) {
-      final args = data.getArgs<CreatePostViewArguments>(nullOk: false);
+      final args = data.getArgs<CreatePostViewArguments>(
+        orElse: () => const CreatePostViewArguments(),
+      );
       return _i10.MaterialPageRoute<dynamic>(
-        builder: (context) => _i9.CreatePostView(args.imageUrl, key: args.key),
+        builder: (context) => _i9.CreatePostView(
+            key: args.key, imageUrl: args.imageUrl, image: args.image),
         settings: data,
         maintainState: false,
       );
@@ -171,21 +176,24 @@ class CategoryTemplatesViewArguments {
 
 class CreatePostViewArguments {
   const CreatePostViewArguments({
-    required this.imageUrl,
     this.key,
+    this.imageUrl,
+    this.image,
   });
-
-  final String imageUrl;
 
   final _i10.Key? key;
 
+  final String? imageUrl;
+
+  final _i11.File? image;
+
   @override
   String toString() {
-    return '{"imageUrl": "$imageUrl", "key": "$key"}';
+    return '{"key": "$key", "imageUrl": "$imageUrl", "image": "$image"}';
   }
 }
 
-extension NavigatorStateExtension on _i11.NavigationService {
+extension NavigatorStateExtension on _i12.NavigationService {
   Future<dynamic> navigateToTemplatesView([
     int? routerId,
     bool preventDuplicates = true,
@@ -288,8 +296,9 @@ extension NavigatorStateExtension on _i11.NavigationService {
   }
 
   Future<dynamic> navigateToCreatePostView({
-    required String imageUrl,
     _i10.Key? key,
+    String? imageUrl,
+    _i11.File? image,
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
@@ -297,7 +306,8 @@ extension NavigatorStateExtension on _i11.NavigationService {
         transition,
   }) async {
     return navigateTo<dynamic>(Routes.createPostView,
-        arguments: CreatePostViewArguments(imageUrl: imageUrl, key: key),
+        arguments:
+            CreatePostViewArguments(key: key, imageUrl: imageUrl, image: image),
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
@@ -406,8 +416,9 @@ extension NavigatorStateExtension on _i11.NavigationService {
   }
 
   Future<dynamic> replaceWithCreatePostView({
-    required String imageUrl,
     _i10.Key? key,
+    String? imageUrl,
+    _i11.File? image,
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
@@ -415,7 +426,8 @@ extension NavigatorStateExtension on _i11.NavigationService {
         transition,
   }) async {
     return replaceWith<dynamic>(Routes.createPostView,
-        arguments: CreatePostViewArguments(imageUrl: imageUrl, key: key),
+        arguments:
+            CreatePostViewArguments(key: key, imageUrl: imageUrl, image: image),
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
