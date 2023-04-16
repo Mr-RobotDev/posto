@@ -45,6 +45,3 @@ app.*.map.json
 
 # vs code
 .vscode/
-
-#env
-.env
