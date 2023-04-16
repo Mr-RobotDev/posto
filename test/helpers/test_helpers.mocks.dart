@@ -4,10 +4,17 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i4;
+import 'dart:typed_data' as _i12;
 import 'dart:ui' as _i5;
 
 import 'package:flutter/material.dart' as _i3;
+import 'package:image_picker/image_picker.dart' as _i11;
 import 'package:mockito/mockito.dart' as _i1;
+import 'package:posto/models/models.dart' as _i7;
+import 'package:posto/services/firebase_service.dart' as _i6;
+import 'package:posto/services/localization_service.dart' as _i8;
+import 'package:posto/services/media_service.dart' as _i10;
+import 'package:posto/services/shared_preferences_service.dart' as _i9;
 import 'package:stacked_services/stacked_services.dart' as _i2;
 
 // ignore_for_file: type=lint
@@ -495,8 +502,7 @@ class MockDialogService extends _i1.Mock implements _i2.DialogService {
       _i3.BuildContext,
       _i2.DialogRequest<dynamic>,
       dynamic Function(_i2.DialogResponse<dynamic>),
-    )?
-        builder,
+    )? builder,
   }) =>
       super.noSuchMethod(
         Invocation.method(
@@ -621,4 +627,130 @@ class MockDialogService extends _i1.Mock implements _i2.DialogService {
         ),
         returnValueForMissingStub: null,
       );
+}
+
+/// A class which mocks [FirebaseService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockFirebaseService extends _i1.Mock implements _i6.FirebaseService {
+  @override
+  bool get hasLoaded => (super.noSuchMethod(
+        Invocation.getter(#hasLoaded),
+        returnValue: false,
+        returnValueForMissingStub: false,
+      ) as bool);
+  @override
+  _i4.Future<List<_i7.Category>?> getCategories() => (super.noSuchMethod(
+        Invocation.method(
+          #getCategories,
+          [],
+        ),
+        returnValue: _i4.Future<List<_i7.Category>?>.value(),
+        returnValueForMissingStub: _i4.Future<List<_i7.Category>?>.value(),
+      ) as _i4.Future<List<_i7.Category>?>);
+  @override
+  _i4.Future<List<_i7.Template>?> getTemplates(String? category) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #getTemplates,
+          [category],
+        ),
+        returnValue: _i4.Future<List<_i7.Template>?>.value(),
+        returnValueForMissingStub: _i4.Future<List<_i7.Template>?>.value(),
+      ) as _i4.Future<List<_i7.Template>?>);
+}
+
+/// A class which mocks [LocalizationService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockLocalizationService extends _i1.Mock
+    implements _i8.LocalizationService {
+  @override
+  _i4.Stream<_i5.Locale?> get localeStream => (super.noSuchMethod(
+        Invocation.getter(#localeStream),
+        returnValue: _i4.Stream<_i5.Locale?>.empty(),
+        returnValueForMissingStub: _i4.Stream<_i5.Locale?>.empty(),
+      ) as _i4.Stream<_i5.Locale?>);
+  @override
+  void setLocale(_i5.Locale? locale) => super.noSuchMethod(
+        Invocation.method(
+          #setLocale,
+          [locale],
+        ),
+        returnValueForMissingStub: null,
+      );
+}
+
+/// A class which mocks [SharedPreferencesService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockSharedPreferencesService extends _i1.Mock
+    implements _i9.SharedPreferencesService {
+  @override
+  _i4.Future<void> init() => (super.noSuchMethod(
+        Invocation.method(
+          #init,
+          [],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+  @override
+  _i4.Future<bool> setString(
+    String? key,
+    String? value,
+  ) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #setString,
+          [
+            key,
+            value,
+          ],
+        ),
+        returnValue: _i4.Future<bool>.value(false),
+        returnValueForMissingStub: _i4.Future<bool>.value(false),
+      ) as _i4.Future<bool>);
+  @override
+  String? getString(String? key) => (super.noSuchMethod(
+        Invocation.method(
+          #getString,
+          [key],
+        ),
+        returnValueForMissingStub: null,
+      ) as String?);
+}
+
+/// A class which mocks [MediaService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockMediaService extends _i1.Mock implements _i10.MediaService {
+  @override
+  _i4.Future<_i11.XFile?> pickImage(_i11.ImageSource? source) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #pickImage,
+          [source],
+        ),
+        returnValue: _i4.Future<_i11.XFile?>.value(),
+        returnValueForMissingStub: _i4.Future<_i11.XFile?>.value(),
+      ) as _i4.Future<_i11.XFile?>);
+  @override
+  _i4.Future<bool> saveImage(_i12.Uint8List? imageBytes) => (super.noSuchMethod(
+        Invocation.method(
+          #saveImage,
+          [imageBytes],
+        ),
+        returnValue: _i4.Future<bool>.value(false),
+        returnValueForMissingStub: _i4.Future<bool>.value(false),
+      ) as _i4.Future<bool>);
+  @override
+  _i4.Future<void> save(_i12.Uint8List? imageBytes) => (super.noSuchMethod(
+        Invocation.method(
+          #save,
+          [imageBytes],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
 }

@@ -1,39 +1,23 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:posto/app/app.bottomsheets.dart';
-import 'package:posto/app/app.dialogs.dart';
 import 'package:posto/app/app.locator.dart';
-import 'package:posto/app/app.router.dart';
-import 'package:posto/ui/common/app_colors.dart';
-import 'package:stacked_services/stacked_services.dart';
+import 'package:posto/firebase_options.dart';
+import 'package:posto/ui/views/app/app_view.dart';
 
-void main() {
-  setupLocator();
-  setupDialogUi();
+Future main() async {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  await dotenv.load();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  await setupLocator();
   setupBottomSheetUi();
 
-  runApp(const MyApp());
-}
+  runApp(const AppView());
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: Theme.of(context).copyWith(
-        primaryColor: kcBackgroundColor,
-        focusColor: kcPrimaryColor,
-        textTheme: Theme.of(context).textTheme.apply(
-              bodyColor: Colors.black,
-            ),
-      ),
-      initialRoute: Routes.startupView,
-      onGenerateRoute: StackedRouter().onGenerateRoute,
-      navigatorKey: StackedService.navigatorKey,
-      navigatorObservers: [
-        StackedService.routeObserver,
-      ],
-    );
-  }
+  FlutterNativeSplash.remove();
 }

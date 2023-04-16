@@ -1,0 +1,147 @@
+{
+    "@@locale": "fr",
+    "templates": "Modèles",
+    "@language": {
+    "description": "Le titre de l'application pour la vue des modèles"
+    },
+    "categories": "Catégories",
+    "@language": {
+    "description": "Le titre de l'application pour la vue des catégories"
+    },
+    "settings": "Paramètres",
+    "@settings": {
+    "description": "Le titre de l'application pour la vue des paramètres"
+    },
+    "language": "Langue",
+    "@language": {
+    "description": "Le titre de l'application pour la vue de la langue"
+    },
+    "english": "Anglais",
+    "@english": {
+    "description": "Le bouton pour choisir la langue anglaise"
+    },
+    "german": "Allemand",
+    "@german": {
+    "description": "Le bouton pour choisir la langue allemande"
+    },
+    "french": "Français",
+    "@french": {
+    "description": "Le bouton pour choisir la langue française"
+    },
+    "spanish": "Espagnol",
+    "@spanish": {
+    "description": "Le bouton pour choisir la langue espagnole"
+    },
+    "italian": "Italien",
+    "@italian": {
+    "description": "Le bouton pour choisir la langue italienne"
+    },
+    "chinese": "Chinois",
+    "@chinese": {
+    "description": "Le bouton pour choisir la langue chinoise"
+    },
+    "japanese": "Japonais",
+    "@japanese": {
+    "description": "Le bouton pour choisir la langue japonaise"
+    },
+    "arabic": "Arabe",
+    "@arabic": {
+    "description": "Le bouton pour choisir la langue arabe"
+    },
+    "urdu": "Ourdou",
+    "@urdu": {
+    "description": "Le bouton pour choisir la langue ourdou"
+    },
+    "darkmode": "Mode sombre",
+"@darkmode": {
+"description": "Le bouton pour choisir le mode sombre"
+},
+"dark": "Thème sombre",
+"@dark": {
+"description": "Le bouton pour choisir le thème sombre"
+},
+"light": "Thème clair",
+"@light": {
+"description": "Le bouton pour choisir le thème clair"
+},
+"system": "Thème du système",
+"@system": {
+"description": "Le bouton pour choisir le thème du système"
+},
+"about": "À propos",
+"@about": {
+"description": "Le titre de la barre d'application de la vue À propos"
+},
+"noMoreTemplates": "Plus de modèles",
+"@noMoreTemplates": {
+"description": "Le texte à afficher lorsqu'il n'y a plus de modèles"
+},
+"languageAndRegion": "Langue et région",
+"@language": {
+"description": "Le titre de la barre d'application de la vue de langue et région"
+},
+"errorLoadingTemplates": "Erreur lors du chargement des modèles",
+"@errorLoadingTemplates": {
+"description": "Le message d'erreur à afficher lorsque les modèles ne peuvent pas être chargés"
+},
+"errorLoadingCategories": "Erreur lors du chargement des catégories",
+"@errorLoadingCategories": {
+"description": "Le message d'erreur à afficher lorsque les catégories ne peuvent pas être chargées"
+},
+"errorLoadingImage": "Erreur lors du chargement de l'image",
+"@errorLoadingImage": {
+"description": "Le message d'erreur à afficher lorsque l'image ne peut pas être chargée"
+},
+"preferences": "Préférences",
+"@preferences": {
+"description": "Le texte des préférences"
+},
+"appInfo": "Informations sur l'application",
+"@appInfo": {
+"description": "Le texte des informations sur l'application"
+},
+"feedback": "Commentaires",
+"@feedback": {
+"description": "Le texte des commentaires"
+},
+"share": "Partager",
+"@share": {
+"description": "Le texte pour partager"
+},
+"rate": "Évaluer",
+"@rate": {
+"description": "Le texte pour évaluer"
+},
+"privacyPolicy": "Politique de confidentialité",
+"@privacyPolicy": {
+"description": "Le texte de la politique de confidentialité"
+},
+"termsOfUse": "Conditions d'utilisation",
+"@termsOfUse": {
+"description": "Le texte des conditions d'utilisation"
+},
+"version": "Version",
+"@version": {
+"description": "Le texte de la version"
+},
+    "createPost": "Créer une publication",
+    "@createPost": {
+    "description": "Le titre de l'application pour la vue de création de publication"
+    },
+    "moreImages": "Plus d'images",
+    "@moreImages": {
+    "description": "Le bouton pour ajouter plus d'images"
+    },
+    "chooseImage": "Choisir une image",
+    "@chooseImage": {
+    "description": "Le bouton pour choisir une image"
+    },
+    "gallery": "Galerie",
+    "@gallery": {
+    "description": "Le bouton pour choisir une image dans la galerie"
+    },
+    "camera": "Appareil photo",
+    "@camera": {
+    "description": "Le bouton pour choisir une image depuis l'appareil photo"
+    }
+    }

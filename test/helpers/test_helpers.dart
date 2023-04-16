@@ -2,6 +2,10 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:posto/app/app.locator.dart';
 import 'package:stacked_services/stacked_services.dart';
+import 'package:posto/services/firebase_service.dart';
+import 'package:posto/services/localization_service.dart';
+import 'package:posto/services/shared_preferences_service.dart';
+import 'package:posto/services/media_service.dart';
 // @stacked-import
 
 import 'test_helpers.mocks.dart';
@@ -10,13 +14,22 @@ import 'test_helpers.mocks.dart';
   MockSpec<NavigationService>(onMissingStub: OnMissingStub.returnDefault),
   MockSpec<BottomSheetService>(onMissingStub: OnMissingStub.returnDefault),
   MockSpec<DialogService>(onMissingStub: OnMissingStub.returnDefault),
-  // @stacked-mock-spec
+  MockSpec<FirebaseService>(onMissingStub: OnMissingStub.returnDefault),
+  MockSpec<LocalizationService>(onMissingStub: OnMissingStub.returnDefault),
+  MockSpec<SharedPreferencesService>(
+      onMissingStub: OnMissingStub.returnDefault),
+  MockSpec<MediaService>(onMissingStub: OnMissingStub.returnDefault),
+// @stacked-mock-spec
 ])
 void registerServices() {
   getAndRegisterNavigationService();
   getAndRegisterBottomSheetService();
   getAndRegisterDialogService();
-  // @stacked-mock-register
+  getAndRegisterFirebaseService();
+  getAndRegisterLocalizationService();
+  getAndRegisterSharedPreferencesService();
+  getAndRegisterMediaService();
+// @stacked-mock-register
 }
 
 MockNavigationService getAndRegisterNavigationService() {
@@ -69,6 +82,33 @@ MockDialogService getAndRegisterDialogService() {
   return service;
 }
 
+MockFirebaseService getAndRegisterFirebaseService() {
+  _removeRegistrationIfExists<FirebaseService>();
+  final service = MockFirebaseService();
+  locator.registerSingleton<FirebaseService>(service);
+  return service;
+}
+
+MockLocalizationService getAndRegisterLocalizationService() {
+  _removeRegistrationIfExists<LocalizationService>();
+  final service = MockLocalizationService();
+  locator.registerSingleton<LocalizationService>(service);
+  return service;
+}
+
+MockSharedPreferencesService getAndRegisterSharedPreferencesService() {
+  _removeRegistrationIfExists<SharedPreferencesService>();
+  final service = MockSharedPreferencesService();
+  locator.registerSingleton<SharedPreferencesService>(service);
+  return service;
+}
+
+MockMediaService getAndRegisterMediaService() {
+  _removeRegistrationIfExists<MediaService>();
+  final service = MockMediaService();
+  locator.registerSingleton<MediaService>(service);
+  return service;
+}
 // @stacked-mock-create
 
 void _removeRegistrationIfExists<T extends Object>() {

@@ -1,0 +1,147 @@
+{
+  "@@locale": "es",
+  "templates": "Plantillas",
+  "@language": {
+  "description": "El título de la barra de aplicación de la vista de plantillas"
+  },
+  "categories": "Categorías",
+  "@language": {
+  "description": "El título de la barra de aplicación de la vista de categorías"
+  },
+  "settings": "Ajustes",
+  "@settings": {
+  "description": "El título de la barra de aplicación de la vista de ajustes"
+  },
+  "language": "Idioma",
+  "@language": {
+  "description": "El título de la barra de aplicación de la vista de idioma"
+  },
+  "english": "Inglés",
+  "@english": {
+  "description": "El botón para elegir el idioma inglés"
+  },
+  "german": "Alemán",
+  "@german": {
+  "description": "El botón para elegir el idioma alemán"
+  },
+  "french": "Francés",
+  "@french": {
+  "description": "El botón para elegir el idioma francés"
+  },
+  "spanish": "Español",
+  "@spanish": {
+  "description": "El botón para elegir el idioma español"
+  },
+  "italian": "Italiano",
+  "@italian": {
+  "description": "El botón para elegir el idioma italiano"
+  },
+  "chinese": "Chino",
+  "@chinese": {
+  "description": "El botón para elegir el idioma chino"
+  },
+  "japanese": "Japonés",
+  "@japanese": {
+  "description": "El botón para elegir el idioma japonés"
+  },
+  "arabic": "Árabe",
+  "@arabic": {
+  "description": "El botón para elegir el idioma árabe"
+  },
+  "urdu": "Urdu",
+  "@urdu": {
+  "description": "El botón para elegir el idioma urdu"
+  },
+  "darkmode": "Modo oscuro",
+"@darkmode": {
+"description": "El botón para elegir el modo oscuro"
+},
+"dark": "Tema oscuro",
+"@dark": {
+"description": "El botón para elegir el tema oscuro"
+},
+"light": "Tema claro",
+"@light": {
+"description": "El botón para elegir el tema claro"
+},
+"system": "Tema del sistema",
+"@system": {
+"description": "El botón para elegir el tema del sistema"
+},
+"about": "Acerca de",
+"@about": {
+"description": "El título de la barra de aplicación de la vista Acerca de"
+},
+"noMoreTemplates": "No hay más plantillas",
+"@noMoreTemplates": {
+"description": "El texto para mostrar cuando no hay más plantillas"
+},
+"languageAndRegion": "Idioma y región",
+"@language": {
+"description": "El título de la barra de aplicación de la vista de idioma y región"
+},
+"errorLoadingTemplates": "Error al cargar plantillas",
+"@errorLoadingTemplates": {
+"description": "El mensaje de error que se muestra cuando no se pueden cargar las plantillas"
+},
+"errorLoadingCategories": "Error al cargar categorías",
+"@errorLoadingCategories": {
+"description": "El mensaje de error que se muestra cuando no se pueden cargar las categorías"
+},
+"errorLoadingImage": "Error al cargar imagen",
+"@errorLoadingImage": {
+"description": "El mensaje de error que se muestra cuando no se puede cargar la imagen"
+},
+"preferences": "Preferencias",
+"@preferences": {
+"description": "El texto de las preferencias"
+},
+"appInfo": "Información de la aplicación",
+"@appInfo": {
+"description": "El texto de la información de la aplicación"
+},
+"feedback": "Comentarios",
+"@feedback": {
+"description": "El texto de los comentarios"
+},
+"share": "Compartir",
+"@share": {
+"description": "El texto para compartir"
+},
+"rate": "Valorar",
+"@rate": {
+"description": "El texto para valorar"
+},
+"privacyPolicy": "Política de privacidad",
+"@privacyPolicy": {
+"description": "El texto de la política de privacidad"
+},
+"termsOfUse": "Condiciones de uso",
+"@termsOfUse": {
+"description": "El texto de las condiciones de uso"
+},
+"version": "Versión",
+"@version": {
+"description": "El texto de la versión"
+},
+  "createPost": "Crear publicación",
+  "@createPost": {
+  "description": "El título de la barra de aplicación de la vista de crear publicación"
+  },
+  "moreImages": "Más imágenes",
+  "@moreImages": {
+  "description": "El botón para agregar más imágenes"
+  },
+  "chooseImage": "Elegir imagen",
+  "@chooseImage": {
+  "description": "El botón para elegir una imagen"
+  },
+  "gallery": "Galería",
+  "@gallery": {
+  "description": "El botón para elegir una imagen de la galería"
+  },
+  "camera": "Cámara",
+  "@camera": {
+  "description": "El botón para elegir una imagen de la cámara"
+  }
+  }

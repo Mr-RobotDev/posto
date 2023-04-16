@@ -1,0 +1,147 @@
+{
+    "@@locale": "it",
+    "templates": "Modelli",
+    "@language": {
+    "description": "Il titolo dell'appbar della vista dei modelli"
+    },
+    "categories": "Categorie",
+    "@language": {
+    "description": "Il titolo dell'appbar della vista delle categorie"
+    },
+    "settings": "Impostazioni",
+    "@settings": {
+    "description": "Il titolo dell'appbar della vista delle impostazioni"
+    },
+    "language": "Lingua",
+    "@language": {
+    "description": "Il titolo dell'appbar della vista della lingua"
+    },
+    "english": "Inglese",
+    "@english": {
+    "description": "Il pulsante per scegliere la lingua inglese"
+    },
+    "german": "Tedesco",
+    "@german": {
+    "description": "Il pulsante per scegliere la lingua tedesca"
+    },
+    "french": "Francese",
+    "@french": {
+    "description": "Il pulsante per scegliere la lingua francese"
+    },
+    "spanish": "Spagnolo",
+    "@spanish": {
+    "description": "Il pulsante per scegliere la lingua spagnola"
+    },
+    "italian": "Italiano",
+    "@italian": {
+    "description": "Il pulsante per scegliere la lingua italiana"
+    },
+    "chinese": "Cinese",
+    "@chinese": {
+    "description": "Il pulsante per scegliere la lingua cinese"
+    },
+    "japanese": "Giapponese",
+    "@japanese": {
+    "description": "Il pulsante per scegliere la lingua giapponese"
+    },
+    "arabic": "Arabo",
+    "@arabic": {
+    "description": "Il pulsante per scegliere la lingua araba"
+    },
+    "urdu": "Urdu",
+    "@urdu": {
+    "description": "Il pulsante per scegliere la lingua urdu"
+    },
+    "darkmode": "Dunkelmodus",
+"@darkmode": {
+"description": "Die Schaltfläche zum Auswählen des Dunkelmodus"
+},
+"dark": "Dunkel",
+"@dark": {
+"description": "Die Schaltfläche zum Auswählen des dunklen Themas"
+},
+"light": "Licht",
+"@light": {
+"description": "Die Schaltfläche zum Auswählen des hellen Themas"
+},
+"system": "System",
+"@system": {
+"description": "Die Schaltfläche zum Auswählen des Systemthemas"
+},
+"about": "Über",
+"@about": {
+"description": "Die Titelleiste der Über-Ansicht"
+},
+"noMoreTemplates": "Keine weiteren Vorlagen",
+"@noMoreTemplates": {
+"description": "Der Text, der angezeigt wird, wenn es keine weiteren Vorlagen gibt"
+},
+"languageAndRegion": "Sprache und Region",
+"@language": {
+"description": "Die Titelleiste der Sprach- und Region-Ansicht"
+},
+"errorLoadingTemplates": "Errore durante il caricamento dei modelli",
+"@errorLoadingTemplates": {
+"description": "Il messaggio di errore da mostrare quando non è possibile caricare i modelli"
+},
+"errorLoadingCategories": "Errore durante il caricamento delle categorie",
+"@errorLoadingCategories": {
+"description": "Il messaggio di errore da mostrare quando non è possibile caricare le categorie"
+},
+"errorLoadingImage": "Errore durante il caricamento dell'immagine",
+"@errorLoadingImage": {
+"description": "Il messaggio di errore da mostrare quando non è possibile caricare l'immagine"
+},
+"preferences": "Preferenze",
+"@preferences": {
+"description": "Il testo delle preferenze"
+},
+"appInfo": "Informazioni sull'applicazione",
+"@appInfo": {
+"description": "Il testo delle informazioni sull'applicazione"
+},
+"feedback": "Feedback",
+"@feedback": {
+"description": "Il testo del feedback"
+},
+"share": "Condividi",
+"@share": {
+"description": "Il testo per la condivisione"
+},
+"rate": "Valuta",
+"@rate": {
+"description": "Il testo per la valutazione"
+},
+"privacyPolicy": "Informativa sulla privacy",
+"@privacyPolicy": {
+"description": "Il testo dell'informativa sulla privacy"
+},
+"termsOfUse": "Condizioni d'uso",
+"@termsOfUse": {
+"description": "Il testo delle condizioni d'uso"
+},
+"version": "Versione",
+"@version": {
+"description": "Il testo della versione"
+},
+    "createPost": "Crea Post",
+    "@createPost": {
+    "description": "Il titolo dell'appbar della vista di creazione post"
+    },
+    "moreImages": "Altre Immagini",
+    "@moreImages": {
+    "description": "Il pulsante per aggiungere altre immagini"
+    },
+    "chooseImage": "Scegli Immagine",
+    "@chooseImage": {
+    "description": "Il pulsante per scegliere un'immagine"
+    },
+    "gallery": "Galleria",
+    "@gallery": {
+    "description": "Il pulsante per scegliere un'immagine dalla galleria"
+    },
+    "camera": "Fotocamera",
+    "@camera": {
+    "description": "Il pulsante per scegliere un'immagine dalla fotocamera"
+    }
+    }

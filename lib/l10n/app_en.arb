@@ -1,0 +1,147 @@
+{
+    "@@locale": "en",
+    "templates": "Templates",
+    "@language": {
+        "description": "The appbar title of the templates view"
+    },
+    "categories": "Categories",
+    "@language": {
+        "description": "The appbar title of the categories view"
+    },
+    "settings": "Settings",
+    "@settings": {
+        "description": "The appbar title of the settings view"
+    },
+    "language": "Language",
+    "@language": {
+        "description": "The appbar title of the language view"
+    },
+    "english": "English",
+    "@english": {
+        "description": "The button to choose the english language"
+    },
+    "german": "German",
+    "@german": {
+        "description": "The button to choose the german language"
+    },
+    "french": "French",
+    "@french": {
+        "description": "The button to choose the french language"
+    },
+    "spanish": "Spanish",
+    "@spanish": {
+        "description": "The button to choose the spanish language"
+    },
+    "italian": "Italian",
+    "@italian": {
+        "description": "The button to choose the italian language"
+    },
+    "chinese": "Chinese",
+    "@chinese": {
+        "description": "The button to choose the chinese language"
+    },
+    "japanese": "Japanese",
+    "@japanese": {
+        "description": "The button to choose the japanese language"
+    },
+    "arabic": "Arabic",
+    "@arabic": {
+        "description": "The button to choose the arabic language"
+    },
+    "urdu": "Urdu",
+    "@urdu": {
+        "description": "The button to choose the urdu language"
+    },
+    "darkmode": "Darkmode",
+    "@darkmode": {
+        "description": "The button to choose the darkmode"
+    },
+    "dark": "Dark",
+    "@dark": {
+        "description": "The button to choose the dark theme"
+    },
+    "light": "Light",
+    "@light": {
+        "description": "The button to choose the light theme"
+    },
+    "system": "System",
+    "@system": {
+        "description": "The button to choose the system theme"
+    },
+    "about": "About",
+    "@about": {
+        "description": "The appbar title of the about view"
+    },
+    "noMoreTemplates": "No more templates",
+    "@noMoreTemplates": {
+        "description": "The text to show when there are no more templates"
+    },
+    "languageAndRegion": "Language & Region",
+    "@language": {
+        "description": "The appbar title of the language and region view"
+    },
+    "errorLoadingTemplates": "Error loading templates",
+    "@errorLoadingTemplates": {
+        "description": "The error message to show when the templates could not be loaded"
+    },
+    "errorLoadingCategories": "Error loading categories",
+    "@errorLoadingCategories": {
+        "description": "The error message to show when the categories could not be loaded"
+    },
+    "errorLoadingImage": "Error loading image",
+    "@errorLoadingImage": {
+        "description": "The error message to show when the image could not be loaded"
+    },
+    "preferences": "Preferences",
+    "@preferences": {
+        "description": "The text preferences"
+    },
+    "appInfo": "App Info",
+    "@appInfo": {
+        "description": "The text app info"
+    },
+    "feedback": "Feedback",
+    "@feedback": {
+        "description": "The text feedback"
+    },
+    "share": "Share",
+    "@share": {
+        "description": "The text share"
+    },
+    "rate": "Rate",
+    "@rate": {
+        "description": "The text rate"
+    },
+    "privacyPolicy": "Privacy Policy",
+    "@privacyPolicy": {
+        "description": "The text privacy policy"
+    },
+    "termsOfUse": "Terms of Use",
+    "@termsOfUse": {
+        "description": "The text terms of use"
+    },
+    "version": "Version",
+    "@version": {
+        "description": "The text version"
+    },
+    "createPost": "Create Post",
+    "@createPost": {
+        "description": "The appbar title of the create post view"
+    },
+    "moreImages": "More Images",
+    "@moreImages": {
+        "description": "The button to add more images"
+    },
+    "chooseImage": "Choose Image",
+    "@chooseImage": {
+        "description": "The button to choose an image"
+    },
+    "gallery": "Gallery",
+    "@gallery": {
+        "description": "The button to choose an image from the gallery"
+    },
+    "camera": "Camera",
+    "@camera": {
+        "description": "The button to choose an image from the camera"
+    }
+}

@@ -1,0 +1,147 @@
+{
+  "@@locale": "ur",
+  "templates": "سانچے",
+  "@language": {
+  "description": "سانچوں کے دیکھنے کے لئے ایپ بار کا ٹائٹل"
+  },
+  "categories": "زمرے",
+  "@language": {
+  "description": "زمرہ دیکھنے کے لئے ایپ بار کا ٹائٹل"
+  },
+  "settings": "ترتیبات",
+  "@settings": {
+  "description": "ترتیبات دیکھنے کے لئے ایپ بار کا ٹائٹل"
+  },
+  "language": "زبان",
+  "@language": {
+  "description": "زبان دیکھنے کے لئے ایپ بار کا ٹائٹل"
+  },
+  "english": "انگریزی",
+  "@english": {
+  "description": "انگریزی زبان کا انتخاب کرنے کا بٹن"
+  },
+  "german": "جرمن",
+  "@german": {
+  "description": "جرمن زبان کا انتخاب کرنے کا بٹن"
+  },
+  "french": "فرانسیسی",
+  "@french": {
+  "description": "فرانسیسی زبان کا انتخاب کرنے کا بٹن"
+  },
+  "spanish": "ہسپانوی",
+  "@spanish": {
+  "description": "ہسپانوی زبان کا انتخاب کرنے کا بٹن"
+  },
+  "italian": "اطالوی",
+  "@italian": {
+  "description": "اطالوی زبان کا انتخاب کرنے کا بٹن"
+  },
+  "chinese": "چینی",
+  "@chinese": {
+  "description": "چینی زبان کا انتخاب کرنے کا بٹن"
+  },
+  "japanese": "جاپانی",
+  "@japanese": {
+  "description": "جاپانی زبان کا انتخاب کرنے کا بٹن"
+  },
+  "arabic": "عربی",
+  "@arabic": {
+  "description": "عربی زبان کا انتخاب کرنے کا بٹن"
+  },
+  "urdu": "اردو",
+  "@urdu": {
+  "description": "اردو زبان کا انتخاب کرنے کا بٹن"
+  },
+  "darkmode": "ڈارک موڈ",
+"@darkmode": {
+"description": "ڈارک موڈ منتخب کرنے والے بٹن"
+},
+"dark": "ڈارک",
+"@dark": {
+"description": "ڈارک تھیم منتخب کرنے والے بٹن"
+},
+"light": "لائٹ",
+"@light": {
+"description": "لائٹ تھیم منتخب کرنے والے بٹن"
+},
+"system": "سسٹم",
+"@system": {
+"description": "سسٹم تھیم منتخب کرنے والے بٹن"
+},
+"about": "اپپ کے بارے میں",
+"@about": {
+"description": "کے بارے میں ویو کا عنوان"
+},
+"noMoreTemplates": "کوئی مزید ٹیمپلیٹ نہیں",
+"@noMoreTemplates": {
+"description": "جب کوئی ٹیمپلیٹ نہیں رہتا تو دکھانے والا ٹیکسٹ"
+},
+"languageAndRegion": "زبان اور علاقہ",
+"@language": {
+"description": "زبان اور علاقہ ویو کا عنوان"
+},
+"errorLoadingTemplates": "ٹیمپلیٹس لوڈ کرنے میں خرابی",
+"@errorLoadingTemplates": {
+"description": "ٹیمپلیٹس لوڈ نہ ہونے کی صورت میں دکھانے کے لئے خرابی کا پیغام"
+},
+"errorLoadingCategories": "زمرے لوڈ کرنے میں خرابی",
+"@errorLoadingCategories": {
+"description": "زمرے لوڈ نہ ہونے کی صورت میں دکھانے کے لئے خرابی کا پیغام"
+},
+"errorLoadingImage": "تصویر لوڈ کرنے میں خرابی",
+"@errorLoadingImage": {
+"description": "تصویر لوڈ نہ ہونے کی صورت میں دکھانے کے لئے خرابی کا پیغام"
+},
+"preferences": "ترجیحات",
+"@preferences": {
+"description": "ترجیحات کا متن"
+},
+"appInfo": "ایپ کی معلومات",
+"@appInfo": {
+"description": "ایپ کی معلومات کا متن"
+},
+"feedback": "تاثرات",
+"@feedback": {
+"description": "تاثرات کا متن"
+},
+"share": "اشتراک کریں",
+"@share": {
+"description": "اشتراک کرنے کا متن"
+},
+"rate": "درجہ",
+"@rate": {
+"description": "درجہ دینے کا متن"
+},
+"privacyPolicy": "رازداری کی پالیسی",
+"@privacyPolicy": {
+"description": "رازداری کی پالیسی کا متن"
+},
+"termsOfUse": "استعمال کے شرائط",
+"@termsOfUse": {
+"description": "استعمال کے شرائط کا متن"
+},
+"version": "ورژن",
+"@version": {
+"description": "ورژن کا متن"
+},
+    "createPost": "پوسٹ بنائیں",
+    "@createPost": {
+      "description": "The appbar title of the create post view"
+    },
+    "moreImages": "مزید تصاویر",
+    "@moreImages": {
+      "description": "The button to add more images to a post"
+    },
+    "chooseImage": "تصویر منتخب کریں",
+    "@chooseImage": {
+      "description": "The button to choose an image from the gallery"
+    },
+    "gallery": "گیلری",
+    "@gallery": {
+      "description": "The gallery button"
+    },
+    "camera": "کیمرہ",
+    "@camera": {
+      "description": "The camera button"
+    }
+}

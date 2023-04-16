@@ -9,7 +9,14 @@
 import 'package:stacked_services/src/bottom_sheet/bottom_sheet_service.dart';
 import 'package:stacked_services/src/dialog/dialog_service.dart';
 import 'package:stacked_services/src/navigation/navigation_service.dart';
+import 'package:stacked_services/src/snackbar/snackbar_service.dart';
 import 'package:stacked_shared/stacked_shared.dart';
+
+import '../services/firebase_service.dart';
+import '../services/localization_service.dart';
+import '../services/media_service.dart';
+import '../services/shared_preferences_service.dart';
+import '../ui/views/home/home_viewmodel.dart';
 
 final locator = StackedLocator.instance;
 
@@ -25,4 +32,10 @@ Future<void> setupLocator({
   locator.registerLazySingleton(() => BottomSheetService());
   locator.registerLazySingleton(() => DialogService());
   locator.registerLazySingleton(() => NavigationService());
+  locator.registerLazySingleton(() => SnackbarService());
+  locator.registerLazySingleton(() => FirebaseService());
+  locator.registerLazySingleton(() => LocalizationService());
+  locator.registerLazySingleton(() => SharedPreferencesService());
+  locator.registerLazySingleton(() => MediaService());
+  locator.registerSingleton(HomeViewModel());
 }

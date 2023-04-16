@@ -1,9 +1,16 @@
-import 'package:flutter/material.dart';
-import 'package:stacked/stacked.dart';
-import 'package:posto/ui/common/app_colors.dart';
-import 'package:posto/ui/common/ui_helpers.dart';
+import 'dart:io';
 
-import 'home_viewmodel.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:posto/app/app.locator.dart';
+import 'package:posto/ui/common/ui_helpers.dart';
+import 'package:posto/ui/views/categories/categories_view.dart';
+import 'package:posto/ui/views/settings/settings_view.dart';
+import 'package:posto/ui/views/templates/templates_view.dart';
+import 'package:stacked/stacked.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'package:posto/ui/views/home/home_viewmodel.dart';
 
 class HomeView extends StackedView<HomeViewModel> {
   const HomeView({Key? key}) : super(key: key);
@@ -14,65 +21,70 @@ class HomeView extends StackedView<HomeViewModel> {
     HomeViewModel viewModel,
     Widget? child,
   ) {
-    return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25.0),
-          child: Center(
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                verticalSpaceLarge,
-                Column(
-                  children: [
-                    const Text(
-                      'Hello, STACKED!',
-                      style: TextStyle(
-                        fontSize: 35,
-                        fontWeight: FontWeight.w900,
-                      ),
-                    ),
-                    verticalSpaceMedium,
-                    MaterialButton(
-                      color: Colors.black,
-                      onPressed: viewModel.incrementCounter,
-                      child: Text(
-                        viewModel.counterLabel,
-                        style: const TextStyle(color: Colors.white),
-                      ),
-                    ),
-                  ],
+    return PlatformScaffold(
+      cupertino: (_, __) => CupertinoPageScaffoldData(
+        backgroundColor: viewModel.currentIndex == 2
+            ? settingsBackgroundColor(context)
+            : scaffoldColor(context),
+      ),
+      material: (_, __) => MaterialScaffoldData(
+        floatingActionButton: viewModel.currentIndex == 0
+            ? FloatingActionButton.extended(
+                onPressed: viewModel.showGalleryCameraSheet,
+                icon: Icon(PlatformIcons(context).add),
+                label: const Text(
+                  'Create',
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    MaterialButton(
-                      color: kcDarkGreyColor,
-                      child: const Text(
-                        'Show Dialog',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                      onPressed: viewModel.showDialog,
-                    ),
-                    MaterialButton(
-                      color: kcDarkGreyColor,
-                      child: const Text(
-                        'Show Bottom Sheet',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                      onPressed: viewModel.showBottomSheet,
-                    ),
-                  ],
-                )
-              ],
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+              )
+            : null,
+      ),
+      body: SafeArea(
+        child: IndexedStack(
+          index: viewModel.currentIndex,
+          children: const [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
+              child: TemplatesView(),
             ),
-          ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
+              child: CategoriesView(),
+            ),
+            SettingsView(),
+          ],
         ),
+      ),
+      bottomNavBar: PlatformNavBar(
+        key: const Key('bottomNavBar'),
+        cupertino: (_, __) => CupertinoTabBarData(
+          backgroundColor: isDarkModeNavBarColor(context),
+        ),
+        height: Platform.isAndroid ? 84.0 : 60.0,
+        currentIndex: viewModel.currentIndex,
+        itemChanged: viewModel.setIndex,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              PlatformIcons(context).home,
+            ),
+            label: AppLocalizations.of(context)!.templates,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              PlatformIcons(context).collections,
+            ),
+            label: AppLocalizations.of(context)!.categories,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              PlatformIcons(context).settings,
+            ),
+            label: AppLocalizations.of(context)!.settings,
+          ),
+        ],
       ),
     );
   }
@@ -81,5 +93,11 @@ class HomeView extends StackedView<HomeViewModel> {
   HomeViewModel viewModelBuilder(
     BuildContext context,
   ) =>
-      HomeViewModel();
+      locator<HomeViewModel>();
+
+  @override
+  bool get disposeViewModel => false;
+
+  @override
+  bool get initialiseSpecialViewModelsOnce => false;
 }

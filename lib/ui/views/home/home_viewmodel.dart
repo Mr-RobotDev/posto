@@ -1,36 +1,31 @@
+import 'dart:io';
+
 import 'package:posto/app/app.bottomsheets.dart';
-import 'package:posto/app/app.dialogs.dart';
 import 'package:posto/app/app.locator.dart';
-import 'package:posto/ui/common/app_strings.dart';
+import 'package:posto/app/app.router.dart';
+import 'package:posto/services/media_service.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
-class HomeViewModel extends BaseViewModel {
-  final _dialogService = locator<DialogService>();
+class HomeViewModel extends IndexTrackingViewModel {
+  final _navigationService = locator<NavigationService>();
+  final _mediaService = locator<MediaService>();
   final _bottomSheetService = locator<BottomSheetService>();
 
-  String get counterLabel => 'Counter is: $_counter';
+  File? _image;
+  File? get image => _image;
 
-  int _counter = 0;
-
-  void incrementCounter() {
-    _counter++;
-    rebuildUi();
-  }
-
-  void showDialog() {
-    _dialogService.showCustomDialog(
-      variant: DialogType.infoAlert,
-      title: 'Stacked Rocks!',
-      description: 'Give stacked $_counter stars on Github',
+  void showGalleryCameraSheet() async {
+    final SheetResponse<dynamic>? result =
+        await _bottomSheetService.showCustomSheet(
+      variant: BottomSheetType.galleryCamera,
     );
-  }
-
-  void showBottomSheet() {
-    _bottomSheetService.showCustomSheet(
-      variant: BottomSheetType.notice,
-      title: ksHomeBottomSheetTitle,
-      description: ksHomeBottomSheetDescription,
-    );
+    if (result != null && result.confirmed) {
+      final file = await _mediaService.pickImage(result.data);
+      if (file != null) {
+        _image = File(file.path);
+        _navigationService.navigateToCreatePostView(image: _image);
+      }
+    }
   }
 }

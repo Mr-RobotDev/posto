@@ -1,6 +1,8 @@
 import 'dart:math';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
 const double _tinySize = 5.0;
 const double _smallSize = 10.0;
@@ -75,4 +77,118 @@ double getResponsiveFontSize(BuildContext context,
       max);
 
   return responsiveSize;
+}
+
+bool isDarkMode(BuildContext context) =>
+    MediaQuery.of(context).platformBrightness == Brightness.dark;
+
+Color isDarkModeTextColor(BuildContext context) =>
+    MediaQuery.of(context).platformBrightness == Brightness.dark
+        ? Colors.white
+        : Colors.black;
+
+Color isDarkModeTileColor(BuildContext context) =>
+    MediaQuery.of(context).platformBrightness == Brightness.dark
+        ? CupertinoColors.darkBackgroundGray
+        : CupertinoColors.white;
+
+Color settingsBackgroundColor(BuildContext context) =>
+    MediaQuery.of(context).platformBrightness == Brightness.dark
+        ? CupertinoColors.black
+        : CupertinoColors.lightBackgroundGray;
+
+Color scaffoldColor(BuildContext context) =>
+    MediaQuery.of(context).platformBrightness == Brightness.dark
+        ? CupertinoColors.black
+        : CupertinoColors.white;
+
+Color isDarkModeNavBarColor(BuildContext context) =>
+    MediaQuery.of(context).platformBrightness == Brightness.dark
+        ? CupertinoColors.darkBackgroundGray
+        : CupertinoColors.lightBackgroundGray;
+
+double getMinHeight(int index) {
+  switch (index % 7) {
+    case 0:
+      return 100;
+    case 1:
+      return 350;
+    case 2:
+      return 200;
+    case 3:
+      return 150;
+    case 4:
+      return 400;
+    case 5:
+      return 250;
+    case 6:
+      return 300;
+    default:
+      return 100;
+  }
+}
+
+Future showConfirmationDialog(
+  BuildContext context, {
+  required String content,
+  required String confirmText,
+  required String cancelText,
+  required Function onConfirm,
+}) async {
+  return showPlatformDialog(
+    context: context,
+    builder: (context) => PlatformAlertDialog(
+      content: Text(
+        content,
+        style: TextStyle(
+          color: isDarkModeTextColor(context),
+        ),
+      ),
+      actions: <Widget>[
+        PlatformDialogAction(
+          child: Text(cancelText),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        PlatformDialogAction(
+          cupertino: (_, __) => CupertinoDialogActionData(
+            isDestructiveAction: true,
+          ),
+          child: Text(confirmText),
+          onPressed: () {
+            onConfirm();
+            Navigator.of(context).pop();
+          },
+        ),
+      ],
+    ),
+  );
+}
+
+Future showSavedDialog(
+  BuildContext context,
+) async {
+  return showPlatformDialog(
+    context: context,
+    builder: (_) => PlatformAlertDialog(
+      title: Text(
+        'Success',
+        style: TextStyle(
+          color: isDarkModeTextColor(context),
+        ),
+      ),
+      content: Text(
+        'Image saved to gallery',
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          color: isDarkModeTextColor(context),
+        ),
+      ),
+      actions: [
+        PlatformDialogAction(
+          child: const Text('OK'),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+      ],
+    ),
+  );
 }

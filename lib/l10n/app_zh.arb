@@ -1,0 +1,147 @@
+{
+    "@@locale": "zh",
+    "templates": "模板",
+    "@language": {
+    "description": "模板视图的应用栏标题"
+    },
+    "categories": "分类",
+    "@language": {
+    "description": "分类视图的应用栏标题"
+    },
+    "settings": "设置",
+    "@settings": {
+    "description": "设置视图的应用栏标题"
+    },
+    "language": "语言",
+    "@language": {
+    "description": "语言视图的应用栏标题"
+    },
+    "english": "英语",
+    "@english": {
+    "description": "选择英语语言的按钮"
+    },
+    "german": "德语",
+    "@german": {
+    "description": "选择德语语言的按钮"
+    },
+    "french": "法语",
+    "@french": {
+    "description": "选择法语语言的按钮"
+    },
+    "spanish": "西班牙语",
+    "@spanish": {
+    "description": "选择西班牙语语言的按钮"
+    },
+    "italian": "意大利语",
+    "@italian": {
+    "description": "选择意大利语语言的按钮"
+    },
+    "chinese": "中文",
+    "@chinese": {
+    "description": "选择中文语言的按钮"
+    },
+    "japanese": "日语",
+    "@japanese": {
+    "description": "选择日语语言的按钮"
+    },
+    "arabic": "阿拉伯语",
+    "@arabic": {
+    "description": "选择阿拉伯语语言的按钮"
+    },
+    "urdu": "乌尔都语",
+    "@urdu": {
+    "description": "选择乌尔都语语言的按钮"
+    },
+    "darkmode": "夜间模式",
+"@darkmode": {
+"description": "选择夜间模式的按钮"
+},
+"dark": "暗色主题",
+"@dark": {
+"description": "选择暗色主题的按钮"
+},
+"light": "亮色主题",
+"@light": {
+"description": "选择亮色主题的按钮"
+},
+"system": "系统主题",
+"@system": {
+"description": "选择系统主题的按钮"
+},
+"about": "关于",
+"@about": {
+"description": "关于视图的应用栏标题"
+},
+"noMoreTemplates": "没有更多的模板",
+"@noMoreTemplates": {
+"description": "没有更多模板时显示的文本"
+},
+"languageAndRegion": "语言和地区",
+"@language": {
+"description": "语言和地区视图的应用栏标题"
+},
+"errorLoadingTemplates": "加载模板出错",
+"@errorLoadingTemplates": {
+"description": "当无法加载模板时显示的错误消息"
+},
+"errorLoadingCategories": "加载类别出错",
+"@errorLoadingCategories": {
+"description": "当无法加载类别时显示的错误消息"
+},
+"errorLoadingImage": "加载图像出错",
+"@errorLoadingImage": {
+"description": "当无法加载图像时显示的错误消息"
+},
+"preferences": "偏好设置",
+"@preferences": {
+"description": "偏好设置的文本"
+},
+"appInfo": "应用信息",
+"@appInfo": {
+"description": "应用信息的文本"
+},
+"feedback": "反馈",
+"@feedback": {
+"description": "反馈的文本"
+},
+"share": "分享",
+"@share": {
+"description": "分享的文本"
+},
+"rate": "评分",
+"@rate": {
+"description": "评分的文本"
+},
+"privacyPolicy": "隐私政策",
+"@privacyPolicy": {
+"description": "隐私政策的文本"
+},
+"termsOfUse": "使用条款",
+"@termsOfUse": {
+"description": "使用条款的文本"
+},
+"version": "版本",
+"@version": {
+"description": "版本的文本"
+},
+    "createPost": "创建帖子",
+    "@createPost": {
+    "description": "创建帖子视图的应用栏标题"
+    },
+    "moreImages": "更多图片",
+    "@moreImages": {
+    "description": "添加更多图片的按钮"
+    },
+    "chooseImage": "选择图片",
+    "@chooseImage": {
+    "description": "选择图片的按钮"
+    },
+    "gallery": "图库",
+    "@gallery": {
+    "description": "从图库选择图片的按钮"
+    },
+    "camera": "相机",
+    "@camera": {
+    "description": "从相机选择图片的按钮"
+    }
+    }
