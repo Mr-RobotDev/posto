@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:posto/ui/views/create_post/text_item.dart';
 
@@ -117,7 +118,7 @@ class _AddTextLayoutState extends State<AddTextLayout> {
           Positioned(
             top: MediaQuery.of(context).padding.top + 10,
             right: 20,
-            child: TextButton(
+            child: PlatformTextButton(
               onPressed: () {
                 if (_textController.text.isEmpty) {
                   return Navigator.pop(context);
@@ -136,10 +137,9 @@ class _AddTextLayoutState extends State<AddTextLayout> {
               },
               child: Text(
                 "Done",
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyLarge
-                    ?.copyWith(color: Colors.white),
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                      color: Colors.white,
+                    ),
               ),
             ),
           ),
@@ -151,7 +151,7 @@ class _AddTextLayoutState extends State<AddTextLayout> {
               builder: (context, value, _) {
                 return Row(
                   children: [
-                    IconButton(
+                    PlatformIconButton(
                       icon: Icon(
                         Icons.format_align_left_rounded,
                         color: value.textAlign == TextAlign.left
@@ -164,7 +164,7 @@ class _AddTextLayoutState extends State<AddTextLayout> {
                         );
                       },
                     ),
-                    IconButton(
+                    PlatformIconButton(
                       icon: Icon(
                         Icons.format_align_center_rounded,
                         color: value.textAlign == TextAlign.center
@@ -177,7 +177,7 @@ class _AddTextLayoutState extends State<AddTextLayout> {
                         );
                       },
                     ),
-                    IconButton(
+                    PlatformIconButton(
                       icon: Icon(
                         Icons.format_align_right_rounded,
                         color: value.textAlign == TextAlign.right
@@ -190,7 +190,7 @@ class _AddTextLayoutState extends State<AddTextLayout> {
                         );
                       },
                     ),
-                    IconButton(
+                    PlatformIconButton(
                       icon: Icon(
                         Icons.format_italic_rounded,
                         color: value.fontStyle == FontStyle.italic
@@ -209,7 +209,7 @@ class _AddTextLayoutState extends State<AddTextLayout> {
                         }
                       },
                     ),
-                    IconButton(
+                    PlatformIconButton(
                       icon: Icon(
                         Icons.format_bold_rounded,
                         color: value.fontWeight == FontWeight.bold
@@ -245,7 +245,7 @@ class _AddTextLayoutState extends State<AddTextLayout> {
                   return Slider.adaptive(
                     value: value.fontSize ?? 0,
                     min: 12,
-                    max: 52,
+                    max: 96,
                     onChanged: (fontSize) {
                       _valueListener.value = _valueListener.value.copyWith(
                         fontSize: fontSize,
