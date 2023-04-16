@@ -2,10 +2,8 @@ import 'package:posto/app/app.locator.dart';
 import 'package:posto/models/models.dart';
 import 'package:posto/services/firebase_service.dart';
 import 'package:stacked/stacked.dart';
-import 'package:stacked_services/stacked_services.dart';
 
 class CategoryTemplatesViewModel extends BaseViewModel {
-  final _navigationService = locator<NavigationService>();
   final _firebaseService = locator<FirebaseService>();
 
   final List<Template> _templates = [];
@@ -28,6 +26,4 @@ class CategoryTemplatesViewModel extends BaseViewModel {
       _templates.addAll(templates);
     }
   }
-
-  void back() => _navigationService.back();
 }

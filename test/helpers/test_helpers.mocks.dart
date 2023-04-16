@@ -4,9 +4,11 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i4;
+import 'dart:typed_data' as _i12;
 import 'dart:ui' as _i5;
 
 import 'package:flutter/material.dart' as _i3;
+import 'package:image_picker/image_picker.dart' as _i11;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:posto/models/models.dart' as _i7;
 import 'package:posto/services/firebase_service.dart' as _i6;
@@ -722,4 +724,33 @@ class MockSharedPreferencesService extends _i1.Mock
 /// A class which mocks [MediaService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockMediaService extends _i1.Mock implements _i10.MediaService {}
+class MockMediaService extends _i1.Mock implements _i10.MediaService {
+  @override
+  _i4.Future<_i11.XFile?> pickImage(_i11.ImageSource? source) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #pickImage,
+          [source],
+        ),
+        returnValue: _i4.Future<_i11.XFile?>.value(),
+        returnValueForMissingStub: _i4.Future<_i11.XFile?>.value(),
+      ) as _i4.Future<_i11.XFile?>);
+  @override
+  _i4.Future<bool> saveImage(_i12.Uint8List? imageBytes) => (super.noSuchMethod(
+        Invocation.method(
+          #saveImage,
+          [imageBytes],
+        ),
+        returnValue: _i4.Future<bool>.value(false),
+        returnValueForMissingStub: _i4.Future<bool>.value(false),
+      ) as _i4.Future<bool>);
+  @override
+  _i4.Future<void> save(_i12.Uint8List? imageBytes) => (super.noSuchMethod(
+        Invocation.method(
+          #save,
+          [imageBytes],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+}

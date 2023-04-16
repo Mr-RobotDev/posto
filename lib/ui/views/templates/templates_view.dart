@@ -35,8 +35,9 @@ class TemplatesView extends StackedView<TemplatesViewModel> {
               ),
               PlatformWidget(
                 cupertino: (_, __) => PlatformIconButton(
+                  padding: EdgeInsets.zero,
                   icon: Icon(PlatformIcons(context).add),
-                  onPressed: () {},
+                  onPressed: viewModel.showGalleryCameraSheet,
                 ),
               ),
             ],
@@ -58,6 +59,8 @@ class TemplatesView extends StackedView<TemplatesViewModel> {
                     final template = viewModel.templates[index];
                     double height = getMinHeight(index);
                     return GestureDetector(
+                      onTap: () =>
+                          viewModel.navigateToCreatePost(template.thumbnail),
                       onLongPress: () {
                         viewModel.popupDialog = OverlayEntry(
                           builder: (context) => AnimatedDialog(

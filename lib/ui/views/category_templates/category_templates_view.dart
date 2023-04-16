@@ -2,8 +2,10 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:posto/ui/common/app_strings.dart';
 import 'package:posto/ui/common/ui_helpers.dart';
 import 'package:posto/ui/dumb_widgets/shimmer_image.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:stacked/stacked.dart';
 
 import 'category_templates_viewmodel.dart';
@@ -20,30 +22,16 @@ class CategoryTemplatesView extends StackedView<CategoryTemplatesViewModel> {
     Widget? child,
   ) {
     return PlatformScaffold(
+      appBar: PlatformAppBar(
+        title: Text(
+          name,
+        ),
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: Column(
             children: [
-              Row(
-                children: [
-                  GestureDetector(
-                    child: Icon(
-                      PlatformIcons(context).leftChevron,
-                      color: isDarkModeTextColor(context),
-                      size: 24.0,
-                    ),
-                    onTap: viewModel.back,
-                  ),
-                  Text(
-                    name,
-                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                          color: isDarkModeTextColor(context),
-                        ),
-                  ),
-                ],
-              ),
-              verticalSpaceSmall,
               viewModel.templates.isNotEmpty
                   ? GestureDetector(
                       onHorizontalDragEnd: (dragEndDetails) {
@@ -82,7 +70,27 @@ class CategoryTemplatesView extends StackedView<CategoryTemplatesViewModel> {
                     ),
               verticalSpaceLarge,
               viewModel.isBusy
-                  ? const CircularProgressIndicator.adaptive()
+                  ? SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          for (int i = 0; i < 10; i++)
+                            Shimmer.fromColors(
+                              baseColor: defaultShimmerBaseColor,
+                              highlightColor: defaultShimmerHighlightColor,
+                              child: Container(
+                                height: 84,
+                                width: 84,
+                                margin: const EdgeInsets.only(right: 10.0),
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context).cardColor,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
+                            ),
+                        ],
+                      ),
+                    )
                   : SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
